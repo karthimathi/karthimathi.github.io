@@ -123,7 +123,7 @@
     <div class="product-card">
       <img src="https://m.media-amazon.com/images/I/61y2VVWcGBL._AC_SL1500_.jpg" alt="Vacuum Cleaner">
       <h2>Vacuum Cleaner</h2>
-      <p>🧹 Compact and powerful suction.</p>
+      <p>🧹 Compact and powerful section.</p>
       <a href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE14" target="_blank">👉 Buy on Amazon</a>
     </div>
 
