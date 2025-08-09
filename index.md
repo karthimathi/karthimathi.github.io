@@ -87,7 +87,7 @@
           <p class="desc">Great sound quality and long battery life.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹1,799</div><div class="old">₹2,499</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE1" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/459WUkP" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -98,7 +98,7 @@
           <p class="desc">Track fitness, heart rate, and receive notifications.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹2,999</div><div class="old">₹4,199</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE2" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/3J169eH" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -109,7 +109,7 @@
           <p class="desc">Perfect for YouTube, Instagram, and Zoom calls.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹1,199</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE3" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/47ogScZ" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -120,18 +120,18 @@
           <p class="desc">Fast-charging and travel friendly.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹899</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE4" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/4mjDhNa" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
         <!-- Product 5 -->
         <article class="card">
-          <img class="thumb" src="/assets/images/toothbrush.jpg" alt="Electric Toothbrush" />
+          <img class="thumb" src="/assets/images/tooth Brush.jpg" alt="Electric Toothbrush" />
           <h3 class="title">5. Electric Toothbrush</h3>
           <p class="desc">Advanced cleaning with smart timer.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹1,499</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE5" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/45ciLbv" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -142,7 +142,7 @@
           <p class="desc">Easy to clean and perfect for daily cooking.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹899</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE6" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/45p1M4r" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -153,7 +153,7 @@
           <p class="desc">Compact and ideal for small rooms or office.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹5,499</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE7" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/45wa22F" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -164,7 +164,7 @@
           <p class="desc">Smooth trim with skin protection.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹1,299</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE8" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/46Pl3yn" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -175,7 +175,7 @@
           <p class="desc">Ergonomic design for better posture.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹1,199</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE9" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/3UYQXBb" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -186,7 +186,7 @@
           <p class="desc">Comfortable grip with long battery life.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹599</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE10" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/4lnzZay" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -197,7 +197,7 @@
           <p class="desc">Better sleep and neck support.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹1,699</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE11" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/4mB9M9E" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -208,7 +208,7 @@
           <p class="desc">Perfect for content creators and vloggers.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹999</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE12" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/4m9j0tZ" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -219,7 +219,7 @@
           <p class="desc">For Android or PC gaming.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹1,499</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE13" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/4lqwXSZ" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -230,7 +230,7 @@
           <p class="desc">Compact and powerful suction.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹2,999</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE14" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/3UhbMrv" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -241,7 +241,7 @@
           <p class="desc">For glowing and healthy skin.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹899</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE15" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/4mGkLi9" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -252,7 +252,7 @@
           <p class="desc">Boost your productivity and mindset.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹299</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE16" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/41qEeek" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -263,7 +263,7 @@
           <p class="desc">Space-saving and foldable.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹499</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE17" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/4fu09a8" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -274,7 +274,7 @@
           <p class="desc">Comfortable, durable, and lightweight.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹2,199</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE18" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/4fx61Qj" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -285,7 +285,7 @@
           <p class="desc">Boil water quickly and safely.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹1,099</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE19" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/4liTwJ6" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
@@ -296,7 +296,7 @@
           <p class="desc">Natural formula for healthy hair.</p>
           <div class="meta">
             <div class="price-row"><div class="price">₹449</div></div>
-            <div class="actions"><a class="btn btn-cta" href="https://www.amazon.in/dp/YOUR_AFFILIATE_CODE20" target="_blank" rel="noopener">Buy on Amazon</a></div>
+            <div class="actions"><a class="btn btn-cta" href="https://amzn.to/4mABeEr" target="_blank" rel="noopener">Buy on Amazon</a></div>
           </div>
         </article>
 
