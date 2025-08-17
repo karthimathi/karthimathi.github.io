@@ -71,7 +71,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/71Tv3xjgb8L._AC_UL320_.jpg" alt="Non-Stick Frying Pan" />
+          <img class="thumb" src="images/Induction Pan.png" alt="Non-Stick Frying Pan" />
           <h3 class="title">6. Non-Stick Frying Pan</h3>
           <p>Easy to clean and perfect for daily cooking.</p>
           <a class="btn-cta" href="https://amzn.to/3JbL29s" target="_blank">Buy on Amazon</a>
