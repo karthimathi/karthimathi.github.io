@@ -85,7 +85,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/51P6kRmGZRL._AC_UL320_.jpg" alt="Trimmer for Men" />
+          <img class="thumb" src="images/Trimmer.png" alt="Trimmer for Men" />
           <h3 class="title">8. Trimmer for Men</h3>
           <p>Smooth trim with skin protection.</p>
           <a class="btn-cta" href="https://amzn.to/46Pl3yn" target="_blank">Buy on Amazon</a>
