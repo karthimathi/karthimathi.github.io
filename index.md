@@ -127,7 +127,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/61iXBBdZ+gL._AC_UL320_.jpg" alt="Vacuum Cleaner" />
+          <img class="thumb" src="images/Vaccum Cleaner.png" alt="Vacuum Cleaner" />
           <h3 class="title">14. Vacuum Cleaner</h3>
           <p>Compact and powerful suction.</p>
           <a class="btn-cta" href="https://amzn.to/45cHQD8" target="_blank">Buy on Amazon</a>
