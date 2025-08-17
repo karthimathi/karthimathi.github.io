@@ -148,7 +148,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/61hAh0R1FqL._AC_UL320_.jpg" alt="Storage Organizer" />
+          <img class="thumb" src="images/Storage Oraganizer.png" alt="Storage Organizer" />
           <h3 class="title">17. Storage Organizer</h3>
           <p>Space-saving and foldable.</p>
           <a class="btn-cta" href="https://amzn.to/3J5Rxuy" target="_blank">Buy on Amazon</a>
