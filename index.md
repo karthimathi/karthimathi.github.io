@@ -57,7 +57,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/61F6C5aN-5L._AC_UL320_.jpg" alt="Power Bank" />
+          <img class="thumb" src="images/Power Bank.png" alt="Power Bank" />
           <h3 class="title">4. Power Bank</h3>
           <p>Fast-charging and travel friendly.</p>
           <a class="btn-cta" href="https://amzn.to/3J5PnLs" target="_blank">Buy on Amazon</a>
