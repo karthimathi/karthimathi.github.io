@@ -43,7 +43,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/61gscZYmaoL._AC_UL320_.jpg" alt="Smartwatch" />
+          <img class="thumb" src="images/Smartwatch.png" alt="Smartwatch" />
           <h3 class="title">2. Smartwatch</h3>
           <p>Track fitness, heart rate, and receive notifications.</p>
           <a class="btn-cta" href="https://amzn.to/4ow3o51" target="_blank">Buy on Amazon</a>
