@@ -78,7 +78,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/61Ahx8T-MCL._AC_UL320_.jpg" alt="Mini Fridge" />
+          <img class="thumb" src="images/Mini Bridge.png" alt="Mini Fridge" />
           <h3 class="title">7. Mini Fridge</h3>
           <p>Compact and ideal for small rooms or office.</p>
           <a class="btn-cta" href="https://amzn.to/46PAK8R" target="_blank">Buy on Amazon</a>
