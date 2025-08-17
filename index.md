@@ -64,7 +64,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/61y13PbI1iL._AC_UL320_.jpg" alt="Electric Toothbrush" />
+          <img class="thumb" src="images/Electric Tooth Brush.png" alt="Electric Toothbrush" />
           <h3 class="title">5. Electric Toothbrush</h3>
           <p>Advanced cleaning with smart timer.</p>
           <a class="btn-cta" href="https://amzn.to/4oPL3QX" target="_blank">Buy on Amazon</a>
