@@ -120,7 +120,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/61gTbdawT0L._AC_UL320_.jpg" alt="Gamepad Controller" />
+          <img class="thumb" src="images/Gamepad Controller.png" alt="Gamepad Controller" />
           <h3 class="title">13. Gamepad Controller</h3>
           <p>For Android or PC gaming.</p>
           <a class="btn-cta" href="https://amzn.to/4mnLCQ7" target="_blank">Buy on Amazon</a>
