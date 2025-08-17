@@ -92,14 +92,14 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/71wLbeYvKjL._AC_UL320_.jpg" alt="Laptop Stand" />
+          <img class="thumb" src="images/Laptop Stand.png" alt="Laptop Stand" />
           <h3 class="title">9. Laptop Stand</h3>
           <p>Ergonomic design for better posture.</p>
           <a class="btn-cta" href="https://amzn.to/3J5WzqX" target="_blank">Buy on Amazon</a>
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/61Q0RyRhP2L._AC_UL320_.jpg" alt="Wireless Mouse" />
+          <img class="thumb" src="images/Wireless Mouse.png" alt="Wireless Mouse" />
           <h3 class="title">10. Wireless Mouse</h3>
           <p>Comfortable grip with long battery life.</p>
           <a class="btn-cta" href="https://amzn.to/3V1RSkk" target="_blank">Buy on Amazon</a>
@@ -113,7 +113,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/51iIb9qNq-L._AC_UL320_.jpg" alt="Tripod Stand" />
+          <img class="thumb" src="images/Tripod stand.png" alt="Tripod Stand" />
           <h3 class="title">12. Tripod Stand</h3>
           <p>Perfect for content creators and vloggers.</p>
           <a class="btn-cta" href="https://amzn.to/3Hx7NEd" target="_blank">Buy on Amazon</a>
@@ -155,21 +155,21 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/71ClxJ-e3hL._AC_UL320_.jpg" alt="Running Shoes" />
+          <img class="thumb" src="images/Running shoes.png" alt="Running Shoes" />
           <h3 class="title">18. Running Shoes</h3>
           <p>Comfortable, durable, and lightweight.</p>
           <a class="btn-cta" href="https://amzn.to/3JcMc4D" target="_blank">Buy on Amazon</a>
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/51cA4nX7CeL._AC_UL320_.jpg" alt="Electric Kettle" />
+          <img class="thumb" src="images/Electric Kittle.png" alt="Electric Kettle" />
           <h3 class="title">19. Electric Kettle</h3>
           <p>Boil water quickly and safely.</p>
           <a class="btn-cta" href="https://amzn.to/4llGlHD" target="_blank">Buy on Amazon</a>
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/61hPSW6oHEL._AC_UL320_.jpg" alt="Hair Oil for Growth" />
+          <img class="thumb" src="images/Hair Oil For Growth.png" alt="Hair Oil for Growth" />
           <h3 class="title">20. Hair Oil for Growth</h3>
           <p>Natural formula for healthy hair.</p>
           <a class="btn-cta" href="https://amzn.to/4otU2Hf" target="_blank">Buy on Amazon</a>
