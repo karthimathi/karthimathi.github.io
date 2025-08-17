@@ -134,7 +134,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/71jYspOjcXL._AC_UL320_.jpg" alt="Skincare Kit" />
+          <img class="thumb" src="images/Skin Care Kit.png" alt="Skincare Kit" />
           <h3 class="title">15. Skincare Kit</h3>
           <p>For glowing and healthy skin.</p>
           <a class="btn-cta" href="https://amzn.to/3JujU5v" target="_blank">Buy on Amazon</a>
