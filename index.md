@@ -106,7 +106,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/71CrPDMjPzL._AC_UL320_.jpg" alt="Memory Foam Pillow" />
+          <img class="thumb" src="images/Memory Foam Fillow.png" alt="Memory Foam Pillow" />
           <h3 class="title">11. Memory Foam Pillow</h3>
           <p>Better sleep and neck support.</p>
           <a class="btn-cta" href="https://amzn.to/4mysezy" target="_blank">Buy on Amazon</a>
