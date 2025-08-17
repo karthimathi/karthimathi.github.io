@@ -36,7 +36,7 @@
     <main>
       <div class="grid">
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/51dJ3aq4ltL._AC_UY218_.jpg" alt="Wireless Earbuds" />
+          <img class="thumb" src="images/products.jpg" alt="Wireless Earbuds" />
           <h3 class="title">1. Wireless Earbuds</h3>
           <p>Great sound quality and long battery life.</p>
           <a class="btn-cta" href="https://amzn.to/3HtMvYa" target="_blank">Buy on Amazon</a>
