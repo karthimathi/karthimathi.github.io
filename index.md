@@ -50,7 +50,7 @@
         </article>
 
         <article class="card">
-          <img class="thumb" src="https://m.media-amazon.com/images/I/61+1FEr7PHL._AC_UL320_.jpg" alt="LED Ring Light" />
+          <img class="thumb" src="images/LED Ring Light.png" alt="LED Ring Light" />
           <h3 class="title">3. LED Ring Light</h3>
           <p>Perfect for YouTube, Instagram, and Zoom calls.</p>
           <a class="btn-cta" href="https://amzn.to/3JaXma2" target="_blank">Buy on Amazon</a>
