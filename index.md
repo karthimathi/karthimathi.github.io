@@ -207,46 +207,6 @@
 
     <main id="products">
       <div class="grid" id="productGrid">
-        <!-- 🔹 Your 20 product cards go here -->
-        <!-- Example card (remove if already added) -->
-        <article class="card">
-          <img class="thumb" src="images/EarBuds.png" alt="Wireless Earbuds" />
-          <h3 class="title">Wireless Earbuds</h3>
-          <p>Great sound quality and long battery life.</p>
-          <a class="btn-cta" href="https://amzn.to/3HtMvYa" target="_blank">Buy on Amazon</a>
-        </article>
-      </div>
-    </main>
-  </div>
-
-  <!-- 🔹 Footer -->
-  <footer id="contact">
-    © 2025 Best Amazon Deals | Affiliate Disclaimer: As an Amazon Associate I earn from qualifying purchases.  
-    <br>📧 Contact: <a href="mailto:youremail@example.com" style="color:var(--accent)">youremail@example.com</a>
-  </footer>
-
-  <!-- 🔹 Search Script -->
-  <script>
-    function searchProducts() {
-      const input = document.getElementById("searchInput").value.toLowerCase();
-      const products = document.querySelectorAll("#productGrid .card");
-
-      products.forEach(card => {
-        const title = card.querySelector(".title").innerText.toLowerCase();
-        if (title.includes(input)) {
-          card.style.display = "block";
-        } else {
-          card.style.display = "none";
-        }
-      });
-    }
-  </script>
-</body>
-
-
-
-    <main>
-      <div class="grid">
         <article class="card">
           <img class="thumb" src="images/EarBuds.png" alt="Wireless Earbuds" />
           <h3 class="title">1. Wireless Earbuds</h3>
@@ -386,8 +346,32 @@
           <p>Natural formula for healthy hair.</p>
           <a class="btn-cta" href="https://amzn.to/4otU2Hf" target="_blank">Buy on Amazon</a>
         </article>
+
       </div>
     </main>
   </div>
+
+  <!-- 🔹 Footer -->
+  <footer id="contact">
+    © 2025 Best Amazon Deals | Affiliate Disclaimer: As an Amazon Associate I earn from qualifying purchases.  
+    <br>📧 Contact: <a href="mailto:youremail@example.com" style="color:var(--accent)">youremail@example.com</a>
+  </footer>
+
+  <!-- 🔹 Search Script -->
+  <script>
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll("#productGrid .card");
+
+      products.forEach(card => {
+        const title = card.querySelector(".title").innerText.toLowerCase();
+        if (title.includes(input)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
 </body>
 </html>
