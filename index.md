@@ -6,32 +6,244 @@
   <title>Best Amazon Deals</title>
   <meta name="description" content="Handpicked Amazon affiliate products with the best reviews and deals." />
   <style>
-    :root{
+    :root {
       --bg:#0f1724;
       --card:#0b1220;
       --muted:#9aa6b2;
       --accent:#ff6b6b;
       --accent-2:#4fd1c5;
-      --glass: rgba(255,255,255,0.04);
       --radius:16px;
       --max:1100px;
       --gap:18px;
       font-family: Inter, sans-serif;
     }
-    html,body{margin:0;background:linear-gradient(180deg,#071024,#07182c);color:#e6eef6}
-    .wrap{max-width:var(--max);margin:36px auto;padding:28px;border-radius:20px;background:rgba(255,255,255,0.02)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--gap)}
-    .card{background:rgba(255,255,255,0.015);border-radius:var(--radius);padding:12px}
-    .thumb{width:100%;height:160px;object-fit:contain;background:rgba(255,255,255,0.02);border-radius:10px}
-    .title{font-size:15px;margin:6px 0}
-    .btn-cta{display:inline-block;padding:10px 12px;border-radius:10px;text-decoration:none;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#08131b;font-weight:600}
+    html,body {
+      margin:0;
+      background:linear-gradient(180deg,#071024,#07182c);
+      color:#e6eef6;
+    }
+    .wrap {
+      max-width:var(--max);
+      margin:36px auto;
+      padding:28px;
+      border-radius:20px;
+      background:rgba(255,255,255,0.02);
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 20px;
+      background: rgba(255,255,255,0.02);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(6px);
+    }
+    nav .logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--accent-2);
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #e6eef6;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: var(--accent);
+    }
+    .search-bar {
+      display: flex;
+      gap: 6px;
+    }
+    .search-bar input {
+      padding: 6px 10px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+    }
+    .search-bar button {
+      background: var(--accent);
+      border: none;
+      padding: 6px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+    }
+    .menu-toggle span {
+      width: 24px;
+      height: 3px;
+      background: #fff;
+    }
+
+    header h1 {
+      text-align: center;
+      font-size: 28px;
+      margin: 30px 0;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(240px,1fr));
+      gap:var(--gap);
+    }
+    .card {
+      background:rgba(255,255,255,0.015);
+      border-radius:var(--radius);
+      padding:12px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+    .thumb {
+      width:100%;
+      height:160px;
+      object-fit:contain;
+      background:rgba(255,255,255,0.02);
+      border-radius:10px;
+    }
+    .title {
+      font-size:15px;
+      margin:6px 0;
+    }
+    .btn-cta {
+      display:inline-block;
+      padding:10px 12px;
+      border-radius:10px;
+      text-decoration:none;
+      background:linear-gradient(90deg,var(--accent),var(--accent-2));
+      color:#08131b;
+      font-weight:600;
+      transition:0.3s;
+    }
+    .btn-cta:hover {
+      background:linear-gradient(90deg,var(--accent-2),var(--accent));
+      transform: scale(1.05);
+    }
+    footer {
+      text-align:center;
+      margin:40px 0;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: rgba(0,0,0,0.6);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      nav ul.show {
+        display: flex;
+      }
+      .menu-toggle {
+        display: flex;
+      }
+      .search-bar {
+        display: none;
+      }
+      header h1 { font-size: 22px; }
+      .title { font-size: 14px; }
+      .btn-cta { padding: 8px 10px; font-size: 14px; }
+    }
   </style>
 </head>
 <body>
+  <!-- 🔹 Navigation -->
+  <nav>
+    <div class="logo">Best Deals</div>
+    <ul id="menu">
+      <li><a href="#">Home</a></li>
+      <li><a href="#products">Categories</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <!-- Search bar -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <button onclick="searchProducts()">Search</button>
+    </div>
+    <!-- Hamburger -->
+    <div class="menu-toggle" onclick="document.getElementById('menu').classList.toggle('show')">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
   <div class="wrap">
     <header>
       <h1>🔥 Top 20 Amazon Products – Handpicked for You</h1>
     </header>
+
+    <main id="products">
+      <div class="grid" id="productGrid">
+        <!-- 🔹 Your 20 product cards go here -->
+        <!-- Example card (remove if already added) -->
+        <article class="card">
+          <img class="thumb" src="images/EarBuds.png" alt="Wireless Earbuds" />
+          <h3 class="title">Wireless Earbuds</h3>
+          <p>Great sound quality and long battery life.</p>
+          <a class="btn-cta" href="https://amzn.to/3HtMvYa" target="_blank">Buy on Amazon</a>
+        </article>
+      </div>
+    </main>
+  </div>
+
+  <!-- 🔹 Footer -->
+  <footer id="contact">
+    © 2025 Best Amazon Deals | Affiliate Disclaimer: As an Amazon Associate I earn from qualifying purchases.  
+    <br>📧 Contact: <a href="mailto:youremail@example.com" style="color:var(--accent)">youremail@example.com</a>
+  </footer>
+
+  <!-- 🔹 Search Script -->
+  <script>
+    function searchProducts() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const products = document.querySelectorAll("#productGrid .card");
+
+      products.forEach(card => {
+        const title = card.querySelector(".title").innerText.toLowerCase();
+        if (title.includes(input)) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+</body>
+</html>
+
 
     <main>
       <div class="grid">
