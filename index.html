@@ -3,21 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DealFinder - Best Amazon Product Deals</title>
+    <title>TechDeals - Find Your Perfect Tech Product</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Color Scheme */
-        :root {
-            --primary: #FF9900; /* Amazon Orange */
-            --secondary: #146EB4; /* Amazon Blue */
-            --accent: #FF6B6B; /* Vibrant Red */
-            --success: #2ECC71; /* Green for savings */
-            --dark: #232F3E; /* Amazon Dark Blue */
-            --light: #F5F5F5; /* Light background */
-            --text: #333333; /* Main text color */
-            --text-light: #777777; /* Lighter text */
-        }
-
         /* Base Styles */
         * {
             margin: 0;
@@ -25,490 +13,565 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        body {
-            background-color: var(--light);
-            color: var(--text);
-            line-height: 1.6;
+        
+        :root {
+            --primary: #4361ee;
+            --secondary: #3a0ca3;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #4cc9f0;
         }
-
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f7fb;
+        }
+        
         a {
             text-decoration: none;
             color: inherit;
         }
-
+        
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 15px;
         }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-weight: 600;
-            text-align: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #e68900;
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: var(--secondary);
-            color: white;
-        }
-
-        .btn-secondary:hover {
-            background: #115d9e;
-        }
-
+        
         /* Header Styles */
         header {
-            background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
             color: white;
-            padding: 15px 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 1rem 0;
             position: sticky;
             top: 0;
-            z-index: 1000;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-
+        
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+        
         .logo {
-            font-size: 28px;
-            font-weight: 700;
             display: flex;
             align-items: center;
+            font-size: 1.8rem;
+            font-weight: 700;
         }
-
+        
         .logo i {
-            color: var(--primary);
             margin-right: 10px;
+            font-size: 2rem;
         }
-
-        .search-bar {
-            flex: 1;
-            max-width: 500px;
-            margin: 0 20px;
-            position: relative;
-        }
-
-        .search-bar input {
-            width: 100%;
-            padding: 10px 15px;
-            border-radius: 30px;
-            border: none;
-            font-size: 16px;
-        }
-
-        .search-bar button {
-            position: absolute;
-            right: 5px;
-            top: 5px;
-            background: var(--primary);
-            border: none;
-            color: white;
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            cursor: pointer;
-        }
-
-        .nav-links {
+        
+        nav ul {
             display: flex;
             list-style: none;
         }
-
-        .nav-links li {
-            margin-left: 20px;
+        
+        nav ul li {
+            margin-left: 1.5rem;
         }
-
-        .nav-links a {
+        
+        nav ul li a {
             font-weight: 500;
             transition: color 0.3s;
+            display: flex;
+            align-items: center;
         }
-
-        .nav-links a:hover {
-            color: var(--primary);
+        
+        nav ul li a i {
+            margin-right: 5px;
         }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(35, 47, 62, 0.8), rgba(20, 110, 180, 0.8)), 
-                        url('https://images.unsplash.com/photo-1607082350899-7e105aa886ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 80px 0;
-            text-align: center;
+        
+        nav ul li a:hover {
+            color: var(--success);
         }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        
+        /* Search Section */
+        .search-section {
+            background-color: white;
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
-            margin: 0 auto 30px;
+        
+        .search-container {
+            display: flex;
+            max-width: 800px;
+            margin: 0 auto;
+            gap: 10px;
         }
-
-        /* Categories Section */
-        .categories {
-            padding: 50px 0;
-            background: white;
+        
+        .search-box {
+            flex: 1;
+            padding: 12px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
         }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-            position: relative;
+        
+        .search-box:focus {
+            outline: none;
+            border-color: var(--primary);
         }
-
-        .section-title h2 {
-            font-size: 32px;
-            color: var(--dark);
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
-        .section-title h2:after {
-            content: '';
-            position: absolute;
-            width: 80px;
-            height: 4px;
+        
+        .search-btn {
             background: var(--primary);
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
         }
-
-        .category-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+        
+        .search-btn:hover {
+            background: var(--secondary);
         }
-
-        .category-card {
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .category-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .category-img {
-            height: 150px;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .category-content {
-            padding: 20px;
-        }
-
-        .category-content h3 {
-            margin-bottom: 10px;
-            color: var(--dark);
-        }
-
-        /* Deals Section */
-        .deals {
-            padding: 50px 0;
-            background: var(--light);
-        }
-
-        .deal-filters {
+        
+        .filter-options {
             display: flex;
             justify-content: center;
-            margin-bottom: 30px;
             flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
         }
-
+        
         .filter-btn {
-            margin: 5px 10px;
-            padding: 8px 20px;
             background: white;
-            border: 1px solid #ddd;
-            border-radius: 30px;
+            border: 1px solid #e0e0e0;
+            padding: 8px 15px;
+            border-radius: 20px;
             cursor: pointer;
             transition: all 0.3s;
+            font-size: 0.9rem;
         }
-
-        .filter-btn.active, .filter-btn:hover {
+        
+        .filter-btn:hover, .filter-btn.active {
             background: var(--primary);
             color: white;
             border-color: var(--primary);
         }
-
-        .deal-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(67, 97, 238, 0.9), rgba(58, 12, 163, 0.9)), url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
         }
-
-        .deal-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(247, 37, 133, 0.4);
+        }
+        
+        .cta-button:hover {
+            background-color: #d40c6a;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(247, 37, 133, 0.5);
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            color: var(--dark);
             position: relative;
         }
-
-        .deal-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 10px auto;
+            border-radius: 2px;
         }
-
-        .deal-badge {
+        
+        .product-controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .results-count {
+            font-weight: 500;
+            color: var(--gray);
+        }
+        
+        .sort-options select {
+            padding: 8px 15px;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background: white;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .product-badge {
             position: absolute;
-            top: 15px;
-            left: 15px;
+            top: 10px;
+            right: 10px;
             background: var(--accent);
             color: white;
             padding: 5px 10px;
             border-radius: 4px;
-            font-size: 14px;
+            font-size: 0.8rem;
             font-weight: 600;
             z-index: 2;
         }
-
-        .deal-img {
+        
+        .product-image {
             height: 200px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .deal-content {
-            padding: 20px;
-        }
-
-        .deal-title {
-            font-size: 18px;
-            margin-bottom: 10px;
-            height: 50px;
-            overflow: hidden;
-        }
-
-        .deal-price {
+            background-color: #f0f0f0;
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .current-price {
-            font-size: 22px;
-            font-weight: 700;
-            color: var(--dark);
-            margin-right: 10px;
-        }
-
-        .original-price {
-            font-size: 16px;
-            color: var(--text-light);
-            text-decoration: line-through;
-        }
-
-        .savings {
-            color: var(--success);
-            font-weight: 600;
-            margin-left: auto;
-        }
-
-        .rating {
+            justify-content: center;
+            font-size: 3.5rem;
             color: var(--primary);
-            margin-bottom: 15px;
+            position: relative;
+            overflow: hidden;
         }
-
-        /* Newsletter Section */
-        .newsletter {
-            background: linear-gradient(135deg, var(--secondary) 0%, var(--dark) 100%);
-            color: white;
-            padding: 60px 0;
+        
+        .product-image:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.05));
+        }
+        
+        .product-info {
+            padding: 1.5rem;
+        }
+        
+        .product-category {
+            color: var(--gray);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .product-description {
+            color: var(--gray);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .product-price {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .product-rating {
+            color: #ffc107;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        .affiliate-button {
+            display: block;
             text-align: center;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            color: white;
+            padding: 0.8rem;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s;
         }
-
-        .newsletter h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
+        
+        .affiliate-button:hover {
+            background: linear-gradient(to right, var(--secondary), var(--primary));
+            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
         }
-
-        .newsletter p {
-            max-width: 600px;
-            margin: 0 auto 30px;
-            font-size: 18px;
-        }
-
-        .newsletter-form {
-            max-width: 500px;
-            margin: 0 auto;
+        
+        /* Pagination */
+        .pagination {
             display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+            gap: 5px;
         }
-
-        .newsletter-form input {
-            flex: 1;
-            padding: 12px 15px;
-            border: none;
-            border-radius: 4px 0 0 4px;
-            font-size: 16px;
+        
+        .page-btn {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
         }
-
-        .newsletter-form button {
+        
+        .page-btn:hover, .page-btn.active {
             background: var(--primary);
             color: white;
-            border: none;
-            padding: 0 25px;
-            border-radius: 0 4px 4px 0;
-            cursor: pointer;
+            border-color: var(--primary);
+        }
+        
+        /* Features Section */
+        .features {
+            background-color: white;
+            padding: 4rem 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f5f7fb 0%, #e4e8f0 100%);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
             font-weight: 600;
-            transition: background 0.3s;
         }
-
-        .newsletter-form button:hover {
-            background: #e68900;
-        }
-
+        
         /* Footer */
         footer {
-            background: var(--dark);
+            background: linear-gradient(135deg, var(--dark) 0%, #000 100%);
             color: white;
-            padding: 50px 0 20px;
+            padding: 4rem 0 1.5rem;
         }
-
+        
         .footer-content {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
+            gap: 2.5rem;
+            margin-bottom: 2rem;
         }
-
+        
         .footer-column h3 {
-            font-size: 18px;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--success);
         }
-
-        .footer-column h3:after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 3px;
-            background: var(--primary);
-            bottom: 0;
-            left: 0;
-        }
-
-        .footer-links {
+        
+        .footer-column ul {
             list-style: none;
         }
-
-        .footer-links li {
-            margin-bottom: 10px;
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
         }
-
-        .footer-links a {
-            color: #ccc;
+        
+        .footer-column ul li a {
             transition: color 0.3s;
         }
-
-        .footer-links a:hover {
-            color: var(--primary);
+        
+        .footer-column ul li a:hover {
+            color: var(--success);
         }
-
+        
         .social-links {
             display: flex;
-            margin-top: 15px;
+            gap: 15px;
+            margin-top: 1rem;
         }
-
+        
         .social-links a {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 36px;
-            height: 36px;
-            background: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
             border-radius: 50%;
-            margin-right: 10px;
-            transition: background 0.3s;
+            transition: all 0.3s;
         }
-
+        
         .social-links a:hover {
             background: var(--primary);
+            transform: translateY(-3px);
         }
-
-        .footer-bottom {
+        
+        .copyright {
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 14px;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
             color: #aaa;
         }
-
+        
+        /* Loading Animation */
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .loading-spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--primary);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
         /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
+                text-align: center;
             }
             
-            .logo {
-                margin-bottom: 15px;
+            nav ul {
+                margin-top: 1rem;
+                justify-content: center;
+                flex-wrap: wrap;
             }
             
-            .search-bar {
-                margin: 15px 0;
-                max-width: 100%;
+            nav ul li {
+                margin: 0.5rem;
             }
             
-            .nav-links {
-                margin-top: 15px;
+            .hero {
+                padding: 3rem 0;
             }
             
             .hero h1 {
-                font-size: 36px;
+                font-size: 2rem;
             }
             
             .hero p {
-                font-size: 18px;
+                font-size: 1rem;
             }
             
-            .newsletter-form {
+            .search-container {
                 flex-direction: column;
             }
             
-            .newsletter-form input {
-                border-radius: 4px;
-                margin-bottom: 10px;
+            .search-btn {
+                border-radius: 8px;
+                margin-top: 10px;
             }
             
-            .newsletter-form button {
-                border-radius: 4px;
-                padding: 12px;
+            .product-controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -516,271 +579,309 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container header-content">
-            <div class="logo">
-                <i class="fas fa-bolt"></i>
-                <span>DealFinder</span>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>TechDeals</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#products"><i class="fas fa-box-open"></i> Products</a></li>
+                        <li><a href="#categories"><i class="fas fa-tags"></i> Categories</a></li>
+                        <li><a href="#deals"><i class="fas fa-bolt"></i> Hot Deals</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="search-bar">
-                <input type="text" placeholder="Search for products...">
-                <button><i class="fas fa-search"></i></button>
-            </div>
-            <ul class="nav-links">
-                <li><a href="https://amzn.to/4mCiCn8">Home</a></li>
-                <li><a href="#">Categories</a></li>
-                <li><a href="#">Deals</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
         </div>
     </header>
 
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" class="search-box" placeholder="Search among 500+ tech products...">
+                <button class="search-btn"><i class="fas fa-search"></i> Search</button>
+            </div>
+            <div class="filter-options">
+                <button class="filter-btn active">All Products</button>
+                <button class="filter-btn">Laptops</button>
+                <button class="filter-btn">Smartphones</button>
+                <button class="filter-btn">Tablets</button>
+                <button class="filter-btn">Accessories</button>
+                <button class="filter-btn">Gaming</button>
+                <button class="filter-btn">Audio</button>
+                <button class="filter-btn">Cameras</button>
+            </div>
+        </div>
+    </section>
+
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="container">
-            <h1>Discover Amazing Amazon Deals</h1>
-            <p>We find the best discounts and promotions so you don't have to. Save time and money with our hand-picked selection of Amazon products.</p>
-            <a href="#deals" class="btn btn-primary">Explore Deals</a>
+            <h1>Discover 500+ Amazing Tech Products</h1>
+            <p>Find the perfect tech products with our curated selection. From laptops to smart home devices, we have everything you need at the best prices.</p>
+            <a href="#products" class="cta-button">Explore All Products</a>
         </div>
     </section>
 
-    <!-- Categories Section -->
-    <section class="categories">
+    <!-- Products Section -->
+    <section class="products" id="products">
         <div class="container">
-            <div class="section-title">
-                <h2>Popular Categories</h2>
-            </div>
-            <div class="category-grid">
-                <div class="category-card">
-                    <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="category-content">
-                        <h3>Electronics</h3>
-                        <p>Latest gadgets and tech deals</p>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1558769132-cb1aea458c5e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="category-content">
-                        <h3>Home & Kitchen</h3>
-                        <p>Appliances and home essentials</p>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="category-content">
-                        <h3>Fashion</h3>
-                        <p>Clothing, shoes and accessories</p>
-                    </div>
-                </div>
-                <div class="category-card">
-                    <div class="category-img" style="background-image: url('https://images.unsplash.com/photo-1534452203293-494d7ddbf7e0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="category-content">
-                        <h3>Beauty & Personal Care</h3>
-                        <p>Skincare, makeup and more</p>
-                    </div>
+            <h2 class="section-title">Featured Products</h2>
+            
+            <div class="product-controls">
+                <div class="results-count">Showing 12 of 500+ products</div>
+                <div class="sort-options">
+                    <select>
+                        <option>Sort by: Featured</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                        <option>Highest Rated</option>
+                        <option>Newest First</option>
+                    </select>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Deals Section -->
-    <section class="deals" id="deals">
-        <div class="container">
-            <div class="section-title">
-                <h2>Today's Best Deals</h2>
+            
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded here by JavaScript -->
             </div>
-            <div class="deal-filters">
-                <button class="filter-btn active">All Deals</button>
-                <button class="filter-btn">Electronics</button>
-                <button class="filter-btn">Home & Kitchen</button>
-                <button class="filter-btn">Fashion</button>
-                <button class="filter-btn">Beauty</button>
-                <button class="filter-btn">Under $25</button>
+            
+            <div class="loading" id="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading more products...</p>
             </div>
-            <div class="deal-grid">
-                <!-- Deal 1 -->
-                <div class="deal-card">
-                    <div class="deal-badge">50% OFF</div>
-                    <div class="deal-img" style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="deal-content">
-                        <h3 class="deal-title">Wireless Bluetooth Headphones with Noise Cancellation</h3>
-                        <div class="deal-price">
-                            <span class="current-price">$49.99</span>
-                            <span class="original-price">$99.99</span>
-                            <span class="savings">Save $50</span>
-                        </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>(4.5)</span>
-                        </div>
-                        <a href="#" class="btn btn-primary">View Deal</a>
-                    </div>
-                </div>
-                
-                <!-- Deal 2 -->
-                <div class="deal-card">
-                    <div class="deal-badge">30% OFF</div>
-                    <div class="deal-img" style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="deal-content">
-                        <h3 class="deal-title">Smart Watch with Fitness Tracker and Heart Rate Monitor</h3>
-                        <div class="deal-price">
-                            <span class="current-price">$69.99</span>
-                            <span class="original-price">$99.99</span>
-                            <span class="savings">Save $30</span>
-                        </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <span>(4.0)</span>
-                        </div>
-                        <a href="#" class="btn btn-primary">View Deal</a>
-                    </div>
-                </div>
-                
-                <!-- Deal 3 -->
-                <div class="deal-card">
-                    <div class="deal-badge">40% OFF</div>
-                    <div class="deal-img" style="background-image: url('https://images.unsplash.com/photo-1572635196237-14b3f281503f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="deal-content">
-                        <h3 class="deal-title">Premium Coffee Maker with Programmable Settings</h3>
-                        <div class="deal-price">
-                            <span class="current-price">$59.99</span>
-                            <span class="original-price">$99.99</span>
-                            <span class="savings">Save $40</span>
-                        </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <span>(5.0)</span>
-                        </div>
-                        <a href="#" class="btn btn-primary">View Deal</a>
-                    </div>
-                </div>
-                
-                <!-- Deal 4 -->
-                <div class="deal-card">
-                    <div class="deal-badge">25% OFF</div>
-                    <div class="deal-img" style="background-image: url('https://images.unsplash.com/photo-1585386959984-a4155224a1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');"></div>
-                    <div class="deal-content">
-                        <h3 class="deal-title">Professional Skincare Set with Vitamin C Serum</h3>
-                        <div class="deal-price">
-                            <span class="current-price">$29.99</span>
-                            <span class="original-price">$39.99</span>
-                            <span class="savings">Save $10</span>
-                        </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <span>(4.5)</span>
-                        </div>
-                        <a href="#" class="btn btn-primary">View Deal</a>
-                    </div>
-                </div>
+            
+            <div class="pagination">
+                <div class="page-btn active">1</div>
+                <div class="page-btn">2</div>
+                <div class="page-btn">3</div>
+                <div class="page-btn">4</div>
+                <div class="page-btn">5</div>
+                <div class="page-btn"><i class="fas fa-chevron-right"></i></div>
             </div>
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="newsletter">
+    <!-- Features Section -->
+    <section class="features" id="about">
         <div class="container">
-            <h2>Never Miss a Deal Again!</h2>
-            <p>Subscribe to our newsletter and get the hottest Amazon deals delivered straight to your inbox.</p>
-            <form class="newsletter-form">
-                <input type="email" placeholder="Your email address" required>
-                <button type="submit">Subscribe</button>
-            </form>
+            <h2 class="section-title">Why Shop With Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3 class="feature-title">Curated Selection</h3>
+                    <p>We handpick only the best products from trusted brands to ensure quality and value.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tag"></i></div>
+                    <h3 class="feature-title">Best Prices</h3>
+                    <p>Get exclusive deals and discounts not available anywhere else. Price match guarantee.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
+                    <h3 class="feature-title">Fast Shipping</h3>
+                    <p>Free shipping on orders over $50. Express delivery options available.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                    <h3 class="feature-title">24/7 Support</h3>
+                    <p>Our customer service team is available around the clock to assist you.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>DealFinder</h3>
-                    <p>Your one-stop destination for the best Amazon deals and discounts.</p>
+                    <h3>TechDeals</h3>
+                    <p>Your trusted source for the best tech products and deals. We help you find exactly what you need at the best prices.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+                
                 <div class="footer-column">
                     <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Categories</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">All Products</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#deals">Hot Deals</a></li>
+                        <li><a href="#about">About Us</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-column">
-                    <h3>Categories</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Electronics</a></li>
-                        <li><a href="#">Home & Kitchen</a></li>
-                        <li><a href="#">Fashion</a></li>
-                        <li><a href="#">Beauty & Personal Care</a></li>
-                        <li><a href="#">Toys & Games</a></li>
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns & Refunds</a></li>
+                        <li><a href="#">Track Your Order</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-column">
-                    <h3>Legal</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Affiliate Disclosure</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@techdeals.com</li>
+                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 DealFinder. All rights reserved. | As an Amazon Associate I earn from qualifying purchases.</p>
+            
+            <div class="copyright">
+                <p>&copy; 2023 TechDeals. All rights reserved. | Affiliate Disclosure | Privacy Policy | Terms of Service</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Simple JavaScript for filter buttons
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
+        // Sample product data (in a real scenario, this would come from a database)
+        const products = [
+            { id: 1, name: "Premium Gaming Laptop", category: "Laptops", price: 1299.99, rating: 4.8, description: "High-performance gaming laptop with RTX graphics", badge: "Hot" },
+            { id: 2, name: "Smartphone Pro Max", category: "Smartphones", price: 999.99, rating: 4.7, description: "Latest smartphone with advanced camera system", badge: "New" },
+            { id: 3, name: "Wireless Noise Cancelling Headphones", category: "Audio", price: 299.99, rating: 4.6, description: "Premium sound quality with active noise cancellation", badge: "Sale" },
+            { id: 4, name: "Ultra HD Smart TV", category: "TV & Home", price: 899.99, rating: 4.5, description: "65-inch 4K Smart TV with HDR technology", badge: "" },
+            { id: 5, name: "Professional DSLR Camera", category: "Cameras", price: 1499.99, rating: 4.9, description: "24MP DSLR with 4K video recording", badge: "Popular" },
+            { id: 6, name: "Gaming Mechanical Keyboard", category: "Accessories", price: 129.99, rating: 4.4, description: "RGB mechanical keyboard with customizable keys", badge: "" },
+            { id: 7, name: "Fitness Smartwatch", category: "Wearables", price: 249.99, rating: 4.3, description: "Track your health and fitness with this advanced smartwatch", badge: "New" },
+            { id: 8, name: "Tablet Pro", category: "Tablets", price: 599.99, rating: 4.5, description: "10.5-inch tablet with stylus support", badge: "" },
+            { id: 9, name: "Wireless Earbuds", category: "Audio", price: 149.99, rating: 4.2, description: "True wireless earbuds with charging case", badge: "Sale" },
+            { id: 10, name: "External SSD 1TB", category: "Storage", price: 199.99, rating: 4.7, description: "High-speed portable SSD for backups and storage", badge: "" },
+            { id: 11, name: "Gaming Mouse", category: "Accessories", price: 79.99, rating: 4.4, description: "Precision gaming mouse with customizable DPI", badge: "" },
+            { id: 12, name: "Monitor 27-inch 4K", category: "Monitors", price: 399.99, rating: 4.6, description: "Ultra HD monitor with HDR support", badge: "Popular" }
+        ];
+
+        // Icons for different product categories
+        const categoryIcons = {
+            "Laptops": "fas fa-laptop",
+            "Smartphones": "fas fa-mobile-alt",
+            "Audio": "fas fa-headphones",
+            "TV & Home": "fas fa-tv",
+            "Cameras": "fas fa-camera",
+            "Accessories": "fas fa-keyboard",
+            "Wearables": "fas fa-clock",
+            "Tablets": "fas fa-tablet-alt",
+            "Storage": "fas fa-hdd",
+            "Monitors": "fas fa-desktop",
+            "Gaming": "fas fa-gamepad",
+            "Networking": "fas fa-wifi"
+        };
+
+        // Function to generate product cards
+        function generateProductCards(productsToShow) {
+            const productGrid = document.getElementById('productGrid');
+            productGrid.innerHTML = '';
             
-            filterButtons.forEach(button => {
+            productsToShow.forEach(product => {
+                const iconClass = categoryIcons[product.category] || "fas fa-box";
+                
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
+                    <div class="product-image">
+                        <i class="${iconClass}"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category}</div>
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-rating">
+                            ${'<i class="fas fa-star"></i>'.repeat(Math.floor(product.rating))}
+                            ${product.rating % 1 >= 0.5 ? '<i class="fas fa-star-half-alt"></i>' : ''}
+                            <span> (${product.rating})</span>
+                        </div>
+                        <div class="product-price">$${product.price.toFixed(2)}</div>
+                        <a href="#" class="affiliate-button">View Deal</a>
+                    </div>
+                `;
+                
+                productGrid.appendChild(productCard);
+            });
+        }
+
+        // Function to simulate loading more products
+        function loadMoreProducts() {
+            const loading = document.getElementById('loading');
+            loading.style.display = 'block';
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                // In a real application, you would fetch more products from a server
+                // For this demo, we'll just duplicate the existing products
+                const moreProducts = [...products, ...products.map(p => ({...p, id: p.id + 12}))];
+                generateProductCards(moreProducts);
+                loading.style.display = 'none';
+                
+                // Update results count
+                document.querySelector('.results-count').textContent = `Showing ${moreProducts.length} of 500+ products`;
+            }, 1500);
+        }
+
+        // Initialize the page with products
+        document.addEventListener('DOMContentLoaded', () => {
+            generateProductCards(products);
+            
+            // Add event listeners for filter buttons
+            document.querySelectorAll('.filter-btn').forEach(button => {
                 button.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterButtons.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
+                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
                     this.classList.add('active');
                     
-                    // In a real implementation, you would filter the deals here
-                    // For this demo, we'll just show an alert
-                    alert('Filtering by: ' + this.textContent);
+                    // In a real application, you would filter products by category
+                    // For this demo, we'll just show all products
+                    generateProductCards(products);
                 });
             });
             
-            // Newsletter form submission
-            const newsletterForm = document.querySelector('.newsletter-form');
-            newsletterForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const email = this.querySelector('input[type="email"]').value;
-                alert('Thank you for subscribing with: ' + email);
-                this.reset();
+            // Add event listener for search
+            document.querySelector('.search-btn').addEventListener('click', function() {
+                const searchTerm = document.querySelector('.search-box').value.toLowerCase();
+                if (searchTerm) {
+                    const filteredProducts = products.filter(product => 
+                        product.name.toLowerCase().includes(searchTerm) || 
+                        product.description.toLowerCase().includes(searchTerm) ||
+                        product.category.toLowerCase().includes(searchTerm)
+                    );
+                    generateProductCards(filteredProducts);
+                    document.querySelector('.results-count').textContent = `Found ${filteredProducts.length} products`;
+                }
+            });
+            
+            // Add event listener for pagination
+            document.querySelectorAll('.page-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    if (this.querySelector('i')) {
+                        loadMoreProducts();
+                    } else {
+                        document.querySelectorAll('.page-btn').forEach(btn => btn.classList.remove('active'));
+                        this.classList.add('active');
+                        // In a real application, you would load the specific page
+                    }
+                });
+            });
+            
+            // Add event listener for Enter key in search box
+            document.querySelector('.search-box').addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    document.querySelector('.search-btn').click();
+                }
             });
         });
     </script>
