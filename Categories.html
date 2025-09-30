@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Categories</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            border-radius: 3px;
+        }
+
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+            padding: 20px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .category-image {
+            height: 180px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .category-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .category-card:hover .category-overlay {
+            opacity: 1;
+        }
+
+        .category-btn {
+            background: white;
+            color: #2c3e50;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-btn:hover {
+            background: #3498db;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .category-name {
+            padding: 20px;
+            text-align: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            background: white;
+        }
+
+        .category-icon {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            color: #3498db;
+        }
+
+        /* Color variations for different categories */
+        .category-card:nth-child(3n+1) .category-icon {
+            color: #e74c3c;
+        }
+
+        .category-card:nth-child(3n+2) .category-icon {
+            color: #2ecc71;
+        }
+
+        .category-card:nth-child(5n+3) .category-name {
+            background: linear-gradient(to right, #f8f9fa, #ffffff);
+        }
+
+        .category-card:nth-child(5n+4) .category-name {
+            background: linear-gradient(to right, #ffffff, #f8f9fa);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+                gap: 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .categories-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Shop By Category</h1>
+            <p class="subtitle">Explore our wide range of products across different categories</p>
+        </header>
+        
+        <div class="categories-grid">
+            <!-- Mobiles -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Mobiles</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-mobile-alt category-icon"></i> Mobiles
+                </div>
+            </div>
+            
+            <!-- Computers -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Computers</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-laptop category-icon"></i> Computers
+                </div>
+            </div>
+            
+            <!-- TV -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore TV</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-tv category-icon"></i> TV
+                </div>
+            </div>
+            
+            <!-- Appliances -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1158&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Appliances</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-blender category-icon"></i> Appliances
+                </div>
+            </div>
+            
+            <!-- Electronics -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1201&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Electronics</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-plug category-icon"></i> Electronics
+                </div>
+            </div>
+            
+            <!-- Men's Fashion -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Men's Fashion</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-tshirt category-icon"></i> Men's Fashion
+                </div>
+            </div>
+            
+            <!-- Women's Fashion -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Women's Fashion</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-female category-icon"></i> Women's Fashion
+                </div>
+            </div>
+            
+            <!-- Home -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1158&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Home</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-home category-icon"></i> Home
+                </div>
+            </div>
+            
+            <!-- Kitchen -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Kitchen</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-utensils category-icon"></i> Kitchen
+                </div>
+            </div>
+            
+            <!-- Pets -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1155&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Pets</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-paw category-icon"></i> Pets
+                </div>
+            </div>
+            
+            <!-- Beauty & Health -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Beauty & Health</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-spa category-icon"></i> Beauty & Health
+                </div>
+            </div>
+            
+            <!-- Grocery -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Grocery</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-shopping-basket category-icon"></i> Grocery
+                </div>
+            </div>
+            
+            <!-- Sports -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Sports</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-baseball-ball category-icon"></i> Sports
+                </div>
+            </div>
+            
+            <!-- Fitness -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Fitness</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-dumbbell category-icon"></i> Fitness
+                </div>
+            </div>
+            
+            <!-- Bags & Luggage -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Bags & Luggage</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-suitcase category-icon"></i> Bags & Luggage
+                </div>
+            </div>
+            
+            <!-- Toys -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Toys</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-gamepad category-icon"></i> Toys
+                </div>
+            </div>
+            
+            <!-- Baby Products -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1584839404047-5f65c5df5c6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Baby Products</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-baby category-icon"></i> Baby Products
+                </div>
+            </div>
+            
+            <!-- Kids Fashion -->
+            <div class="category-card">
+                <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80')">
+                    <div class="category-overlay">
+                        <button class="category-btn">Explore Kids Fashion</button>
+                    </div>
+                </div>
+                <div class="category-name">
+                    <i class="fas fa-child category-icon"></i> Kids Fashion
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 ShopAll Categories. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Add interactivity to category cards
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const categoryName = this.querySelector('.category-name').textContent.trim();
+                alert(`Navigating to ${categoryName} category!`);
+            });
+            
+            // Add hover effect to the entire card
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+                this.style.boxShadow = '0 15px 30px rgba(0, 0, 0, 0.15)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 8px 20px rgba(0, 0, 0, 0.08)';
+            });
+        });
+        
+        // Add click effect to buttons
+        document.querySelectorAll('.category-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.stopPropagation(); // Prevent triggering the card click event
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+        });
+    </script>
+</body>
+</html>
