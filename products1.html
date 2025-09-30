@@ -1,114 +1,260 @@
-<script>
-    // Generate 50 random products
-    function generateProducts() {
-        const products = [];
-        const categories = [
-            "electronics", "home", "fashion", "beauty", "sports", 
-            "toys", "books", "office", "garden", "kitchen"
-        ];
-        const imageBaseUrl = "https://source.unsplash.com/random/600x600/?";
-        
-        for (let i = 1; i <= 50; i++) {
-            const category = categories[Math.floor(Math.random() * categories.length)];
-            const discount = Math.floor(Math.random() * 50) + 10;
-            const originalPrice = Math.floor(Math.random() * 500) + 50;
-            const currentPrice = originalPrice * (1 - discount / 100);
-            const rating = (Math.random() * 2 + 3).toFixed(1);
-            const reviews = Math.floor(Math.random() * 5000) + 100;
-            
-            // Amazon affiliate link format (You can replace YOURAFFID)
-            const affiliateLink = `https://www.amazon.in/s?k=${category}&tag=YOURAFFID`;
-
-            products.push({
-                id: i,
-                title: `Premium Product ${i} - High Quality ${category}`,
-                category: category,
-                price: currentPrice.toFixed(2),
-                originalPrice: originalPrice.toFixed(2),
-                image: `${imageBaseUrl}${category}`,
-                rating: parseFloat(rating),
-                reviews: reviews,
-                badge: `${discount}% OFF`,
-                link: affiliateLink
-            });
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        return products;
-    }
 
-    // Generate star rating HTML
-    function generateStarRating(rating) {
-        let stars = '';
-        const fullStars = Math.floor(rating);
-        const hasHalfStar = rating % 1 !== 0;
-        
-        for (let i = 0; i < fullStars; i++) stars += '<i class="fas fa-star"></i>';
-        if (hasHalfStar) stars += '<i class="fas fa-star-half-alt"></i>';
-        const emptyStars = 5 - Math.ceil(rating);
-        for (let i = 0; i < emptyStars; i++) stars += '<i class="far fa-star"></i>';
-        return stars;
-    }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-    // Display products on the page
-    function displayProducts(products) {
-        const container = document.getElementById('products-container');
-        container.innerHTML = '';
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            text-align: center;
+        }
 
-        products.forEach(product => {
-            const savings = Math.round(
-                ((parseFloat(product.originalPrice) - parseFloat(product.price)) / parseFloat(product.originalPrice)) * 100
-            );
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h1:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            border-radius: 2px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            height: 220px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .product-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #e74c3c;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .product-description {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .product-price .old-price {
+            text-decoration: line-through;
+            color: #95a5a6;
+            font-size: 1rem;
+            margin-right: 8px;
+        }
+
+        .product-price .new-price {
+            color: #e74c3c;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(to right, #3498db, #2ecc71);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(52, 152, 219, 0.4);
+        }
+
+        .btn i {
+            margin-right: 8px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
             
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card fade-in';
-            productCard.innerHTML = `
-                <div class="product-badge">${product.badge}</div>
-                <div class="product-img" style="background-image: url('${product.image}&sig=${product.id}');"></div>
-                <div class="product-content">
-                    <h3 class="product-title">${product.title}</h3>
-                    <div class="product-price">
-                        <span class="current-price">$${product.price}</span>
-                        <span class="original-price">$${product.originalPrice}</span>
-                        <span class="savings">Save ${savings}%</span>
-                    </div>
-                    <div class="rating">
-                        ${generateStarRating(product.rating)}
-                        <span>(${product.rating})</span>
-                    </div>
-                    <a href="${product.link}" target="_blank" class="btn btn-primary">View Deal</a>
-                    <div class="product-meta">
-                        <span><i class="far fa-clock"></i> Limited time</span>
-                        <span><i class="fas fa-fire"></i> ${product.reviews} reviews</span>
-                    </div>
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Featured Products</h1>
+        
+        <div class="products-grid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+                    <span class="product-tag">Sale</span>
                 </div>
-            `;
-            container.appendChild(productCard);
-        });
-    }
+                <div class="product-info">
+                    <h3 class="product-title">Wireless Headphones</h3>
+                    <p class="product-description">Premium sound quality with noise cancellation feature.</p>
+                    <div class="product-price">
+                        <span class="old-price">$129.99</span>
+                        <span class="new-price">$99.99</span>
+                    </div>
+                    <button class="btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
+                    <span class="product-tag">New</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Smart Watch</h3>
+                    <p class="product-description">Track your fitness and stay connected on the go.</p>
+                    <div class="product-price">
+                        <span class="new-price">$199.99</span>
+                    </div>
+                    <button class="btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1546868871-7041f2a55e12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80')">
+                    <span class="product-tag">Popular</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Smart Speaker</h3>
+                    <p class="product-description">Voice-controlled assistant with premium audio.</p>
+                    <div class="product-price">
+                        <span class="old-price">$89.99</span>
+                        <span class="new-price">$69.99</span>
+                    </div>
+                    <button class="btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+            
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1541807084-5c52b6b3adef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80')">
+                    <span class="product-tag">Limited</span>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-title">Wireless Keyboard</h3>
+                    <p class="product-description">Ergonomic design with long battery life.</p>
+                    <div class="product-price">
+                        <span class="new-price">$79.99</span>
+                    </div>
+                    <button class="btn"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    // Pagination logic
-    const productsPerPage = 10;
-    let allProducts = [];
-    let currentPage = 1;
-
-    function showPage(page) {
-        const start = (page - 1) * productsPerPage;
-        const end = start + productsPerPage;
-        displayProducts(allProducts.slice(start, end));
-    }
-
-    document.addEventListener('DOMContentLoaded', function() {
-        allProducts = generateProducts();
-        showPage(currentPage);
-
-        const pageButtons = document.querySelectorAll('.page-btn');
-        pageButtons.forEach((button, index) => {
+    <script>
+        // Add hover effects to buttons
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.background = 'linear-gradient(to right, #2ecc71, #3498db)';
+            });
+            
+            button.addEventListener('mouseleave', function() {
+                this.style.background = 'linear-gradient(to right, #3498db, #2ecc71)';
+            });
+            
+            // Add click animation
             button.addEventListener('click', function() {
-                pageButtons.forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-                currentPage = index + 1;
-                showPage(currentPage);
-                document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+                
+                // Show a simple alert (in a real site, this would add to cart)
+                const productName = this.closest('.product-card').querySelector('.product-title').textContent;
+                alert(`${productName} added to cart!`);
             });
         });
-    });
-</script>
+    </script>
+</body>
+</html>
