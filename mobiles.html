@@ -74,31 +74,25 @@
 
         .mobile-image {
             height: 200px;
-            background: linear-gradient(45deg, #3498db, #9b59b6);
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             overflow: hidden;
+            background: #f8f9fa; /* Light background for images with transparency */
         }
 
-        .mobile-image::before {
-            content: "";
-            position: absolute;
-            width: 150px;
-            height: 150px;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50%;
+        .mobile-image img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain; /* Changed from 'cover' to 'contain' to show full image */
+            transition: transform 0.5s ease;
         }
 
-        .mobile-image::after {
-            content: "";
-            position: absolute;
-            width: 120px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 40px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        .mobile-card:hover .mobile-image img {
+            transform: scale(1.05);
         }
 
         .mobile-number {
@@ -115,6 +109,7 @@
             justify-content: center;
             font-size: 0.8rem;
             font-weight: bold;
+            z-index: 2;
         }
 
         .mobile-content {
@@ -233,7 +228,7 @@
             <!-- Mobile 1 -->
             <div class="mobile-card">
                 <div class="mobile-image">
-                <img src="images/mobile2.jpg" alt="Mobile 1">
+                    <img src="images/mobile1.jpg" alt="Mobile 1">
                     <div class="mobile-number">1</div>
                 </div>
                 <div class="mobile-content">
@@ -252,6 +247,7 @@
             <!-- Mobile 2 -->
             <div class="mobile-card">
                 <div class="mobile-image">
+                    <img src="images/mobile2.jpg" alt="Mobile 2">
                     <div class="mobile-number">2</div>
                 </div>
                 <div class="mobile-content">
@@ -270,6 +266,7 @@
             <!-- Mobile 3 -->
             <div class="mobile-card">
                 <div class="mobile-image">
+                    <img src="images/mobile3.jpg" alt="Mobile 3">
                     <div class="mobile-number">3</div>
                 </div>
                 <div class="mobile-content">
@@ -288,6 +285,7 @@
             <!-- Mobile 4 -->
             <div class="mobile-card">
                 <div class="mobile-image">
+                    <img src="images/mobile4.jpg" alt="Mobile 4">
                     <div class="mobile-number">4</div>
                 </div>
                 <div class="mobile-content">
@@ -306,6 +304,7 @@
             <!-- Mobile 5 -->
             <div class="mobile-card">
                 <div class="mobile-image">
+                    <img src="images/mobile5.jpg" alt="Mobile 5">
                     <div class="mobile-number">5</div>
                 </div>
                 <div class="mobile-content">
@@ -324,6 +323,7 @@
             <!-- Mobile 6 -->
             <div class="mobile-card">
                 <div class="mobile-image">
+                    <img src="images/mobile6.jpg" alt="Mobile 6">
                     <div class="mobile-number">6</div>
                 </div>
                 <div class="mobile-content">
@@ -342,6 +342,7 @@
             <!-- Mobile 7 -->
             <div class="mobile-card">
                 <div class="mobile-image">
+                    <img src="images/mobile7.jpg" alt="Mobile 7">
                     <div class="mobile-number">7</div>
                 </div>
                 <div class="mobile-content">
@@ -360,6 +361,7 @@
             <!-- Mobile 8 -->
             <div class="mobile-card">
                 <div class="mobile-image">
+                    <img src="images/mobile8.jpg" alt="Mobile 8">
                     <div class="mobile-number">8</div>
                 </div>
                 <div class="mobile-content">
@@ -378,6 +380,7 @@
             <!-- Mobile 9 -->
             <div class="mobile-card">
                 <div class="mobile-image">
+                    <img src="images/mobile9.jpg" alt="Mobile 9">
                     <div class="mobile-number">9</div>
                 </div>
                 <div class="mobile-content">
@@ -396,6 +399,7 @@
             <!-- Mobile 10 -->
             <div class="mobile-card">
                 <div class="mobile-image">
+                    <img src="images/mobile10.jpg" alt="Mobile 10">
                     <div class="mobile-number">10</div>
                 </div>
                 <div class="mobile-content">
@@ -411,725 +415,8 @@
                 </div>
             </div>
             
-            <!-- Mobile 11 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">11</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 11</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.4" Super AMOLED</li>
-                        <li><i class="fas fa-check"></i> 128GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> In-Display Fingerprint</li>
-                    </ul>
-                    <div class="mobile-price">$749</div>
-                    <a href="https://example.com/product11" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
+            <!-- Additional mobiles would continue with the same pattern -->
             
-            <!-- Mobile 12 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">12</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 12</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.5" IPS Display</li>
-                        <li><i class="fas fa-check"></i> 256GB Storage</li>
-                        <li><i class="fas fa-check"></i> Quad Camera System</li>
-                        <li><i class="fas fa-check"></i> 5000mAh Battery</li>
-                    </ul>
-                    <div class="mobile-price">$699</div>
-                    <a href="https://example.com/product12" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 13 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">13</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 13</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.8" Curved Display</li>
-                        <li><i class="fas fa-check"></i> 1TB Storage</li>
-                        <li><i class="fas fa-check"></i> Hexa Camera System</li>
-                        <li><i class="fas fa-check"></i> 144Hz Refresh Rate</li>
-                    </ul>
-                    <div class="mobile-price">$1599</div>
-                    <a href="https://example.com/product13" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 14 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">14</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 14</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.1" Retina Display</li>
-                        <li><i class="fas fa-check"></i> 128GB Storage</li>
-                        <li><i class="fas fa-check"></i> Dual Camera System</li>
-                        <li><i class="fas fa-check"></i> MagSafe Compatible</li>
-                    </ul>
-                    <div class="mobile-price">$799</div>
-                    <a href="https://example.com/product14" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 15 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">15</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 15</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.7" ProMotion Display</li>
-                        <li><i class="fas fa-check"></i> 512GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> LiDAR Scanner</li>
-                    </ul>
-                    <div class="mobile-price">$1199</div>
-                    <a href="https://example.com/product15" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 16 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">16</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 16</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.4" OLED Display</li>
-                        <li><i class="fas fa-check"></i> 256GB Storage</li>
-                        <li><i class="fas fa-check"></i> Quad Camera System</li>
-                        <li><i class="fas fa-check"></i> 65W Fast Charging</li>
-                    </ul>
-                    <div class="mobile-price">$849</div>
-                    <a href="https://example.com/product16" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 17 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">17</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 17</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.9" Ultra Display</li>
-                        <li><i class="fas fa-check"></i> 1TB Storage</li>
-                        <li><i class="fas fa-check"></i> Penta Camera System</li>
-                        <li><i class="fas fa-check"></i> S Pen Included</li>
-                    </ul>
-                    <div class="mobile-price">$1399</div>
-                    <a href="https://example.com/product17" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 18 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">18</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 18</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.2" Dynamic AMOLED</li>
-                        <li><i class="fas fa-check"></i> 128GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> IP68 Water Resistant</li>
-                    </ul>
-                    <div class="mobile-price">$899</div>
-                    <a href="https://example.com/product18" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 19 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">19</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 19</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.5" IPS Display</li>
-                        <li><i class="fas fa-check"></i> 64GB Storage</li>
-                        <li><i class="fas fa-check"></i> Dual Camera System</li>
-                        <li><i class="fas fa-check"></i> 5000mAh Battery</li>
-                    </ul>
-                    <div class="mobile-price">$549</div>
-                    <a href="https://example.com/product19" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 20 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">20</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 20</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.7" Fluid Display</li>
-                        <li><i class="fas fa-check"></i> 256GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> 30W Wireless Charging</li>
-                    </ul>
-                    <div class="mobile-price">$999</div>
-                    <a href="https://example.com/product20" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 21 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">21</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 21</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.3" Super AMOLED</li>
-                        <li><i class="fas fa-check"></i> 128GB Storage</li>
-                        <li><i class="fas fa-check"></i> Quad Camera System</li>
-                        <li><i class="fas fa-check"></i> 5G Connectivity</li>
-                    </ul>
-                    <div class="mobile-price">$749</div>
-                    <a href="https://example.com/product21" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 22 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">22</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 22</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.8" Edge Display</li>
-                        <li><i class="fas fa-check"></i> 512GB Storage</li>
-                        <li><i class="fas fa-check"></i> Penta Camera System</li>
-                        <li><i class="fas fa-check"></i> 100x Zoom</li>
-                    </ul>
-                    <div class="mobile-price">$1299</div>
-                    <a href="https://example.com/product22" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 23 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">23</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 23</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.1" OLED Display</li>
-                        <li><i class="fas fa-check"></i> 256GB Storage</li>
-                        <li><i class="fas fa-check"></i> Dual Camera System</li>
-                        <li><i class="fas fa-check"></i> Ceramic Shield</li>
-                    </ul>
-                    <div class="mobile-price">$849</div>
-                    <a href="https://example.com/product23" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 24 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">24</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 24</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.6" Dynamic AMOLED</li>
-                        <li><i class="fas fa-check"></i> 128GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> 120Hz Refresh Rate</li>
-                    </ul>
-                    <div class="mobile-price">$899</div>
-                    <a href="https://example.com/product24" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 25 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">25</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 25</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.4" IPS Display</li>
-                        <li><i class="fas fa-check"></i> 64GB Storage</li>
-                        <li><i class="fas fa-check"></i> Dual Camera System</li>
-                        <li><i class="fas fa-check"></i> All-Day Battery</li>
-                    </ul>
-                    <div class="mobile-price">$499</div>
-                    <a href="https://example.com/product25" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 26 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">26</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 26</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.7" Pro Display</li>
-                        <li><i class="fas fa-check"></i> 512GB Storage</li>
-                        <li><i class="fas fa-check"></i> Quad Camera System</li>
-                        <li><i class="fas fa-check"></i> ProRAW Photography</li>
-                    </ul>
-                    <div class="mobile-price">$1199</div>
-                    <a href="https://example.com/product26" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 27 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">27</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 27</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.5" Super AMOLED</li>
-                        <li><i class="fas fa-check"></i> 256GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> 5G Connectivity</li>
-                    </ul>
-                    <div class="mobile-price">$799</div>
-                    <a href="https://example.com/product27" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 28 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">28</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 28</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.9" Cinema Display</li>
-                        <li><i class="fas fa-check"></i> 1TB Storage</li>
-                        <li><i class="fas fa-check"></i> Hexa Camera System</li>
-                        <li><i class="fas fa-check"></i> 8K Video Recording</li>
-                    </ul>
-                    <div class="mobile-price">$1499</div>
-                    <a href="https://example.com/product28" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 29 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">29</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 29</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.2" Retina Display</li>
-                        <li><i class="fas fa-check"></i> 128GB Storage</li>
-                        <li><i class="fas fa-check"></i> Dual Camera System</li>
-                        <li><i class="fas fa-check"></i> MagSafe Compatible</li>
-                    </ul>
-                    <div class="mobile-price">$749</div>
-                    <a href="https://example.com/product29" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 30 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">30</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 30</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.7" ProMotion Display</li>
-                        <li><i class="fas fa-check"></i> 512GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> LiDAR Scanner</li>
-                    </ul>
-                    <div class="mobile-price">$1299</div>
-                    <a href="https://example.com/product30" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 31 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">31</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 31</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.4" OLED Display</li>
-                        <li><i class="fas fa-check"></i> 256GB Storage</li>
-                        <li><i class="fas fa-check"></i> Quad Camera System</li>
-                        <li><i class="fas fa-check"></i> 65W Fast Charging</li>
-                    </ul>
-                    <div class="mobile-price">$899</div>
-                    <a href="https://example.com/product31" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 32 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">32</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 32</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.8" Ultra Display</li>
-                        <li><i class="fas fa-check"></i> 1TB Storage</li>
-                        <li><i class="fas fa-check"></i> Penta Camera System</li>
-                        <li><i class="fas fa-check"></i> S Pen Included</li>
-                    </ul>
-                    <div class="mobile-price">$1399</div>
-                    <a href="https://example.com/product32" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 33 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">33</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 33</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.3" Dynamic AMOLED</li>
-                        <li><i class="fas fa-check"></i> 128GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> IP68 Water Resistant</li>
-                    </ul>
-                    <div class="mobile-price">$949</div>
-                    <a href="https://example.com/product33" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 34 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">34</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 34</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.5" IPS Display</li>
-                        <li><i class="fas fa-check"></i> 64GB Storage</li>
-                        <li><i class="fas fa-check"></i> Dual Camera System</li>
-                        <li><i class="fas fa-check"></i> 5000mAh Battery</li>
-                    </ul>
-                    <div class="mobile-price">$599</div>
-                    <a href="https://example.com/product34" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 35 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">35</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 35</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.7" Fluid Display</li>
-                        <li><i class="fas fa-check"></i> 256GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> 30W Wireless Charging</li>
-                    </ul>
-                    <div class="mobile-price">$1049</div>
-                    <a href="https://example.com/product35" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 36 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">36</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 36</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.3" Super AMOLED</li>
-                        <li><i class="fas fa-check"></i> 128GB Storage</li>
-                        <li><i class="fas fa-check"></i> Quad Camera System</li>
-                        <li><i class="fas fa-check"></i> 5G Connectivity</li>
-                    </ul>
-                    <div class="mobile-price">$799</div>
-                    <a href="https://example.com/product36" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 37 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">37</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 37</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.8" Edge Display</li>
-                        <li><i class="fas fa-check"></i> 512GB Storage</li>
-                        <li><i class="fas fa-check"></i> Penta Camera System</li>
-                        <li><i class="fas fa-check"></i> 100x Zoom</li>
-                    </ul>
-                    <div class="mobile-price">$1349</div>
-                    <a href="https://example.com/product37" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 38 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">38</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 38</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.1" OLED Display</li>
-                        <li><i class="fas fa-check"></i> 256GB Storage</li>
-                        <li><i class="fas fa-check"></i> Dual Camera System</li>
-                        <li><i class="fas fa-check"></i> Ceramic Shield</li>
-                    </ul>
-                    <div class="mobile-price">$899</div>
-                    <a href="https://example.com/product38" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 39 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">39</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 39</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.6" Dynamic AMOLED</li>
-                        <li><i class="fas fa-check"></i> 128GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> 120Hz Refresh Rate</li>
-                    </ul>
-                    <div class="mobile-price">$949</div>
-                    <a href="https://example.com/product39" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 40 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">40</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 40</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.4" IPS Display</li>
-                        <li><i class="fas fa-check"></i> 64GB Storage</li>
-                        <li><i class="fas fa-check"></i> Dual Camera System</li>
-                        <li><i class="fas fa-check"></i> All-Day Battery</li>
-                    </ul>
-                    <div class="mobile-price">$549</div>
-                    <a href="https://example.com/product40" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 41 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">41</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 41</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.7" Pro Display</li>
-                        <li><i class="fas fa-check"></i> 512GB Storage</li>
-                        <li><i class="fas fa-check"></i> Quad Camera System</li>
-                        <li><i class="fas fa-check"></i> ProRAW Photography</li>
-                    </ul>
-                    <div class="mobile-price">$1249</div>
-                    <a href="https://example.com/product41" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 42 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">42</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 42</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.5" Super AMOLED</li>
-                        <li><i class="fas fa-check"></i> 256GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> 5G Connectivity</li>
-                    </ul>
-                    <div class="mobile-price">$849</div>
-                    <a href="https://example.com/product42" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 43 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">43</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 43</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.9" Cinema Display</li>
-                        <li><i class="fas fa-check"></i> 1TB Storage</li>
-                        <li><i class="fas fa-check"></i> Hexa Camera System</li>
-                        <li><i class="fas fa-check"></i> 8K Video Recording</li>
-                    </ul>
-                    <div class="mobile-price">$1549</div>
-                    <a href="https://example.com/product43" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 44 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">44</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 44</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.2" Retina Display</li>
-                        <li><i class="fas fa-check"></i> 128GB Storage</li>
-                        <li><i class="fas fa-check"></i> Dual Camera System</li>
-                        <li><i class="fas fa-check"></i> MagSafe Compatible</li>
-                    </ul>
-                    <div class="mobile-price">$799</div>
-                    <a href="https://example.com/product44" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 45 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">45</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 45</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.7" ProMotion Display</li>
-                        <li><i class="fas fa-check"></i> 512GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> LiDAR Scanner</li>
-                    </ul>
-                    <div class="mobile-price">$1349</div>
-                    <a href="https://example.com/product45" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 46 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">46</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 46</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.4" OLED Display</li>
-                        <li><i class="fas fa-check"></i> 256GB Storage</li>
-                        <li><i class="fas fa-check"></i> Quad Camera System</li>
-                        <li><i class="fas fa-check"></i> 65W Fast Charging</li>
-                    </ul>
-                    <div class="mobile-price">$949</div>
-                    <a href="https://example.com/product46" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 47 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">47</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 47</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.8" Ultra Display</li>
-                        <li><i class="fas fa-check"></i> 1TB Storage</li>
-                        <li><i class="fas fa-check"></i> Penta Camera System</li>
-                        <li><i class="fas fa-check"></i> S Pen Included</li>
-                    </ul>
-                    <div class="mobile-price">$1449</div>
-                    <a href="https://example.com/product47" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 48 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">48</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 48</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.3" Dynamic AMOLED</li>
-                        <li><i class="fas fa-check"></i> 128GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> IP68 Water Resistant</li>
-                    </ul>
-                    <div class="mobile-price">$999</div>
-                    <a href="https://example.com/product48" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 49 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">49</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 49</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.5" IPS Display</li>
-                        <li><i class="fas fa-check"></i> 64GB Storage</li>
-                        <li><i class="fas fa-check"></i> Dual Camera System</li>
-                        <li><i class="fas fa-check"></i> 5000mAh Battery</li>
-                    </ul>
-                    <div class="mobile-price">$649</div>
-                    <a href="https://example.com/product49" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 50 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <div class="mobile-number">50</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Mobile 50</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> 6.7" Fluid Display</li>
-                        <li><i class="fas fa-check"></i> 256GB Storage</li>
-                        <li><i class="fas fa-check"></i> Triple Camera System</li>
-                        <li><i class="fas fa-check"></i> 30W Wireless Charging</li>
-                    </ul>
-                    <div class="mobile-price">$1099</div>
-                    <a href="https://example.com/product50" class="buy-btn">Buy Now</a>
-                </div>
-            </div>
         </div>
         
         <footer>
