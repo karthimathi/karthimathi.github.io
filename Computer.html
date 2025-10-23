@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Mobile Collection</title>
+    <title>Best Laptop Deals - Premium Laptop Collection | ShopAll Deals</title>
+    <meta name="description" content="Discover the best laptop deals with our premium collection. Find laptops from top brands like Acer, HP, Lenovo, and ASUS with the latest specs and features.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -87,13 +88,31 @@
             border-radius: 3px;
         }
 
-        .mobiles-grid {
+        .intro-text {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px auto 40px;
+            max-width: 900px;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .intro-text strong {
+            color: #fff;
+        }
+
+        .laptops-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
         }
 
-        .mobile-card {
+        .laptop-card {
             background: rgba(255, 255, 255, 0.08);
             border-radius: 20px;
             overflow: hidden;
@@ -107,7 +126,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .mobile-card::before {
+        .laptop-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -119,13 +138,13 @@
             animation: gradient-shift 8s ease infinite;
         }
 
-        .mobile-card:hover {
+        .laptop-card:hover {
             transform: translateY(-15px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             background: rgba(255, 255, 255, 0.12);
         }
 
-        .mobile-image {
+        .laptop-image {
             height: 220px;
             display: flex;
             align-items: center;
@@ -135,7 +154,7 @@
             background: rgba(0, 0, 0, 0.2);
         }
 
-        .mobile-image::after {
+        .laptop-image::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -146,7 +165,7 @@
             z-index: 1;
         }
 
-        .mobile-image img {
+        .laptop-image img {
             max-width: 85%;
             max-height: 85%;
             width: auto;
@@ -158,11 +177,11 @@
             position: relative;
         }
 
-        .mobile-card:hover .mobile-image img {
+        .laptop-card:hover .laptop-image img {
             transform: scale(1.1) rotate(2deg);
         }
 
-        .mobile-number {
+        .laptop-number {
             position: absolute;
             top: 15px;
             right: 15px;
@@ -181,19 +200,19 @@
             transition: all 0.3s ease;
         }
 
-        .mobile-card:hover .mobile-number {
+        .laptop-card:hover .laptop-number {
             transform: scale(1.2) rotate(15deg);
             background: linear-gradient(135deg, #6a98f0, #b579ff);
         }
 
-        .mobile-content {
+        .laptop-content {
             padding: 25px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .mobile-title {
+        .laptop-title {
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: #fff;
@@ -201,7 +220,7 @@
             position: relative;
         }
 
-        .mobile-title::after {
+        .laptop-title::after {
             content: '';
             display: block;
             width: 40px;
@@ -211,13 +230,13 @@
             border-radius: 2px;
         }
 
-        .mobile-features {
+        .laptop-features {
             list-style: none;
             margin-bottom: 25px;
             flex-grow: 1;
         }
 
-        .mobile-features li {
+        .laptop-features li {
             padding: 8px 0;
             color: #e0e0e0;
             font-size: 0.95rem;
@@ -226,19 +245,19 @@
             transition: all 0.3s ease;
         }
 
-        .mobile-features li:hover {
+        .laptop-features li:hover {
             color: #fff;
             transform: translateX(5px);
         }
 
-        .mobile-features li i {
+        .laptop-features li i {
             margin-right: 10px;
             color: #ffa36c;
             font-size: 0.9rem;
             transition: all 0.3s ease;
         }
 
-        .mobile-features li:hover i {
+        .laptop-features li:hover i {
             color: #ff6b6b;
             transform: scale(1.2);
         }
@@ -304,15 +323,34 @@
             margin: 0 auto 20px;
         }
 
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            color: #ffa36c;
+        }
+
         /* Responsive Design */
         @media (max-width: 1200px) {
-            .mobiles-grid {
+            .laptops-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
 
         @media (max-width: 900px) {
-            .mobiles-grid {
+            .laptops-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
@@ -322,7 +360,7 @@
         }
 
         @media (max-width: 600px) {
-            .mobiles-grid {
+            .laptops-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -333,201 +371,262 @@
             .subtitle {
                 font-size: 1rem;
             }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Premium Mobile Collection</h1>
-            <p class="subtitle">Discover our exclusive range of cutting-edge smartphones with the latest features and technology.</p>
+            <h1>Premium Laptop Collection</h1>
+            <p class="subtitle">Discover our exclusive range of high-performance laptops with the latest technology and features.</p>
         </header>
         
-        <div class="mobiles-grid">
-            <!-- Mobile 1 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop1.png" alt="Mobile 1">
-                    <div class="mobile-number">1</div>
+        <div class="intro-text">
+            <strong>Browse our hand-picked laptop deals from top brands like Acer, HP, Lenovo, and ASUS.</strong> 
+            Find the perfect laptop for work, gaming, or everyday use with our carefully curated selection of the latest models with powerful processors, ample storage, and stunning displays.
+        </div>
+        
+        <div class="laptops-grid">
+            <!-- Laptop 1 -->
+            <div class="laptop-card">
+                <div class="laptop-image">
+                    <img src="Computers/Laptop1.png" alt="Acer Aspire Lite Laptop">
+                    <div class="laptop-number">1</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Laptop 1</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Model Name	Aspire Lite</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i>RAM Memory Installed Size	16 GB</li>
+                <div class="laptop-content">
+                    <h3 class="laptop-title">Acer Aspire Lite</h3>
+                    <ul class="laptop-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
+                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
+                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR4</li>
+                        <li><i class="fas fa-check"></i> Processor: Intel Core i5</li>
                     </ul>
-                    <a href="https://amzn.to/48Jtqwz" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/48Jtqwz" class="buy-btn">View Laptop Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 2 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop2.png" alt="Mobile 2">
-                    <div class="mobile-number">2</div>
+            <!-- Laptop 2 -->
+            <div class="laptop-card">
+                <div class="laptop-image">
+                    <img src="Computers/Laptop2.png" alt="HP Laptop">
+                    <div class="laptop-number">2</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Laptop 2</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Model Name	HP Laptop</li>
-                        <li><i class="fas fa-check"></i> Screen Size	39.6 Centimetres</li>
-                        <li><i class="fas fa-check"></i>Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i>CPU Model	Core i3</li>
+                <div class="laptop-content">
+                    <h3 class="laptop-title">HP Laptop</h3>
+                    <ul class="laptop-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 39.6 cm (15.6")</li>
+                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
+                        <li><i class="fas fa-check"></i> Processor: Intel Core i3</li>
+                        <li><i class="fas fa-check"></i> RAM: 8 GB DDR4</li>
                     </ul>
-                    <a href="https://amzn.to/47iMhNA" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/47iMhNA" class="buy-btn">View Laptop Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 3 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop3.png" alt="Mobile 3">
-                    <div class="mobile-number">3</div>
+            <!-- Laptop 3 -->
+            <div class="laptop-card">
+                <div class="laptop-image">
+                    <img src="Computers/Laptop3.png" alt="HP Laptop with Core i3">
+                    <div class="laptop-number">3</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Laptop 3</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Model Name	HP Laptop</li>
-                        <li><i class="fas fa-check"></i> Screen Size	39.6 Centimetres</li>
-                        <li><i class="fas fa-check"></i>Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Core i3 Family</li>
+                <div class="laptop-content">
+                    <h3 class="laptop-title">HP Core i3 Laptop</h3>
+                    <ul class="laptop-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 39.6 cm (15.6")</li>
+                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
+                        <li><i class="fas fa-check"></i> Processor: Intel Core i3</li>
+                        <li><i class="fas fa-check"></i> RAM: 8 GB DDR4</li>
                     </ul>
-                    <a href="https://amzn.to/3WxqVWv" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/3WxqVWv" class="buy-btn">View Laptop Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 4 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop4.png" alt="Mobile 4">
-                    <div class="mobile-number">4</div>
+            <!-- Laptop 4 -->
+            <div class="laptop-card">
+                <div class="laptop-image">
+                    <img src="Computers/Laptop4.png" alt="Lenovo LOQ Gaming Laptop">
+                    <div class="laptop-number">4</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Laptop 4</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Model Name	LOQ</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i>Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
+                <div class="laptop-content">
+                    <h3 class="laptop-title">Lenovo LOQ</h3>
+                    <ul class="laptop-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
+                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
+                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR5</li>
+                        <li><i class="fas fa-check"></i> Graphics: NVIDIA RTX</li>
                     </ul>
-                    <a href="https://amzn.to/4h8335w" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/4h8335w" class="buy-btn">View Laptop Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 5 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop5.png" alt="Mobile 5">
-                    <div class="mobile-number">5</div>
+            <!-- Laptop 5 -->
+            <div class="laptop-card">
+                <div class="laptop-image">
+                    <img src="Computers/Laptop5.png" alt="Acer Aspire Go 14 Laptop">
+                    <div class="laptop-number">5</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Laptop 5</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Model Name	Aspire Go 14</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Intel Core Ultra 5</li>
+                <div class="laptop-content">
+                    <h3 class="laptop-title">Acer Aspire Go 14</h3>
+                    <ul class="laptop-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 14 Inches</li>
+                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
+                        <li><i class="fas fa-check"></i> Processor: Intel Core Ultra 5</li>
+                        <li><i class="fas fa-check"></i> RAM: 8 GB LPDDR5</li>
                     </ul>
-                    <a href="https://amzn.to/42ACq30" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/42ACq30" class="buy-btn">View Laptop Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 6 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop6.png" alt="Mobile 6">
-                    <div class="mobile-number">6</div>
+            <!-- Laptop 6 -->
+            <div class="laptop-card">
+                <div class="laptop-image">
+                    <img src="Computers/Laptop6.png" alt="ASUS Vivobook 16 Laptop">
+                    <div class="laptop-number">6</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Laptop 6</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Model Name	ASUS Vivobook 16</li>
-                        <li><i class="fas fa-check"></i> Screen Size	16 Inches</li>
-                        <li><i class="fas fa-check"></i>Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i>CPU Model	Intel Core 7</li>
+                <div class="laptop-content">
+                    <h3 class="laptop-title">ASUS Vivobook 16</h3>
+                    <ul class="laptop-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 16 Inches</li>
+                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
+                        <li><i class="fas fa-check"></i> Processor: Intel Core 7</li>
+                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR4</li>
                     </ul>
-                    <a href="https://amzn.to/3WxB5GC" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/3WxB5GC" class="buy-btn">View Laptop Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 7 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop7.png" alt="Mobile 7">
-                    <div class="mobile-number">7</div>
+            <!-- Laptop 7 -->
+            <div class="laptop-card">
+                <div class="laptop-image">
+                    <img src="Computers/Laptop7.png" alt="Acer Aspire Lite Gaming Laptop">
+                    <div class="laptop-number">7</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Laptop 7</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Model Name	Aspire Lite</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Core i5-12450H</li>
+                <div class="laptop-content">
+                    <h3 class="laptop-title">Acer Aspire Lite</h3>
+                    <ul class="laptop-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
+                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
+                        <li><i class="fas fa-check"></i> Processor: Core i5-12450H</li>
+                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR4</li>
                     </ul>
-                    <a href="https://amzn.to/4q0Yz4x" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/4q0Yz4x" class="buy-btn">View Laptop Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 8 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop8.png" alt="Mobile 8">
-                    <div class="mobile-number">8</div>
+            <!-- Laptop 8 -->
+            <div class="laptop-card">
+                <div class="laptop-image">
+                    <img src="Computers/Laptop8.png" alt="Lenovo IdeaPad Slim 3">
+                    <div class="laptop-number">8</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Laptop 8</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Model Name	IdeaPad Slim 3</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.3</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Intel Core i5</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
+                <div class="laptop-content">
+                    <h3 class="laptop-title">Lenovo IdeaPad Slim 3</h3>
+                    <ul class="laptop-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
+                        <li><i class="fas fa-check"></i> Processor: Intel Core i5</li>
+                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR4</li>
+                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
                     </ul>
-                    <a href="https://amzn.to/46LnL7I" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/46LnL7I" class="buy-btn">View Laptop Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 9 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop9.png" alt="Mobile 9">
-                    <div class="mobile-number">9</div>
+            <!-- Laptop 9 -->
+            <div class="laptop-card">
+                <div class="laptop-image">
+                    <img src="Computers/Laptop9.png" alt="Acer ALG Laptop">
+                    <div class="laptop-number">9</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Laptop 9</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Model Name	Acer ALG</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Core i5</li>
+                <div class="laptop-content">
+                    <h3 class="laptop-title">Acer ALG</h3>
+                    <ul class="laptop-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
+                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
+                        <li><i class="fas fa-check"></i> Processor: Intel Core i5</li>
+                        <li><i class="fas fa-check"></i> RAM: 8 GB DDR4</li>
                     </ul>
-                    <a href="https://amzn.to/4h63jSp" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/4h63jSp" class="buy-btn">View Laptop Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 10 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop10.png" alt="Mobile 10">
-                    <div class="mobile-number">10</div>
+            <!-- Laptop 10 -->
+            <div class="laptop-card">
+                <div class="laptop-image">
+                    <img src="Computers/Laptop10.png" alt="Acer ALG Core i7 Laptop">
+                    <div class="laptop-number">10</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Laptop 10</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Model Name	ALG</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Core i7</li>
+                <div class="laptop-content">
+                    <h3 class="laptop-title">Acer ALG Core i7</h3>
+                    <ul class="laptop-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
+                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
+                        <li><i class="fas fa-check"></i> Processor: Intel Core i7</li>
+                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR4</li>
                     </ul>
-                    <a href="https://amzn.to/3J0ng0q" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/3J0ng0q" class="buy-btn">View Laptop Deal</a>
                 </div>
             </div>
         </div>
         
         <footer>
-            <p>© 2025 Premium Mobile Collection. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+            <p>© 2025 ShopAll Deals. All rights reserved.</p>
         </footer>
     </div>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Premium Laptop Collection - ShopAll Deals",
+      "description": "Browse our collection of premium laptops from top brands with the latest processors, ample storage, and high-performance features.",
+      "url": "https://www.shopalldeals.com/laptops.html",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Acer Aspire Lite Laptop",
+          "url": "https://www.shopalldeals.com/laptops.html#acer-aspire-lite"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "HP Laptop with Core i3",
+          "url": "https://www.shopalldeals.com/laptops.html#hp-laptop"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "HP Core i3 Laptop",
+          "url": "https://www.shopalldeals.com/laptops.html#hp-core-i3"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Lenovo LOQ Gaming Laptop",
+          "url": "https://www.shopalldeals.com/laptops.html#lenovo-loq"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Acer Aspire Go 14 Laptop",
+          "url": "https://www.shopalldeals.com/laptops.html#acer-aspire-go"
+        }
+      ]
+    }
+    </script>
 </body>
 </html>
