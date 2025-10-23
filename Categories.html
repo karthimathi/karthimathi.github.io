@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Categories</title>
+    <title>Shop By Category - Find Best Product Deals Across All Categories | ShopAll</title>
+    <meta name="description" content="Discover the best product deals across all major categories in India. Shop mobiles, computers, electronics, fashion, home appliances and more with daily updated offers.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -54,6 +55,23 @@
             font-size: 1.2rem;
             max-width: 600px;
             margin: 0 auto 30px;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 20px auto 40px;
+            max-width: 900px;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #5a6c7d;
+        }
+
+        .intro-text strong {
+            color: #2c3e50;
         }
 
         .categories-grid {
@@ -114,6 +132,9 @@
             cursor: pointer;
             transition: all 0.3s ease;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
         }
 
         .category-btn:hover {
@@ -161,6 +182,24 @@
             font-size: 0.9rem;
         }
 
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #5a6c7d;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #3498db;
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             .categories-grid {
@@ -175,6 +214,11 @@
             .subtitle {
                 font-size: 1rem;
             }
+            
+            .intro-text {
+                padding: 20px;
+                font-size: 1rem;
+            }
         }
 
         @media (max-width: 480px) {
@@ -184,6 +228,11 @@
             
             h1 {
                 font-size: 1.8rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
@@ -195,12 +244,18 @@
             <p class="subtitle">Explore our wide range of products across different categories</p>
         </header>
         
+        <div class="intro-text">
+            <strong>Discover the best product deals across all major categories in India.</strong> 
+            From the latest mobiles and electronics to fashion, home appliances, and more - 
+            we bring you daily updated offers to help you find exactly what you're looking for at the best prices.
+        </div>
+        
         <div class="categories-grid">
             <!-- Mobiles -->
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1160&q=80')">
                     <div class="category-overlay">
-                        <a href="mobiles.html" class="category-btn">Explore Mobiles</a>
+                        <a href="mobiles.html" class="category-btn">Explore Best Mobile Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -212,7 +267,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80')">
                     <div class="category-overlay">
-                        <a href="Computer.html" class="category-btn">Explore Computers</a>
+                        <a href="computers.html" class="category-btn">Explore Computer Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -224,7 +279,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
                     <div class="category-overlay">
-                        <a href="Tv.html" class="category-btn">Explore TV</a>
+                        <a href="tv.html" class="category-btn">Explore TV Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -236,7 +291,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1158&q=80')">
                     <div class="category-overlay">
-                        <a href="Appliances.html" class="category-btn">Explore Appliances</a>
+                        <a href="appliances.html" class="category-btn">Explore Appliance Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -248,7 +303,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1550009158-9ebf69173e03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1201&q=80')">
                     <div class="category-overlay">
-                        <a href="Electronics.html" class="category-btn">Explore Electronics</a>
+                        <a href="electronics.html" class="category-btn">Explore Electronics Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -260,7 +315,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1617137968427-85924c800a22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80')">
                     <div class="category-overlay">
-                        <a href="Mensfashion.html" class="category-btn">Explore Men's Fashion</a>
+                        <a href="mens-fashion.html" class="category-btn">Explore Men's Fashion Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -272,7 +327,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
                     <div class="category-overlay">
-                        <a href="Womensfashion.html" class="category-btn">Explore Women's Fashion</a>
+                        <a href="womens-fashion.html" class="category-btn">Explore Women's Fashion Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -284,7 +339,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1158&q=80')">
                     <div class="category-overlay">
-                        <a href="Home.html" class="category-btn">Explore Home</a>
+                        <a href="home.html" class="category-btn">Explore Home Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -296,7 +351,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
                     <div class="category-overlay">
-                        <a href="Kitchen.html" class="category-btn">Explore Kitchen</a>
+                        <a href="kitchen.html" class="category-btn">Explore Kitchen Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -308,7 +363,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1155&q=80')">
                     <div class="category-overlay">
-                        <a href="Pets.html" class="category-btn">Explore Pets</a>
+                        <a href="pets.html" class="category-btn">Explore Pet Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -320,7 +375,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1180&q=80')">
                     <div class="category-overlay">
-                        <a href="Beautyandhealth.html" class="category-btn">Explore Beauty and Health</a>
+                        <a href="beauty-health.html" class="category-btn">Explore Beauty & Health Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -332,7 +387,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80')">
                     <div class="category-overlay">
-                        <a href="Grocery.html" class="category-btn">Explore Grocery</a>
+                        <a href="grocery.html" class="category-btn">Explore Grocery Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -344,7 +399,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
                     <div class="category-overlay">
-                        <a href="Sports.html" class="category-btn">Explore Sports</a>
+                        <a href="sports.html" class="category-btn">Explore Sports Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -356,7 +411,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
                     <div class="category-overlay">
-                        <a href="Fitness.html" class="category-btn">Explore Fitness</a>
+                        <a href="fitness.html" class="category-btn">Explore Fitness Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -368,7 +423,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80')">
                     <div class="category-overlay">
-                        <a href="Bags & Luggage.html" class="category-btn">Explore Bags & Luggage</a>
+                        <a href="bags-luggage.html" class="category-btn">Explore Bags & Luggage Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -380,7 +435,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80')">
                     <div class="category-overlay">
-                       <a href="Toys.html" class="category-btn">Explore Toys</a>
+                       <a href="toys.html" class="category-btn">Explore Toy Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -392,7 +447,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1584839404047-5f65c5df5c6a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1035&q=80')">
                     <div class="category-overlay">
-                        <a href="Babyproducts.html" class="category-btn">Explore Baby Products</a>
+                        <a href="baby-products.html" class="category-btn">Explore Baby Product Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -404,7 +459,7 @@
             <div class="category-card">
                 <div class="category-image" style="background-image: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80')">
                     <div class="category-overlay">
-                        <a href="Kids Fashion.html" class="category-btn">Explore Kids Fashion</a>
+                        <a href="kids-fashion.html" class="category-btn">Explore Kids Fashion Deals</a>
                     </div>
                 </div>
                 <div class="category-name">
@@ -414,6 +469,13 @@
         </div>
         
         <footer>
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
             <p>© 2023 ShopAll Categories. All rights reserved.</p>
         </footer>
     </div>
@@ -423,7 +485,8 @@
         document.querySelectorAll('.category-card').forEach(card => {
             card.addEventListener('click', function() {
                 const categoryName = this.querySelector('.category-name').textContent.trim();
-                alert(`Navigating to ${categoryName} category!`);
+                // In a real implementation, this would navigate to the category page
+                console.log(`Navigating to ${categoryName} category!`);
             });
             
             // Add hover effect to the entire card
@@ -448,6 +511,50 @@
                 }, 150);
             });
         });
+    </script>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Product Categories",
+      "description": "Browse our wide range of product categories including mobiles, computers, electronics, fashion, home appliances and more.",
+      "url": "https://www.yoursite.com/categories.html",
+      "numberOfItems": 18,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Mobiles",
+          "url": "https://www.yoursite.com/mobiles.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Computers",
+          "url": "https://www.yoursite.com/computers.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "TV",
+          "url": "https://www.yoursite.com/tv.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Appliances",
+          "url": "https://www.yoursite.com/appliances.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Electronics",
+          "url": "https://www.yoursite.com/electronics.html"
+        }
+      ]
+    }
     </script>
 </body>
 </html>
