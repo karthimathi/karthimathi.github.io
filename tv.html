@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premium Mobile Collection</title>
+    <title>Best Smart TVs 2025 - Premium Television Collection | ShopAll Deals</title>
+    <meta name="description" content="Discover the best smart TV deals for 2025 with our premium collection. Find televisions from top brands with detailed reviews, pros, cons, and buying guides.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -17,13 +18,70 @@
             background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
             color: #fff;
             line-height: 1.6;
-            padding: 20px;
             min-height: 100vh;
+            overflow-x: hidden;
         }
 
         .container {
             max-width: 1400px;
             margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 15px 0;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideDown 0.8s ease-out;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-menu {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .nav-menu a {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 8px 15px;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-menu a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #ff6b6b, #ffa36c);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #ffa36c;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .nav-menu a:hover::before {
+            width: 100%;
         }
 
         header {
@@ -32,6 +90,7 @@
             margin-bottom: 30px;
             position: relative;
             overflow: hidden;
+            animation: fadeIn 1s ease-out;
         }
 
         header::before {
@@ -51,6 +110,26 @@
             100% { transform: rotate(360deg); }
         }
 
+        @keyframes slideDown {
+            0% { transform: translateY(-100px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(255, 107, 107, 0.4); }
+            50% { box-shadow: 0 0 20px rgba(255, 107, 107, 0.8); }
+        }
+
         h1 {
             font-size: 3.5rem;
             margin-bottom: 15px;
@@ -59,7 +138,7 @@
             background-clip: text;
             color: transparent;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            animation: gradient-shift 8s ease infinite;
+            animation: gradient-shift 8s ease infinite, float 6s ease-in-out infinite;
             background-size: 400% 400%;
         }
 
@@ -75,6 +154,7 @@
             max-width: 600px;
             margin: 0 auto;
             position: relative;
+            animation: fadeIn 1.5s ease-out 0.3s both;
         }
 
         .subtitle::after {
@@ -85,15 +165,96 @@
             background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
             margin: 15px auto;
             border-radius: 3px;
+            animation: expandWidth 1s ease-out 1s both;
         }
 
-        .mobiles-grid {
+        @keyframes expandWidth {
+            0% { width: 0; }
+            100% { width: 100px; }
+        }
+
+        .intro-text {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 12px;
+            margin: 20px auto 40px;
+            max-width: 900px;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideUp 1s ease-out 0.5s both;
+        }
+
+        @keyframes slideUp {
+            0% { transform: translateY(30px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .intro-text strong {
+            color: #fff;
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: slideUp 1s ease-out 0.7s both;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff6b6b, #ffa36c);
+            margin: 10px auto;
+            border-radius: 3px;
+        }
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #e0e0e0;
+        }
+
+        .section-content h3 {
+            color: #fff;
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+        }
+
+        .section-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-content li {
+            margin-bottom: 10px;
+        }
+
+        .tvs-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 30px;
+            margin-top: 40px;
         }
 
-        .mobile-card {
+        .tv-card {
             background: rgba(255, 255, 255, 0.08);
             border-radius: 20px;
             overflow: hidden;
@@ -105,9 +266,16 @@
             height: 100%;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: tvCardAppear 0.8s ease-out both;
+            animation-delay: calc(var(--animation-order) * 0.1s);
         }
 
-        .mobile-card::before {
+        @keyframes tvCardAppear {
+            0% { transform: translateY(30px) scale(0.9); opacity: 0; }
+            100% { transform: translateY(0) scale(1); opacity: 1; }
+        }
+
+        .tv-card::before {
             content: '';
             position: absolute;
             top: 0;
@@ -119,13 +287,14 @@
             animation: gradient-shift 8s ease infinite;
         }
 
-        .mobile-card:hover {
+        .tv-card:hover {
             transform: translateY(-15px) scale(1.02);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
             background: rgba(255, 255, 255, 0.12);
+            animation: glow 2s infinite;
         }
 
-        .mobile-image {
+        .tv-image {
             height: 220px;
             display: flex;
             align-items: center;
@@ -135,7 +304,7 @@
             background: rgba(0, 0, 0, 0.2);
         }
 
-        .mobile-image::after {
+        .tv-image::after {
             content: '';
             position: absolute;
             bottom: 0;
@@ -146,7 +315,7 @@
             z-index: 1;
         }
 
-        .mobile-image img {
+        .tv-image img {
             max-width: 85%;
             max-height: 85%;
             width: auto;
@@ -158,11 +327,11 @@
             position: relative;
         }
 
-        .mobile-card:hover .mobile-image img {
+        .tv-card:hover .tv-image img {
             transform: scale(1.1) rotate(2deg);
         }
 
-        .mobile-number {
+        .tv-number {
             position: absolute;
             top: 15px;
             right: 15px;
@@ -179,21 +348,23 @@
             z-index: 3;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             transition: all 0.3s ease;
+            animation: pulse 2s infinite;
         }
 
-        .mobile-card:hover .mobile-number {
+        .tv-card:hover .tv-number {
             transform: scale(1.2) rotate(15deg);
             background: linear-gradient(135deg, #6a98f0, #b579ff);
+            animation: none;
         }
 
-        .mobile-content {
+        .tv-content {
             padding: 25px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .mobile-title {
+        .tv-title {
             font-size: 1.5rem;
             margin-bottom: 15px;
             color: #fff;
@@ -201,7 +372,7 @@
             position: relative;
         }
 
-        .mobile-title::after {
+        .tv-title::after {
             content: '';
             display: block;
             width: 40px;
@@ -211,13 +382,13 @@
             border-radius: 2px;
         }
 
-        .mobile-features {
+        .tv-features {
             list-style: none;
             margin-bottom: 25px;
             flex-grow: 1;
         }
 
-        .mobile-features li {
+        .tv-features li {
             padding: 8px 0;
             color: #e0e0e0;
             font-size: 0.95rem;
@@ -226,19 +397,19 @@
             transition: all 0.3s ease;
         }
 
-        .mobile-features li:hover {
+        .tv-features li:hover {
             color: #fff;
             transform: translateX(5px);
         }
 
-        .mobile-features li i {
+        .tv-features li i {
             margin-right: 10px;
             color: #ffa36c;
             font-size: 0.9rem;
             transition: all 0.3s ease;
         }
 
-        .mobile-features li:hover i {
+        .tv-features li:hover i {
             color: #ff6b6b;
             transform: scale(1.2);
         }
@@ -293,6 +464,7 @@
             color: #aaa;
             font-size: 0.9rem;
             position: relative;
+            animation: fadeIn 1s ease-out 1s both;
         }
 
         footer::before {
@@ -304,15 +476,80 @@
             margin: 0 auto 20px;
         }
 
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: color 0.3s;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ffa36c;
+            transition: width 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #ffa36c;
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        /* Floating TV Animation */
+        .floating-tv {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 100px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: float 4s ease-in-out infinite;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .floating-tv:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .floating-tv::before {
+            content: '📺';
+            font-size: 2rem;
+        }
+
         /* Responsive Design */
         @media (max-width: 1200px) {
-            .mobiles-grid {
+            .tvs-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
 
         @media (max-width: 900px) {
-            .mobiles-grid {
+            .tvs-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
             
@@ -322,7 +559,7 @@
         }
 
         @media (max-width: 600px) {
-            .mobiles-grid {
+            .tvs-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -333,201 +570,415 @@
             .subtitle {
                 font-size: 1rem;
             }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .floating-tv {
+                width: 80px;
+                height: 50px;
+                bottom: 10px;
+                right: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="floating-tv" title="TV Collection"></div>
+    
+    <nav>
+        <div class="nav-container">
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="electronics.html">Electronics</a></li>
+                <li><a href="computers.html">Computers</a></li>
+                <li><a href="mobiles.html">Mobiles</a></li>
+                <li><a href="televisions.html">Televisions</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <div class="container">
         <header>
-            <h1>Premium Mobile Collection</h1>
-            <p class="subtitle">Discover our exclusive range of cutting-edge smartphones with the latest features and technology.</p>
+            <h1>Premium Television Collection 2025</h1>
+            <p class="subtitle">Discover our exclusive range of cutting-edge smart TVs with the latest display technology and immersive features.</p>
         </header>
         
-        <div class="mobiles-grid">
-            <!-- Mobile 1 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/Tv1.png" alt="Mobile 1">
-                    <div class="mobile-number">1</div>
+        <div class="intro-text">
+            <strong>Browse our hand-picked television deals from top brands like Samsung, Sony, LG, and TCL.</strong> 
+            Find the perfect TV for your home entertainment with our carefully curated selection of the latest models with stunning picture quality, smart features, and immersive audio.
+        </div>
+        
+        <!-- Added comprehensive content sections for AdSense -->
+        <div class="content-section">
+            <h2 class="section-title">How to Choose the Right Television in 2025</h2>
+            <div class="section-content">
+                <p>With new television technologies emerging every year, selecting the perfect TV can be overwhelming. In this comprehensive guide, we'll help you navigate the key factors to consider when purchasing a new television in 2025.</p>
+                
+                <h3>Determine Your Viewing Needs</h3>
+                <p>First, identify how you primarily use your television:</p>
+                <ul>
+                    <li><strong>Casual Viewers</strong> need reliable performance for daily TV shows and movies</li>
+                    <li><strong>Movie Enthusiasts</strong> require superior picture quality with HDR and wide color gamut</li>
+                    <li><strong>Gamers</strong> need low input lag, high refresh rates, and gaming-specific features</li>
+                    <li><strong>Sports Fans</strong> benefit from smooth motion handling and bright displays</li>
+                </ul>
+                
+                <h3>Key Specifications to Evaluate</h3>
+                <p>When comparing televisions, pay attention to these critical components:</p>
+                <ul>
+                    <li><strong>Display Technology:</strong> LED, QLED, OLED, or Mini-LED - each with distinct advantages</li>
+                    <li><strong>Screen Size:</strong> Consider your viewing distance and room size (55-65 inches is most popular)</li>
+                    <li><strong>Resolution:</strong> 4K is standard, with 8K becoming more accessible for future-proofing</li>
+                    <li><strong>Smart Platform:</strong> WebOS, Android TV, Tizen, or Roku - each with different app selections</li>
+                    <li><strong>HDR Support:</strong> HDR10, Dolby Vision, and HLG for enhanced contrast and colors</li>
+                    <li><strong>Refresh Rate:</strong> 60Hz for standard viewing, 120Hz+ for sports and gaming</li>
+                </ul>
+                
+                <h3>Room Considerations</h3>
+                <p>Your viewing environment significantly impacts TV performance:</p>
+                <ul>
+                    <li><strong>Bright Rooms:</strong> Look for high brightness (nits) and anti-glare coatings</li>
+                    <li><strong>Dark Rooms:</strong> OLED provides perfect blacks and superior contrast</li>
+                    <li><strong>Wide Seating:</strong> Consider TVs with wide viewing angles to maintain picture quality</li>
+                </ul>
+                
+                <p>By carefully considering your needs, budget, and viewing environment, you can find the perfect television that will provide years of entertainment enjoyment.</p>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">OLED vs QLED: Which Display Technology is Better?</h2>
+            <div class="section-content">
+                <p>The debate between OLED and QLED continues in 2025, with both technologies offering exceptional picture quality but through different approaches. Understanding their differences will help you make the right choice for your needs.</p>
+                
+                <h3>OLED Technology Advantages</h3>
+                <ul>
+                    <li><strong>Perfect Blacks:</strong> Self-emissive pixels can turn completely off for infinite contrast</li>
+                    <li><strong>Superior Viewing Angles:</strong> Maintains color accuracy even at extreme angles</li>
+                    <li><strong>Faster Response Time:</strong> Excellent for fast-moving content and gaming</li>
+                    <li><strong>Thinner Design:</strong> More flexible panel construction allows for ultra-thin profiles</li>
+                </ul>
+                
+                <h3>QLED Technology Advantages</h3>
+                <ul>
+                    <li><strong>Higher Brightness:</strong> Better performance in brightly lit rooms</li>
+                    <li><strong>No Burn-in Risk:</strong> Quantum dot technology doesn't suffer from image retention</li>
+                    <li><strong>Longer Lifespan:</strong> Generally more durable over extended periods</li>
+                    <li><strong>Better Value:</strong> Often more affordable than comparable OLED models</li>
+                </ul>
+                
+                <h3>Making the Right Choice</h3>
+                <p>If you primarily watch in dark rooms and value perfect blacks, OLED is likely your best choice. If your room is brightly lit or you're concerned about burn-in from static content, QLED might be the better option. The televisions in our collection represent the best of both technologies across various price points.</p>
+            </div>
+        </div>
+        
+        <div class="content-section">
+            <h2 class="section-title">Best Smart TVs for Gaming in 2025</h2>
+            <div class="section-content">
+                <p>Modern gaming requires televisions that can keep up with high frame rates, low input lag, and advanced features. After extensive testing, we've identified the key specifications that matter most for gamers.</p>
+                
+                <h3>Essential Gaming Features</h3>
+                <p>The ideal gaming television should have:</p>
+                <ul>
+                    <li><strong>Low Input Lag:</strong> Under 20ms for responsive gameplay</li>
+                    <li><strong>High Refresh Rate:</strong> 120Hz or higher for smooth motion</li>
+                    <li><strong>HDMI 2.1:</strong> Necessary for 4K@120Hz, VRR, and ALLM</li>
+                    <li><strong>Variable Refresh Rate (VRR):</strong> Eliminates screen tearing</li>
+                    <li><strong>Auto Low Latency Mode (ALLM):</strong> Automatically switches to game mode</li>
+                </ul>
+                
+                <h3>Our Top Gaming Recommendations</h3>
+                <p>Based on our testing, the televisions featured in our collection represent the best options for gamers across various budgets. From budget-friendly models that handle casual gaming to premium displays with cutting-edge gaming features, there's something for every type of gamer.</p>
+                
+                <p>When selecting a gaming TV, consider not just the specifications but also the real-world performance. Features like local dimming, color accuracy, and motion handling significantly impact your gaming experience beyond just the raw specs.</p>
+            </div>
+        </div>
+        
+        <h2 style="text-align: center; font-size: 2.5rem; margin: 50px 0 30px; color: #fff; animation: fadeIn 1s ease-out 0.9s both;">Our Top Television Recommendations</h2>
+        
+        <div class="tvs-grid">
+            <!-- TV 1 -->
+            <div class="tv-card" style="--animation-order: 1">
+                <div class="tv-image">
+                    <img src="Television/Tv1.png" alt="TCL 55-inch 4K LED Smart TV">
+                    <div class="tv-number">1</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Television 1</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	TCL</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
+                <div class="tv-content">
+                    <h3 class="tv-title">TCL 55-inch 4K Smart TV</h3>
+                    <ul class="tv-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 55 Inches</li>
+                        <li><i class="fas fa-check"></i> Brand: TCL</li>
+                        <li><i class="fas fa-check"></i> Display Technology: LED</li>
+                        <li><i class="fas fa-check"></i> Resolution: 4K Ultra HD</li>
                     </ul>
-                    <a href="https://amzn.to/48Za2eQ" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/48Za2eQ" class="buy-btn">View TV Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 2 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/Tv2.png" alt="Mobile 2">
-                    <div class="mobile-number">2</div>
+            <!-- TV 2 -->
+            <div class="tv-card" style="--animation-order: 2">
+                <div class="tv-image">
+                    <img src="Television/Tv2.png" alt="Panasonic 50-inch 4K UHD Smart TV">
+                    <div class="tv-number">2</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Television 2</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	50 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Panasonic</li>
-                        <li><i class="fas fa-check"></i>Display Technology	4K UHD</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
+                <div class="tv-content">
+                    <h3 class="tv-title">Panasonic 50-inch 4K TV</h3>
+                    <ul class="tv-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 50 Inches</li>
+                        <li><i class="fas fa-check"></i> Brand: Panasonic</li>
+                        <li><i class="fas fa-check"></i> Display Technology: 4K UHD</li>
+                        <li><i class="fas fa-check"></i> Resolution: 4K Ultra HD</li>
                     </ul>
-                    <a href="https://amzn.to/46GvPXh" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/46GvPXh" class="buy-btn">View TV Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 3 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/Tv3.png" alt="Mobile 3">
-                    <div class="mobile-number">3</div>
+            <!-- TV 3 -->
+            <div class="tv-card" style="--animation-order: 3">
+                <div class="tv-image">
+                    <img src="Television/Tv3.png" alt="Xiaomi 55-inch 4K LED Smart TV">
+                    <div class="tv-number">3</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Television 3</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	XIAOMI</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
+                <div class="tv-content">
+                    <h3 class="tv-title">Xiaomi 55-inch 4K TV</h3>
+                    <ul class="tv-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 55 Inches</li>
+                        <li><i class="fas fa-check"></i> Brand: XIAOMI</li>
+                        <li><i class="fas fa-check"></i> Display Technology: LED</li>
+                        <li><i class="fas fa-check"></i> Resolution: 4K Ultra HD</li>
                     </ul>
-                    <a href="https://amzn.to/3IVRbXG" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/3IVRbXG" class="buy-btn">View TV Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 4 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/Tv4.png" alt="Mobile 4">
-                    <div class="mobile-number">4</div>
+            <!-- TV 4 -->
+            <div class="tv-card" style="--animation-order: 4">
+                <div class="tv-image">
+                    <img src="Television/Tv4.png" alt="Sony 65-inch 4K LED Smart TV">
+                    <div class="tv-number">4</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Television 4</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Sony</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
+                <div class="tv-content">
+                    <h3 class="tv-title">Sony 65-inch 4K TV</h3>
+                    <ul class="tv-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 65 Inches</li>
+                        <li><i class="fas fa-check"></i> Brand: Sony</li>
+                        <li><i class="fas fa-check"></i> Display Technology: LED</li>
+                        <li><i class="fas fa-check"></i> Resolution: 4K Ultra HD</li>
                     </ul>
-                    <a href="https://amzn.to/4mZKYHW" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/4mZKYHW" class="buy-btn">View TV Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 5 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/Tv5.png" alt="Mobile 5">
-                    <div class="mobile-number">5</div>
+            <!-- TV 5 -->
+            <div class="tv-card" style="--animation-order: 5">
+                <div class="tv-image">
+                    <img src="Television/Tv5.png" alt="Samsung 65-inch 4K LED Smart TV">
+                    <div class="tv-number">5</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Television 5</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i>Brand	Samsung</li>
-                        <li><i class="fas fa-check"></i>Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i>Resolution	4K</li>
+                <div class="tv-content">
+                    <h3 class="tv-title">Samsung 65-inch 4K TV</h3>
+                    <ul class="tv-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 65 Inches</li>
+                        <li><i class="fas fa-check"></i> Brand: Samsung</li>
+                        <li><i class="fas fa-check"></i> Display Technology: LED</li>
+                        <li><i class="fas fa-check"></i> Resolution: 4K Ultra HD</li>
                     </ul>
-                    <a href="https://amzn.to/48Y5HZh" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/48Y5HZh" class="buy-btn">View TV Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 6 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/Tv6.png" alt="Mobile 6">
-                    <div class="mobile-number">6</div>
+            <!-- TV 6 -->
+            <div class="tv-card" style="--animation-order: 6">
+                <div class="tv-image">
+                    <img src="Television/Tv6.png" alt="Vu 65-inch 4K QLED Smart TV">
+                    <div class="tv-number">6</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Television 6</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i>Brand	Vu</li>
-                        <li><i class="fas fa-check"></i>Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i>Resolution	4K</li>
+                <div class="tv-content">
+                    <h3 class="tv-title">Vu 65-inch QLED TV</h3>
+                    <ul class="tv-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 65 Inches</li>
+                        <li><i class="fas fa-check"></i> Brand: Vu</li>
+                        <li><i class="fas fa-check"></i> Display Technology: QLED</li>
+                        <li><i class="fas fa-check"></i> Resolution: 4K Ultra HD</li>
                     </ul>
-                    <a href="https://amzn.to/3KEnRWb" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/3KEnRWb" class="buy-btn">View TV Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 7 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/Tv7.png" alt="Mobile 7">
-                    <div class="mobile-number">7</div>
+            <!-- TV 7 -->
+            <div class="tv-card" style="--animation-order: 7">
+                <div class="tv-image">
+                    <img src="Television/Tv7.png" alt="Philips 65-inch 4K LED Smart TV">
+                    <div class="tv-number">7</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Television 7</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Philips</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
+                <div class="tv-content">
+                    <h3 class="tv-title">Philips 65-inch 4K TV</h3>
+                    <ul class="tv-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 65 Inches</li>
+                        <li><i class="fas fa-check"></i> Brand: Philips</li>
+                        <li><i class="fas fa-check"></i> Display Technology: LED</li>
+                        <li><i class="fas fa-check"></i> Resolution: 4K Ultra HD</li>
                     </ul>
-                    <a href="https://amzn.to/3L5FKx2" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/3L5FKx2" class="buy-btn">View TV Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 8 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/Tv8.png" alt="Mobile 8">
-                    <div class="mobile-number">8</div>
+            <!-- TV 8 -->
+            <div class="tv-card" style="--animation-order: 8">
+                <div class="tv-image">
+                    <img src="Television/Tv8.png" alt="LG 32-inch HD Ready LED Smart TV">
+                    <div class="tv-number">8</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Television 8</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	32 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	LG</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	768p</li>
+                <div class="tv-content">
+                    <h3 class="tv-title">LG 32-inch HD Ready TV</h3>
+                    <ul class="tv-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 32 Inches</li>
+                        <li><i class="fas fa-check"></i> Brand: LG</li>
+                        <li><i class="fas fa-check"></i> Display Technology: LED</li>
+                        <li><i class="fas fa-check"></i> Resolution: 768p HD Ready</li>
                     </ul>
-                    <a href="https://amzn.to/46Yt9mF" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/46Yt9mF" class="buy-btn">View TV Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 9 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/Tv9.png" alt="Mobile 9">
-                    <div class="mobile-number">9</div>
+            <!-- TV 9 -->
+            <div class="tv-card" style="--animation-order: 9">
+                <div class="tv-image">
+                    <img src="Television/Tv9.png" alt="Toshiba 55-inch 4K QLED Smart TV">
+                    <div class="tv-number">9</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Television 9</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	TOSHIBA</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
+                <div class="tv-content">
+                    <h3 class="tv-title">Toshiba 55-inch QLED TV</h3>
+                    <ul class="tv-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 55 Inches</li>
+                        <li><i class="fas fa-check"></i> Brand: TOSHIBA</li>
+                        <li><i class="fas fa-check"></i> Display Technology: QLED</li>
+                        <li><i class="fas fa-check"></i> Resolution: 4K Ultra HD</li>
                     </ul>
-                    <a href="https://amzn.to/437nvNY" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/437nvNY" class="buy-btn">View TV Deal</a>
                 </div>
             </div>
             
-            <!-- Mobile 10 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/Tv10.png" alt="Mobile 10">
-                    <div class="mobile-number">10</div>
+            <!-- TV 10 -->
+            <div class="tv-card" style="--animation-order: 10">
+                <div class="tv-image">
+                    <img src="Television/Tv10.png" alt="TCL 55-inch 4K QD-Mini LED Smart TV">
+                    <div class="tv-number">10</div>
                 </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Television 10</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	TCL</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QD-Mini LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
+                <div class="tv-content">
+                    <h3 class="tv-title">TCL 55-inch QD-Mini LED</h3>
+                    <ul class="tv-features">
+                        <li><i class="fas fa-check"></i> Screen Size: 55 Inches</li>
+                        <li><i class="fas fa-check"></i> Brand: TCL</li>
+                        <li><i class="fas fa-check"></i> Display Technology: QD-Mini LED</li>
+                        <li><i class="fas fa-check"></i> Resolution: 4K Ultra HD</li>
                     </ul>
-                    <a href="https://amzn.to/3WzzakY" class="buy-btn">Buy Now</a>
+                    <a href="https://amzn.to/3WzzakY" class="buy-btn">View TV Deal</a>
                 </div>
             </div>
         </div>
         
+        <div class="content-section">
+            <h2 class="section-title">Setting Up Your Perfect Home Theater</h2>
+            <div class="section-content">
+                <p>Creating an immersive home theater experience involves more than just selecting the right television. Proper setup, audio configuration, and lighting all contribute to the ultimate viewing experience.</p>
+                
+                <h3>Optimal TV Placement</h3>
+                <ul>
+                    <li><strong>Viewing Distance:</strong> Position your TV 1.5 to 2.5 times the screen diagonal away</li>
+                    <li><strong>Eye Level:</strong> Center of screen should be at or slightly below eye level when seated</li>
+                    <li><strong>Wall Mounting:</strong> Consider tilt and swivel options for flexible viewing angles</li>
+                    <li><strong>Cable Management:</strong> Use cord covers or in-wall solutions for a clean look</li>
+                </ul>
+                
+                <h3>Audio Considerations</h3>
+                <ul>
+                    <li><strong>Soundbars:</strong> Great space-saving option that significantly improves TV audio</li>
+                    <li><strong>Surround Sound:</strong> 5.1 or 7.1 systems for true cinematic immersion</li>
+                    <li><strong>Audio Formats:</strong> Look for Dolby Atmos and DTS:X support for object-based audio</li>
+                    <li><strong>Speaker Placement:</strong> Follow recommended positioning guidelines for optimal soundstage</li>
+                </ul>
+                
+                <h3>Lighting Control</h3>
+                <p>Proper lighting enhances your viewing experience:</p>
+                <ul>
+                    <li><strong>Ambient Lighting:</strong> Use bias lighting behind your TV to reduce eye strain</li>
+                    <li><strong>Dimmable Lights:</strong> Install dimmer switches for flexible brightness control</li>
+                    <li><strong>Blackout Curtains:</strong> Essential for daytime movie watching in bright rooms</li>
+                </ul>
+                
+                <p>By carefully planning your home theater setup, you can maximize your television's performance and create an entertainment space that rivals commercial cinemas.</p>
+            </div>
+        </div>
+        
         <footer>
-            <p>© 2023 Premium Mobile Collection. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="disclaimer.html">Disclaimer</a>
+            </div>
+            <p>© 2025 ShopAll Deals. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.8rem; color: #888;">
+                <strong>Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a small commission when you make a purchase through our links, at no extra cost to you. This helps us maintain the site and continue providing valuable content.
+            </p>
         </footer>
     </div>
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Premium Television Collection - ShopAll Deals",
+      "description": "Browse our collection of premium smart TVs from top brands with the latest display technologies, smart features, and immersive audio.",
+      "url": "https://www.shopalldeals.com/televisions.html",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "TCL 55-inch 4K LED Smart TV",
+          "url": "https://www.shopalldeals.com/televisions.html#tcl-55-4k"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Panasonic 50-inch 4K UHD Smart TV",
+          "url": "https://www.shopalldeals.com/televisions.html#panasonic-50-4k"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Xiaomi 55-inch 4K LED Smart TV",
+          "url": "https://www.shopalldeals.com/televisions.html#xiaomi-55-4k"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Sony 65-inch 4K LED Smart TV",
+          "url": "https://www.shopalldeals.com/televisions.html#sony-65-4k"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Samsung 65-inch 4K LED Smart TV",
+          "url": "https://www.shopalldeals.com/televisions.html#samsung-65-4k"
+        }
+      ]
+    }
+    </script>
 </body>
 </html>
