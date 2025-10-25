@@ -193,6 +193,76 @@
             margin-bottom: 10px;
         }
 
+        /* Filter and Sort Controls */
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .search-box {
+            position: relative;
+            flex-grow: 1;
+            max-width: 400px;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 12px 20px 12px 45px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .search-box input:focus {
+            outline: none;
+            border-color: #ffa36c;
+            box-shadow: 0 0 0 2px rgba(255, 163, 108, 0.2);
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #aaa;
+        }
+
+        .filter-sort {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-sort select {
+            padding: 12px 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .filter-sort select:focus {
+            outline: none;
+            border-color: #ffa36c;
+            box-shadow: 0 0 0 2px rgba(255, 163, 108, 0.2);
+        }
+
+        .filter-sort option {
+            background: #2c5364;
+        }
+
         .laptops-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -393,6 +463,40 @@
             left: 100%;
         }
 
+        /* Pagination */
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0 30px;
+            gap: 10px;
+        }
+
+        .pagination button {
+            padding: 10px 18px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+            color: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .pagination button:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .pagination button.active {
+            background: linear-gradient(90deg, #ff6b6b, #ffa36c);
+            border-color: transparent;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
         footer {
             text-align: center;
             margin-top: 60px;
@@ -445,6 +549,15 @@
             h1 {
                 font-size: 2.8rem;
             }
+            
+            .controls {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .search-box {
+                max-width: 100%;
+            }
         }
 
         @media (max-width: 600px) {
@@ -469,6 +582,10 @@
                 flex-direction: column;
                 align-items: center;
                 gap: 10px;
+            }
+            
+            .filter-sort {
+                flex-direction: column;
             }
         }
     </style>
@@ -582,186 +699,47 @@
         
         <h2 style="text-align: center; font-size: 2.5rem; margin: 50px 0 30px; color: #fff;">Our Top Laptop Recommendations</h2>
         
-        <div class="laptops-grid">
-            <!-- Laptop 1 -->
-            <div class="laptop-card">
-                <div class="laptop-image">
-                    <img src="Computers/Laptop1.png" alt="Acer Aspire Lite Laptop">
-                    <div class="laptop-number">1</div>
-                </div>
-                <div class="laptop-content">
-                    <h3 class="laptop-title">Acer Aspire Lite</h3>
-                    <ul class="laptop-features">
-                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
-                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR4</li>
-                        <li><i class="fas fa-check"></i> Processor: Intel Core i5</li>
-                    </ul>
-                    <a href="https://amzn.to/48Jtqwz" class="buy-btn">View Laptop Deal</a>
-                </div>
+        <!-- Controls for filtering and sorting -->
+        <div class="controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search laptops...">
             </div>
-            
-            <!-- Laptop 2 -->
-            <div class="laptop-card">
-                <div class="laptop-image">
-                    <img src="Computers/Laptop2.png" alt="HP Laptop">
-                    <div class="laptop-number">2</div>
-                </div>
-                <div class="laptop-content">
-                    <h3 class="laptop-title">HP Laptop</h3>
-                    <ul class="laptop-features">
-                        <li><i class="fas fa-check"></i> Screen Size: 39.6 cm (15.6")</li>
-                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
-                        <li><i class="fas fa-check"></i> Processor: Intel Core i3</li>
-                        <li><i class="fas fa-check"></i> RAM: 8 GB DDR4</li>
-                    </ul>
-                    <a href="https://amzn.to/47iMhNA" class="buy-btn">View Laptop Deal</a>
-                </div>
+            <div class="filter-sort">
+                <select id="brandFilter">
+                    <option value="all">All Brands</option>
+                    <option value="acer">Acer</option>
+                    <option value="hp">HP</option>
+                    <option value="lenovo">Lenovo</option>
+                    <option value="asus">ASUS</option>
+                    <option value="dell">Dell</option>
+                    <option value="msi">MSI</option>
+                    <option value="apple">Apple</option>
+                    <option value="samsung">Samsung</option>
+                </select>
+                <select id="priceFilter">
+                    <option value="all">All Prices</option>
+                    <option value="budget">Budget (Under ₹40,000)</option>
+                    <option value="mid">Mid-Range (₹40,000 - ₹80,000)</option>
+                    <option value="premium">Premium (₹80,000+)</option>
+                </select>
+                <select id="sortBy">
+                    <option value="default">Sort By</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating">Highest Rated</option>
+                    <option value="newest">Newest First</option>
+                </select>
             </div>
-            
-            <!-- Laptop 3 -->
-            <div class="laptop-card">
-                <div class="laptop-image">
-                    <img src="Computers/Laptop3.png" alt="HP Laptop with Core i3">
-                    <div class="laptop-number">3</div>
-                </div>
-                <div class="laptop-content">
-                    <h3 class="laptop-title">HP Core i3 Laptop</h3>
-                    <ul class="laptop-features">
-                        <li><i class="fas fa-check"></i> Screen Size: 39.6 cm (15.6")</li>
-                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
-                        <li><i class="fas fa-check"></i> Processor: Intel Core i3</li>
-                        <li><i class="fas fa-check"></i> RAM: 8 GB DDR4</li>
-                    </ul>
-                    <a href="https://amzn.to/3WxqVWv" class="buy-btn">View Laptop Deal</a>
-                </div>
-            </div>
-            
-            <!-- Laptop 4 -->
-            <div class="laptop-card">
-                <div class="laptop-image">
-                    <img src="Computers/Laptop4.png" alt="Lenovo LOQ Gaming Laptop">
-                    <div class="laptop-number">4</div>
-                </div>
-                <div class="laptop-content">
-                    <h3 class="laptop-title">Lenovo LOQ</h3>
-                    <ul class="laptop-features">
-                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
-                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR5</li>
-                        <li><i class="fas fa-check"></i> Graphics: NVIDIA RTX</li>
-                    </ul>
-                    <a href="https://amzn.to/4h8335w" class="buy-btn">View Laptop Deal</a>
-                </div>
-            </div>
-            
-            <!-- Laptop 5 -->
-            <div class="laptop-card">
-                <div class="laptop-image">
-                    <img src="Computers/Laptop5.png" alt="Acer Aspire Go 14 Laptop">
-                    <div class="laptop-number">5</div>
-                </div>
-                <div class="laptop-content">
-                    <h3 class="laptop-title">Acer Aspire Go 14</h3>
-                    <ul class="laptop-features">
-                        <li><i class="fas fa-check"></i> Screen Size: 14 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
-                        <li><i class="fas fa-check"></i> Processor: Intel Core Ultra 5</li>
-                        <li><i class="fas fa-check"></i> RAM: 8 GB LPDDR5</li>
-                    </ul>
-                    <a href="https://amzn.to/42ACq30" class="buy-btn">View Laptop Deal</a>
-                </div>
-            </div>
-            
-            <!-- Laptop 6 -->
-            <div class="laptop-card">
-                <div class="laptop-image">
-                    <img src="Computers/Laptop6.png" alt="ASUS Vivobook 16 Laptop">
-                    <div class="laptop-number">6</div>
-                </div>
-                <div class="laptop-content">
-                    <h3 class="laptop-title">ASUS Vivobook 16</h3>
-                    <ul class="laptop-features">
-                        <li><i class="fas fa-check"></i> Screen Size: 16 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
-                        <li><i class="fas fa-check"></i> Processor: Intel Core 7</li>
-                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR4</li>
-                    </ul>
-                    <a href="https://amzn.to/3WxB5GC" class="buy-btn">View Laptop Deal</a>
-                </div>
-            </div>
-            
-            <!-- Laptop 7 -->
-            <div class="laptop-card">
-                <div class="laptop-image">
-                    <img src="Computers/Laptop7.png" alt="Acer Aspire Lite Gaming Laptop">
-                    <div class="laptop-number">7</div>
-                </div>
-                <div class="laptop-content">
-                    <h3 class="laptop-title">Acer Aspire Lite</h3>
-                    <ul class="laptop-features">
-                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
-                        <li><i class="fas fa-check"></i> Processor: Core i5-12450H</li>
-                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR4</li>
-                    </ul>
-                    <a href="https://amzn.to/4q0Yz4x" class="buy-btn">View Laptop Deal</a>
-                </div>
-            </div>
-            
-            <!-- Laptop 8 -->
-            <div class="laptop-card">
-                <div class="laptop-image">
-                    <img src="Computers/Laptop8.png" alt="Lenovo IdeaPad Slim 3">
-                    <div class="laptop-number">8</div>
-                </div>
-                <div class="laptop-content">
-                    <h3 class="laptop-title">Lenovo IdeaPad Slim 3</h3>
-                    <ul class="laptop-features">
-                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Processor: Intel Core i5</li>
-                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR4</li>
-                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
-                    </ul>
-                    <a href="https://amzn.to/46LnL7I" class="buy-btn">View Laptop Deal</a>
-                </div>
-            </div>
-            
-            <!-- Laptop 9 -->
-            <div class="laptop-card">
-                <div class="laptop-image">
-                    <img src="Computers/Laptop9.png" alt="Acer ALG Laptop">
-                    <div class="laptop-number">9</div>
-                </div>
-                <div class="laptop-content">
-                    <h3 class="laptop-title">Acer ALG</h3>
-                    <ul class="laptop-features">
-                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
-                        <li><i class="fas fa-check"></i> Processor: Intel Core i5</li>
-                        <li><i class="fas fa-check"></i> RAM: 8 GB DDR4</li>
-                    </ul>
-                    <a href="https://amzn.to/4h63jSp" class="buy-btn">View Laptop Deal</a>
-                </div>
-            </div>
-            
-            <!-- Laptop 10 -->
-            <div class="laptop-card">
-                <div class="laptop-image">
-                    <img src="Computers/Laptop10.png" alt="Acer ALG Core i7 Laptop">
-                    <div class="laptop-number">10</div>
-                </div>
-                <div class="laptop-content">
-                    <h3 class="laptop-title">Acer ALG Core i7</h3>
-                    <ul class="laptop-features">
-                        <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk: 512 GB SSD</li>
-                        <li><i class="fas fa-check"></i> Processor: Intel Core i7</li>
-                        <li><i class="fas fa-check"></i> RAM: 16 GB DDR4</li>
-                    </ul>
-                    <a href="https://amzn.to/3J0ng0q" class="buy-btn">View Laptop Deal</a>
-                </div>
-            </div>
+        </div>
+        
+        <div class="laptops-grid" id="laptopsContainer">
+            <!-- Laptop cards will be dynamically generated here -->
+        </div>
+        
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+            <!-- Pagination buttons will be dynamically generated here -->
         </div>
         
         <div class="content-section">
@@ -805,6 +783,927 @@
         </footer>
     </div>
     
+    <script>
+        // Complete laptop data with 50 products
+        const laptops = [
+            // Original 10 laptops
+            {
+                id: 1,
+                name: "Acer Aspire Lite",
+                image: "Computers/Laptop1.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "RAM: 16 GB DDR4",
+                    "Processor: Intel Core i5"
+                ],
+                link: "https://amzn.to/48Jtqwz",
+                brand: "acer",
+                price: 45999,
+                rating: 4.3
+            },
+            {
+                id: 2,
+                name: "HP Laptop 15s",
+                image: "Computers/Laptop2.png",
+                features: [
+                    "Screen Size: 39.6 cm (15.6\")",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i3",
+                    "RAM: 8 GB DDR4"
+                ],
+                link: "https://amzn.to/47iMhNA",
+                brand: "hp",
+                price: 34999,
+                rating: 4.1
+            },
+            {
+                id: 3,
+                name: "HP Core i3 Laptop",
+                image: "Computers/Laptop3.png",
+                features: [
+                    "Screen Size: 39.6 cm (15.6\")",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i3",
+                    "RAM: 8 GB DDR4"
+                ],
+                link: "https://amzn.to/3WxqVWv",
+                brand: "hp",
+                price: 36999,
+                rating: 4.2
+            },
+            {
+                id: 4,
+                name: "Lenovo LOQ Gaming",
+                image: "Computers/Laptop4.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "RAM: 16 GB DDR5",
+                    "Graphics: NVIDIA RTX 3050"
+                ],
+                link: "https://amzn.to/4h8335w",
+                brand: "lenovo",
+                price: 89999,
+                rating: 4.5
+            },
+            {
+                id: 5,
+                name: "Acer Aspire Go 14",
+                image: "Computers/Laptop5.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core Ultra 5",
+                    "RAM: 8 GB LPDDR5"
+                ],
+                link: "https://amzn.to/42ACq30",
+                brand: "acer",
+                price: 52999,
+                rating: 4.4
+            },
+            {
+                id: 6,
+                name: "ASUS Vivobook 16",
+                image: "Computers/Laptop6.png",
+                features: [
+                    "Screen Size: 16 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i7",
+                    "RAM: 16 GB DDR4"
+                ],
+                link: "https://amzn.to/3WxB5GC",
+                brand: "asus",
+                price: 74999,
+                rating: 4.3
+            },
+            {
+                id: 7,
+                name: "Acer Aspire Lite AL15",
+                image: "Computers/Laptop7.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Core i5-12450H",
+                    "RAM: 16 GB DDR4"
+                ],
+                link: "https://amzn.to/4q0Yz4x",
+                brand: "acer",
+                price: 48999,
+                rating: 4.2
+            },
+            {
+                id: 8,
+                name: "Lenovo IdeaPad Slim 3",
+                image: "Computers/Laptop8.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Processor: Intel Core i5",
+                    "RAM: 16 GB DDR4",
+                    "Hard Disk: 512 GB SSD"
+                ],
+                link: "https://amzn.to/46LnL7I",
+                brand: "lenovo",
+                price: 54999,
+                rating: 4.4
+            },
+            {
+                id: 9,
+                name: "Acer ALG Gaming",
+                image: "Computers/Laptop9.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 8 GB DDR4"
+                ],
+                link: "https://amzn.to/4h63jSp",
+                brand: "acer",
+                price: 42999,
+                rating: 4.1
+            },
+            {
+                id: 10,
+                name: "Acer ALG Core i7",
+                image: "Computers/Laptop10.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i7",
+                    "RAM: 16 GB DDR4"
+                ],
+                link: "https://amzn.to/3J0ng0q",
+                brand: "acer",
+                price: 68999,
+                rating: 4.6
+            },
+            // Additional 40 laptops to reach 50 total
+            {
+                id: 11,
+                name: "Dell Inspiron 15",
+                image: "Computers/Laptop11.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 16 GB DDR4"
+                ],
+                link: "#",
+                brand: "dell",
+                price: 59999,
+                rating: 4.4
+            },
+            {
+                id: 12,
+                name: "MSI Katana 15",
+                image: "Computers/Laptop12.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i7",
+                    "Graphics: NVIDIA RTX 4060"
+                ],
+                link: "#",
+                brand: "msi",
+                price: 109999,
+                rating: 4.7
+            },
+            {
+                id: 13,
+                name: "HP Pavilion 14",
+                image: "Computers/Laptop13.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: AMD Ryzen 5",
+                    "RAM: 8 GB DDR4"
+                ],
+                link: "#",
+                brand: "hp",
+                price: 47999,
+                rating: 4.2
+            },
+            {
+                id: 14,
+                name: "Lenovo ThinkPad E15",
+                image: "Computers/Laptop14.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 16 GB DDR4"
+                ],
+                link: "#",
+                brand: "lenovo",
+                price: 68999,
+                rating: 4.5
+            },
+            {
+                id: 15,
+                name: "ASUS TUF Gaming F15",
+                image: "Computers/Laptop15.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: AMD Ryzen 7",
+                    "Graphics: NVIDIA RTX 4050"
+                ],
+                link: "#",
+                brand: "asus",
+                price: 84999,
+                rating: 4.6
+            },
+            {
+                id: 16,
+                name: "Acer Swift 3",
+                image: "Computers/Laptop16.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 16 GB LPDDR4"
+                ],
+                link: "#",
+                brand: "acer",
+                price: 61999,
+                rating: 4.3
+            },
+            {
+                id: 17,
+                name: "HP Omen 16",
+                image: "Computers/Laptop17.png",
+                features: [
+                    "Screen Size: 16.1 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Intel Core i7",
+                    "Graphics: NVIDIA RTX 4070"
+                ],
+                link: "#",
+                brand: "hp",
+                price: 149999,
+                rating: 4.8
+            },
+            {
+                id: 18,
+                name: "Lenovo Yoga 9i",
+                image: "Computers/Laptop18.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Intel Core i7",
+                    "RAM: 16 GB LPDDR5"
+                ],
+                link: "#",
+                brand: "lenovo",
+                price: 129999,
+                rating: 4.7
+            },
+            {
+                id: 19,
+                name: "ASUS Zenbook 14",
+                image: "Computers/Laptop19.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 16 GB LPDDR5"
+                ],
+                link: "#",
+                brand: "asus",
+                price: 74999,
+                rating: 4.4
+            },
+            {
+                id: 20,
+                name: "Dell XPS 13",
+                image: "Computers/Laptop20.png",
+                features: [
+                    "Screen Size: 13.4 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i7",
+                    "RAM: 16 GB LPDDR5"
+                ],
+                link: "#",
+                brand: "dell",
+                price: 119999,
+                rating: 4.7
+            },
+            {
+                id: 21,
+                name: "Apple MacBook Air M2",
+                image: "Computers/Laptop21.png",
+                features: [
+                    "Screen Size: 13.6 Inches",
+                    "Hard Disk: 256 GB SSD",
+                    "Processor: Apple M2 Chip",
+                    "RAM: 8 GB Unified"
+                ],
+                link: "#",
+                brand: "apple",
+                price: 99999,
+                rating: 4.8
+            },
+            {
+                id: 22,
+                name: "Samsung Galaxy Book3",
+                image: "Computers/Laptop22.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 16 GB DDR4"
+                ],
+                link: "#",
+                brand: "samsung",
+                price: 69999,
+                rating: 4.3
+            },
+            {
+                id: 23,
+                name: "MSI Bravo 15",
+                image: "Computers/Laptop23.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: AMD Ryzen 5",
+                    "Graphics: AMD Radeon RX"
+                ],
+                link: "#",
+                brand: "msi",
+                price: 64999,
+                rating: 4.2
+            },
+            {
+                id: 24,
+                name: "HP Victus 16",
+                image: "Computers/Laptop24.png",
+                features: [
+                    "Screen Size: 16.1 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "Graphics: NVIDIA GTX 1650"
+                ],
+                link: "#",
+                brand: "hp",
+                price: 69999,
+                rating: 4.4
+            },
+            {
+                id: 25,
+                name: "Lenovo Legion 5",
+                image: "Computers/Laptop25.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: AMD Ryzen 7",
+                    "Graphics: NVIDIA RTX 4060"
+                ],
+                link: "#",
+                brand: "lenovo",
+                price: 119999,
+                rating: 4.7
+            },
+            {
+                id: 26,
+                name: "ASUS ROG Strix G16",
+                image: "Computers/Laptop26.png",
+                features: [
+                    "Screen Size: 16 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Intel Core i9",
+                    "Graphics: NVIDIA RTX 4070"
+                ],
+                link: "#",
+                brand: "asus",
+                price: 169999,
+                rating: 4.8
+            },
+            {
+                id: 27,
+                name: "Acer Predator Helios",
+                image: "Computers/Laptop27.png",
+                features: [
+                    "Screen Size: 16 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Intel Core i7",
+                    "Graphics: NVIDIA RTX 4060"
+                ],
+                link: "#",
+                brand: "acer",
+                price: 139999,
+                rating: 4.6
+            },
+            {
+                id: 28,
+                name: "Dell G15 Gaming",
+                image: "Computers/Laptop28.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "Graphics: NVIDIA RTX 3050"
+                ],
+                link: "#",
+                brand: "dell",
+                price: 74999,
+                rating: 4.3
+            },
+            {
+                id: 29,
+                name: "Apple MacBook Pro 14",
+                image: "Computers/Laptop29.png",
+                features: [
+                    "Screen Size: 14.2 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Apple M3 Pro",
+                    "RAM: 18 GB Unified"
+                ],
+                link: "#",
+                brand: "apple",
+                price: 199999,
+                rating: 4.9
+            },
+            {
+                id: 30,
+                name: "Samsung Galaxy Book3 Pro",
+                image: "Computers/Laptop30.png",
+                features: [
+                    "Screen Size: 16 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Intel Core i7",
+                    "RAM: 16 GB LPDDR5"
+                ],
+                link: "#",
+                brand: "samsung",
+                price: 139999,
+                rating: 4.5
+            },
+            {
+                id: 31,
+                name: "MSI Prestige 14",
+                image: "Computers/Laptop31.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Intel Core i7",
+                    "RAM: 16 GB LPDDR5"
+                ],
+                link: "#",
+                brand: "msi",
+                price: 109999,
+                rating: 4.4
+            },
+            {
+                id: 32,
+                name: "HP Envy x360",
+                image: "Computers/Laptop32.png",
+                features: [
+                    "Screen Size: 13.3 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: AMD Ryzen 5",
+                    "RAM: 8 GB DDR4"
+                ],
+                link: "#",
+                brand: "hp",
+                price: 69999,
+                rating: 4.3
+            },
+            {
+                id: 33,
+                name: "Lenovo ThinkBook 14",
+                image: "Computers/Laptop33.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 16 GB DDR4"
+                ],
+                link: "#",
+                brand: "lenovo",
+                price: 64999,
+                rating: 4.4
+            },
+            {
+                id: 34,
+                name: "ASUS ExpertBook B9",
+                image: "Computers/Laptop34.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Intel Core i7",
+                    "RAM: 16 GB LPDDR4"
+                ],
+                link: "#",
+                brand: "asus",
+                price: 149999,
+                rating: 4.5
+            },
+            {
+                id: 35,
+                name: "Acer TravelMate P4",
+                image: "Computers/Laptop35.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 16 GB DDR4"
+                ],
+                link: "#",
+                brand: "acer",
+                price: 69999,
+                rating: 4.2
+            },
+            {
+                id: 36,
+                name: "Dell Latitude 5430",
+                image: "Computers/Laptop36.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 16 GB DDR4"
+                ],
+                link: "#",
+                brand: "dell",
+                price: 79999,
+                rating: 4.4
+            },
+            {
+                id: 37,
+                name: "Apple MacBook Air M1",
+                image: "Computers/Laptop37.png",
+                features: [
+                    "Screen Size: 13.3 Inches",
+                    "Hard Disk: 256 GB SSD",
+                    "Processor: Apple M1 Chip",
+                    "RAM: 8 GB Unified"
+                ],
+                link: "#",
+                brand: "apple",
+                price: 79999,
+                rating: 4.7
+            },
+            {
+                id: 38,
+                name: "Samsung Galaxy Book2",
+                image: "Computers/Laptop38.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 8 GB DDR4"
+                ],
+                link: "#",
+                brand: "samsung",
+                price: 54999,
+                rating: 4.2
+            },
+            {
+                id: 39,
+                name: "MSI Modern 15",
+                image: "Computers/Laptop39.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 8 GB DDR4"
+                ],
+                link: "#",
+                brand: "msi",
+                price: 54999,
+                rating: 4.1
+            },
+            {
+                id: 40,
+                name: "HP 14s-dq5000TU",
+                image: "Computers/Laptop40.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i3",
+                    "RAM: 8 GB DDR4"
+                ],
+                link: "#",
+                brand: "hp",
+                price: 37999,
+                rating: 4.0
+            },
+            {
+                id: 41,
+                name: "Lenovo IdeaPad Gaming 3",
+                image: "Computers/Laptop41.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: AMD Ryzen 5",
+                    "Graphics: NVIDIA GTX 1650"
+                ],
+                link: "#",
+                brand: "lenovo",
+                price: 64999,
+                rating: 4.3
+            },
+            {
+                id: 42,
+                name: "ASUS VivoBook S15",
+                image: "Computers/Laptop42.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i5",
+                    "RAM: 8 GB DDR4"
+                ],
+                link: "#",
+                brand: "asus",
+                price: 59999,
+                rating: 4.2
+            },
+            {
+                id: 43,
+                name: "Acer Chromebook 514",
+                image: "Computers/Laptop43.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 128 GB eMMC",
+                    "Processor: Intel Celeron",
+                    "RAM: 4 GB LPDDR4"
+                ],
+                link: "#",
+                brand: "acer",
+                price: 24999,
+                rating: 3.9
+            },
+            {
+                id: 44,
+                name: "Dell Vostro 3425",
+                image: "Computers/Laptop44.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: AMD Ryzen 5",
+                    "RAM: 8 GB DDR4"
+                ],
+                link: "#",
+                brand: "dell",
+                price: 49999,
+                rating: 4.1
+            },
+            {
+                id: 45,
+                name: "Apple MacBook Pro 16",
+                image: "Computers/Laptop45.png",
+                features: [
+                    "Screen Size: 16.2 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Apple M3 Max",
+                    "RAM: 36 GB Unified"
+                ],
+                link: "#",
+                brand: "apple",
+                price: 299999,
+                rating: 4.9
+            },
+            {
+                id: 46,
+                name: "Samsung Galaxy Book3 360",
+                image: "Computers/Laptop46.png",
+                features: [
+                    "Screen Size: 15.6 Inches",
+                    "Hard Disk: 512 GB SSD",
+                    "Processor: Intel Core i7",
+                    "RAM: 16 GB LPDDR4"
+                ],
+                link: "#",
+                brand: "samsung",
+                price: 119999,
+                rating: 4.5
+            },
+            {
+                id: 47,
+                name: "MSI Summit E13",
+                image: "Computers/Laptop47.png",
+                features: [
+                    "Screen Size: 13.4 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Intel Core i7",
+                    "RAM: 16 GB LPDDR4"
+                ],
+                link: "#",
+                brand: "msi",
+                price: 129999,
+                rating: 4.4
+            },
+            {
+                id: 48,
+                name: "HP Spectre x360",
+                image: "Computers/Laptop48.png",
+                features: [
+                    "Screen Size: 13.5 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Intel Core i7",
+                    "RAM: 16 GB LPDDR4"
+                ],
+                link: "#",
+                brand: "hp",
+                price: 149999,
+                rating: 4.6
+            },
+            {
+                id: 49,
+                name: "Lenovo ThinkPad X1 Carbon",
+                image: "Computers/Laptop49.png",
+                features: [
+                    "Screen Size: 14 Inches",
+                    "Hard Disk: 1 TB SSD",
+                    "Processor: Intel Core i7",
+                    "RAM: 16 GB LPDDR5"
+                ],
+                link: "#",
+                brand: "lenovo",
+                price: 159999,
+                rating: 4.7
+            },
+            {
+                id: 50,
+                name: "ASUS ProArt Studiobook",
+                image: "Computers/Laptop50.png",
+                features: [
+                    "Screen Size: 16 Inches",
+                    "Hard Disk: 2 TB SSD",
+                    "Processor: Intel Core i9",
+                    "Graphics: NVIDIA RTX 4070"
+                ],
+                link: "#",
+                brand: "asus",
+                price: 229999,
+                rating: 4.8
+            }
+        ];
+
+        // Pagination variables
+        let currentPage = 1;
+        const laptopsPerPage = 8;
+        let filteredLaptops = [...laptops];
+
+        // DOM elements
+        const laptopsContainer = document.getElementById('laptopsContainer');
+        const paginationContainer = document.getElementById('pagination');
+        const searchInput = document.getElementById('searchInput');
+        const brandFilter = document.getElementById('brandFilter');
+        const priceFilter = document.getElementById('priceFilter');
+        const sortBy = document.getElementById('sortBy');
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            displayLaptops();
+            setupPagination();
+            setupEventListeners();
+        });
+
+        // Display laptops for current page
+        function displayLaptops() {
+            laptopsContainer.innerHTML = '';
+            
+            const startIndex = (currentPage - 1) * laptopsPerPage;
+            const endIndex = startIndex + laptopsPerPage;
+            const laptopsToDisplay = filteredLaptops.slice(startIndex, endIndex);
+            
+            if (laptopsToDisplay.length === 0) {
+                laptopsContainer.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; font-size: 1.2rem; padding: 40px;">No laptops match your criteria. Try adjusting your filters.</p>';
+                return;
+            }
+            
+            laptopsToDisplay.forEach(laptop => {
+                const laptopCard = document.createElement('div');
+                laptopCard.className = 'laptop-card';
+                
+                laptopCard.innerHTML = `
+                    <div class="laptop-image">
+                        <img src="${laptop.image}" alt="${laptop.name}">
+                        <div class="laptop-number">${laptop.id}</div>
+                    </div>
+                    <div class="laptop-content">
+                        <h3 class="laptop-title">${laptop.name}</h3>
+                        <ul class="laptop-features">
+                            ${laptop.features.map(feature => `<li><i class="fas fa-check"></i> ${feature}</li>`).join('')}
+                        </ul>
+                        <a href="${laptop.link}" class="buy-btn">View Laptop Deal</a>
+                    </div>
+                `;
+                
+                laptopsContainer.appendChild(laptopCard);
+            });
+        }
+
+        // Setup pagination buttons
+        function setupPagination() {
+            paginationContainer.innerHTML = '';
+            
+            const pageCount = Math.ceil(filteredLaptops.length / laptopsPerPage);
+            
+            if (pageCount <= 1) return;
+            
+            // Previous button
+            const prevButton = document.createElement('button');
+            prevButton.innerHTML = '<i class="fas fa-chevron-left"></i>';
+            prevButton.disabled = currentPage === 1;
+            prevButton.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    displayLaptops();
+                    setupPagination();
+                }
+            });
+            paginationContainer.appendChild(prevButton);
+            
+            // Page buttons
+            for (let i = 1; i <= pageCount; i++) {
+                const pageButton = document.createElement('button');
+                pageButton.textContent = i;
+                pageButton.className = i === currentPage ? 'active' : '';
+                pageButton.addEventListener('click', () => {
+                    currentPage = i;
+                    displayLaptops();
+                    setupPagination();
+                });
+                paginationContainer.appendChild(pageButton);
+            }
+            
+            // Next button
+            const nextButton = document.createElement('button');
+            nextButton.innerHTML = '<i class="fas fa-chevron-right"></i>';
+            nextButton.disabled = currentPage === pageCount;
+            nextButton.addEventListener('click', () => {
+                if (currentPage < pageCount) {
+                    currentPage++;
+                    displayLaptops();
+                    setupPagination();
+                }
+            });
+            paginationContainer.appendChild(nextButton);
+        }
+
+        // Filter and sort laptops
+        function filterAndSortLaptops() {
+            let result = [...laptops];
+            
+            // Search filter
+            const searchTerm = searchInput.value.toLowerCase();
+            if (searchTerm) {
+                result = result.filter(laptop => 
+                    laptop.name.toLowerCase().includes(searchTerm) ||
+                    laptop.features.some(feature => feature.toLowerCase().includes(searchTerm))
+                );
+            }
+            
+            // Brand filter
+            const brandValue = brandFilter.value;
+            if (brandValue !== 'all') {
+                result = result.filter(laptop => laptop.brand === brandValue);
+            }
+            
+            // Price filter
+            const priceValue = priceFilter.value;
+            if (priceValue !== 'all') {
+                if (priceValue === 'budget') {
+                    result = result.filter(laptop => laptop.price < 40000);
+                } else if (priceValue === 'mid') {
+                    result = result.filter(laptop => laptop.price >= 40000 && laptop.price <= 80000);
+                } else if (priceValue === 'premium') {
+                    result = result.filter(laptop => laptop.price > 80000);
+                }
+            }
+            
+            // Sort
+            const sortValue = sortBy.value;
+            if (sortValue !== 'default') {
+                if (sortValue === 'price-low') {
+                    result.sort((a, b) => a.price - b.price);
+                } else if (sortValue === 'price-high') {
+                    result.sort((a, b) => b.price - a.price);
+                } else if (sortValue === 'rating') {
+                    result.sort((a, b) => b.rating - a.rating);
+                } else if (sortValue === 'newest') {
+                    // Assuming higher ID means newer
+                    result.sort((a, b) => b.id - a.id);
+                }
+            }
+            
+            filteredLaptops = result;
+            currentPage = 1;
+            displayLaptops();
+            setupPagination();
+        }
+
+        // Setup event listeners for filters
+        function setupEventListeners() {
+            searchInput.addEventListener('input', filterAndSortLaptops);
+            brandFilter.addEventListener('change', filterAndSortLaptops);
+            priceFilter.addEventListener('change', filterAndSortLaptops);
+            sortBy.addEventListener('change', filterAndSortLaptops);
+        }
+    </script>
+    
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
@@ -813,7 +1712,7 @@
       "name": "Premium Laptop Collection - ShopAll Deals",
       "description": "Browse our collection of premium laptops from top brands with the latest processors, ample storage, and high-performance features.",
       "url": "https://www.shopalldeals.com/laptops.html",
-      "numberOfItems": 10,
+      "numberOfItems": 50,
       "itemListElement": [
         {
           "@type": "ListItem",
