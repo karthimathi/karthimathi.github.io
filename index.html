@@ -3,54 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechDeals - Find Your Perfect Tech Product</title>
+    <title>TechDealsHub - Smart Shopping Starts Here</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
         }
         
         :root {
             --primary: #4361ee;
+            --primary-light: #eef2ff;
             --secondary: #3a0ca3;
             --accent: #f72585;
             --light: #f8f9fa;
             --dark: #212529;
             --gray: #6c757d;
             --success: #4cc9f0;
+            --border: #e0e0e0;
         }
         
         body {
             line-height: 1.6;
             color: var(--dark);
-            background-color: #f5f7fb;
+            background-color: var(--light);
         }
         
         a {
             text-decoration: none;
             color: inherit;
+            transition: color 0.3s;
         }
         
         .container {
             width: 90%;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 15px;
         }
         
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.2rem;
+            color: var(--dark);
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            margin: 10px auto;
+            border-radius: 2px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
         /* Header Styles */
         header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            color: white;
+            background-color: white;
+            color: var(--dark);
             padding: 1rem 0;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         
         .header-content {
@@ -64,6 +131,7 @@
             align-items: center;
             font-size: 1.8rem;
             font-weight: 700;
+            color: var(--primary);
         }
         
         .logo i {
@@ -92,340 +160,164 @@
         }
         
         nav ul li a:hover {
-            color: var(--success);
+            color: var(--primary);
         }
         
-        /* Search Section */
-        .search-section {
-            background-color: white;
-            padding: 2rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-        
-        .search-container {
-            display: flex;
-            max-width: 800px;
-            margin: 0 auto;
-            gap: 10px;
-        }
-        
-        .search-box {
-            flex: 1;
-            padding: 12px 20px;
-            border: 2px solid #e0e0e0;
-            border-radius: 50px;
-            font-size: 1rem;
-            transition: border-color 0.3s;
-        }
-        
-        .search-box:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-        
-        .search-btn {
-            background: var(--primary);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 50px;
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
             cursor: pointer;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-        
-        .search-btn:hover {
-            background: var(--secondary);
-        }
-        
-        .filter-options {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 1rem;
-        }
-        
-        .filter-btn {
-            background: white;
-            border: 1px solid #e0e0e0;
-            padding: 8px 15px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: all 0.3s;
-            font-size: 0.9rem;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(67, 97, 238, 0.9), rgba(58, 12, 163, 0.9)), url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            color: white;
-            padding: 5rem 0;
+            color: var(--dark);
+            padding: 6rem 0;
             text-align: center;
         }
         
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.2;
         }
         
         .hero p {
             font-size: 1.2rem;
             max-width: 700px;
             margin: 0 auto 2rem;
-        }
-        
-        .cta-button {
-            display: inline-block;
-            background-color: var(--accent);
-            color: white;
-            padding: 0.9rem 2rem;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s;
-            box-shadow: 0 4px 15px rgba(247, 37, 133, 0.4);
-        }
-        
-        .cta-button:hover {
-            background-color: #d40c6a;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(247, 37, 133, 0.5);
-        }
-        
-        /* Products Section */
-        .products {
-            padding: 4rem 0;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            font-size: 2.2rem;
-            color: var(--dark);
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--primary);
-            margin: 10px auto;
-            border-radius: 2px;
-        }
-        
-        .product-controls {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .results-count {
-            font-weight: 500;
             color: var(--gray);
         }
         
-        .sort-options select {
-            padding: 8px 15px;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            background: white;
-        }
-        
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-        
-        .product-card {
+        /* Product Guide Section */
+        .product-guide {
             background-color: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            position: relative;
         }
         
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-        }
-        
-        .product-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: var(--accent);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            z-index: 2;
-        }
-        
-        .product-image {
-            height: 200px;
-            background-color: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3.5rem;
-            color: var(--primary);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .product-image:after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 40%;
-            background: linear-gradient(transparent, rgba(0,0,0,0.05));
-        }
-        
-        .product-info {
-            padding: 1.5rem;
-        }
-        
-        .product-category {
-            color: var(--gray);
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-        }
-        
-        .product-title {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        
-        .product-description {
-            color: var(--gray);
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        
-        .product-price {
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        
-        .product-rating {
-            color: #ffc107;
-            margin-bottom: 1rem;
-            font-size: 0.9rem;
-        }
-        
-        .affiliate-button {
-            display: block;
-            text-align: center;
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: white;
-            padding: 0.8rem;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.3s;
-        }
-        
-        .affiliate-button:hover {
-            background: linear-gradient(to right, var(--secondary), var(--primary));
-            box-shadow: 0 4px 12px rgba(67, 97, 238, 0.3);
-        }
-        
-        /* Pagination */
-        .pagination {
-            display: flex;
-            justify-content: center;
-            margin-top: 3rem;
-            gap: 5px;
-        }
-        
-        .page-btn {
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid #e0e0e0;
-            border-radius: 5px;
-            background: white;
-            cursor: pointer;
-            transition: all 0.3s;
-        }
-        
-        .page-btn:hover, .page-btn.active {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-        
-        /* Features Section */
-        .features {
-            background-color: white;
-            padding: 4rem 0;
-        }
-        
-        .features-grid {
+        .guide-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
         
-        .feature-card {
-            background: linear-gradient(135deg, #f5f7fb 0%, #e4e8f0 100%);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s;
+        .guide-category {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 2rem;
+            transition: all 0.3s;
+            border: 1px solid var(--border);
         }
         
-        .feature-card:hover {
-            transform: translateY(-5px);
+        .guide-category:hover {
+            background-color: white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
         }
         
-        .feature-icon {
+        .category-icon {
             font-size: 2.5rem;
             color: var(--primary);
             margin-bottom: 1.5rem;
         }
         
-        .feature-title {
-            font-size: 1.3rem;
+        .category-title {
+            font-size: 1.5rem;
             margin-bottom: 1rem;
             font-weight: 600;
         }
         
+        .category-description {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        /* About Section */
+        .about {
+            background-color: var(--light);
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .about-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: var(--gray);
+        }
+        
+        .affiliate-disclosure {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .affiliate-disclosure h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Policy Sections */
+        .policy-section {
+            background-color: white;
+        }
+        
+        .policy-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .policy-content h3 {
+            margin: 2rem 0 1rem;
+            color: var(--primary);
+        }
+        
+        .policy-content p {
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: var(--gray);
+        }
+        
+        .policy-content ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .policy-content li {
+            margin-bottom: 0.5rem;
+            line-height: 1.7;
+            color: var(--gray);
+        }
+        
+        /* Contact Section */
+        .contact {
+            background-color: var(--light);
+            text-align: center;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
         /* Footer */
         footer {
-            background: linear-gradient(135deg, var(--dark) 0%, #000 100%);
+            background-color: var(--dark);
             color: white;
             padding: 4rem 0 1.5rem;
         }
@@ -449,10 +341,6 @@
         
         .footer-column ul li {
             margin-bottom: 0.8rem;
-        }
-        
-        .footer-column ul li a {
-            transition: color 0.3s;
         }
         
         .footer-column ul li a:hover {
@@ -489,36 +377,14 @@
             color: #aaa;
         }
         
-        /* Loading Animation */
-        .loading {
-            display: none;
-            text-align: center;
-            padding: 2rem;
-        }
-        
-        .loading-spinner {
-            border: 5px solid #f3f3f3;
-            border-top: 5px solid var(--primary);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
         /* Responsive Design */
         @media (max-width: 992px) {
             .hero h1 {
                 font-size: 2.5rem;
             }
             
-            .product-grid {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            .guide-grid {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             }
         }
         
@@ -539,7 +405,7 @@
             }
             
             .hero {
-                padding: 3rem 0;
+                padding: 4rem 0;
             }
             
             .hero h1 {
@@ -550,28 +416,41 @@
                 font-size: 1rem;
             }
             
-            .search-container {
-                flex-direction: column;
-            }
-            
-            .search-btn {
-                border-radius: 8px;
-                margin-top: 10px;
-            }
-            
-            .product-controls {
-                flex-direction: column;
-                align-items: flex-start;
+            section {
+                padding: 3rem 0;
             }
         }
         
         @media (max-width: 576px) {
-            .product-grid {
+            .guide-grid {
                 grid-template-columns: 1fr;
             }
             
-            .features-grid {
+            .footer-content {
                 grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            nav {
+                display: none;
+                width: 100%;
+                margin-top: 1rem;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 0.5rem 0;
             }
         }
     </style>
@@ -583,13 +462,18 @@
             <div class="header-content">
                 <div class="logo">
                     <i class="fas fa-laptop-code"></i>
-                    <span>TechDeals</span>
+                    <span>TechDealsHub</span>
                 </div>
-                <nav>
+                <div class="mobile-menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <nav id="main-nav">
                     <ul>
-                       <li><a href="products1.html"><i class="fas fa-bolt"></i> Products</a></li>
-                        <li><a href="Categories.html"><i class="fas fa-tags"></i> Categories</a></li>
-                        <li><a href="#deals"><i class="fas fa-bolt"></i> Hot Deals</a></li>
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#products"><i class="fas fa-box"></i> Products</a></li>
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li><a href="#privacy"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                        <li><a href="#terms"><i class="fas fa-file-contract"></i> Terms</a></li>
                         <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
                     </ul>
                 </nav>
@@ -597,112 +481,217 @@
         </div>
     </header>
 
-    <!-- Search Section -->
-    <section class="search-section">
-        <div class="container">
-            <div class="search-container">
-                <input type="text" class="search-box" placeholder="Search among 500+ tech products...">
-                <button class="search-btn"><i class="fas fa-search"></i> Search</button>
-            </div>
-            <div class="filter-options">
-                <button class="filter-btn active">All Products</button>
-                <button class="filter-btn">Laptops</button>
-                <button class="filter-btn">Smartphones</button>
-                <button class="filter-btn">Tablets</button>
-                <button class="filter-btn">Accessories</button>
-                <button class="filter-btn">Gaming</button>
-                <button class="filter-btn">Audio</button>
-                <button class="filter-btn">Cameras</button>
-            </div>
-        </div>
-    </section>
-
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>Discover 500+ Amazing Tech Products</h1>
-            <p>Find the perfect tech products with our curated selection. From laptops to smart home devices, we have everything you need at the best prices.</p>
-            <a href="#products" class="cta-button">Explore All Products</a>
+            <h1>Smart Shopping Starts Here</h1>
+            <p>Find the Best Amazon Deals on Tech Products. Unbiased reviews, detailed guides, and exclusive discounts to help you make informed purchasing decisions.</p>
+            <a href="#products" class="btn">Explore Products</a>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section class="products" id="products">
+    <!-- Product Guide Section -->
+    <section class="product-guide" id="products">
         <div class="container">
-            <h2 class="section-title">Featured Products</h2>
-            
-            <div class="product-controls">
-                <div class="results-count">Showing 12 of 500+ products</div>
-                <div class="sort-options">
-                    <select>
-                        <option>Sort by: Featured</option>
-                        <option>Price: Low to High</option>
-                        <option>Price: High to Low</option>
-                        <option>Highest Rated</option>
-                        <option>Newest First</option>
-                    </select>
+            <h2 class="section-title">Amazon Product Guides</h2>
+            <div class="guide-grid">
+                <div class="guide-category">
+                    <div class="category-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="category-title">Electronics</h3>
+                    <p class="category-description">Discover the latest electronic gadgets and devices from top brands. Our comprehensive guides help you understand specifications, compare features, and find the best value for your money. From cutting-edge smartphones to innovative smart home devices, we cover all the essential electronics that can enhance your digital lifestyle.</p>
+                    <a href="#" class="btn btn-outline">Shop Now</a>
                 </div>
-            </div>
-            
-            <div class="product-grid" id="productGrid">
-                <!-- Products will be loaded here by JavaScript -->
-            </div>
-            
-            <div class="loading" id="loading">
-                <div class="loading-spinner"></div>
-                <p>Loading more products...</p>
-            </div>
-            
-            <div class="pagination">
-                <div class="page-btn active">1</div>
-                <div class="page-btn">2</div>
-                <div class="page-btn">3</div>
-                <div class="page-btn">4</div>
-                <div class="page-btn">5</div>
-                <div class="page-btn"><i class="fas fa-chevron-right"></i></div>
+                
+                <div class="guide-category">
+                    <div class="category-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3 class="category-title">Laptops</h3>
+                    <p class="category-description">Find the perfect laptop for your needs, whether for work, gaming, or creative projects. Our detailed buying guides break down processor performance, RAM requirements, storage options, and display quality. We compare the latest models from leading manufacturers to help you make an informed decision that matches both your budget and requirements.</p>
+                    <a href="#" class="btn btn-outline">Shop Now</a>
+                </div>
+                
+                <div class="guide-category">
+                    <div class="category-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="category-title">Smart TVs</h3>
+                    <p class="category-description">Transform your entertainment experience with the right Smart TV. Our guides explain display technologies like OLED, QLED, and 4K resolution, helping you understand which features matter most for your viewing preferences. We evaluate smart platforms, connectivity options, and audio quality to ensure you select a television that delivers exceptional performance.</p>
+                    <a href="#" class="btn btn-outline">Shop Now</a>
+                </div>
+                
+                <div class="guide-category">
+                    <div class="category-icon">
+                        <i class="fas fa-blender"></i>
+                    </div>
+                    <h3 class="category-title">Kitchen & Home Appliances</h3>
+                    <p class="category-description">Upgrade your home with efficient and innovative appliances that simplify daily tasks. Our reviews cover everything from smart refrigerators and precision cookers to robotic vacuums and air purifiers. We focus on energy efficiency, durability, and user-friendly features to help you create a more comfortable and functional living space.</p>
+                    <a href="#" class="btn btn-outline">Shop Now</a>
+                </div>
+                
+                <div class="guide-category">
+                    <div class="category-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="category-title">Smartphones</h3>
+                    <p class="category-description">Stay connected with the perfect smartphone that balances performance, camera quality, and battery life. Our comprehensive analysis compares operating systems, processing power, camera capabilities, and display quality across various price points. We help you identify the features that matter most for your usage patterns and budget constraints.</p>
+                    <a href="#" class="btn btn-outline">Shop Now</a>
+                </div>
+                
+                <div class="guide-category">
+                    <div class="category-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3 class="category-title">Cameras</h3>
+                    <p class="category-description">Capture life's moments with the right camera equipment. Whether you're a beginner looking for an easy-to-use point-and-shoot or a professional seeking advanced DSLR or mirrorless options, our guides provide detailed comparisons of sensor quality, lens options, and shooting capabilities. We help you understand technical specifications in practical terms.</p>
+                    <a href="#" class="btn btn-outline">Shop Now</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features" id="about">
+    <!-- About Section -->
+    <section class="about" id="about">
         <div class="container">
-            <h2 class="section-title">Why Shop With Us</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-check-circle"></i></div>
-                    <h3 class="feature-title">Curated Selection</h3>
-                    <p>We handpick only the best products from trusted brands to ensure quality and value.</p>
-                </div>
+            <h2 class="section-title">About TechDealsHub</h2>
+            <div class="about-content">
+                <p>TechDealsHub was founded with a simple mission: to help consumers navigate the complex world of technology products and find the best deals on Amazon. In an era of information overload, we cut through the noise to provide clear, unbiased product recommendations and buying guides.</p>
                 
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-tag"></i></div>
-                    <h3 class="feature-title">Best Prices</h3>
-                    <p>Get exclusive deals and discounts not available anywhere else. Price match guarantee.</p>
-                </div>
+                <p>Our team of tech enthusiasts and product researchers spends countless hours testing, comparing, and analyzing products across various categories. We understand that purchasing decisions involve more than just comparing prices – they require understanding how products perform in real-world scenarios and whether they deliver genuine value.</p>
                 
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-shipping-fast"></i></div>
-                    <h3 class="feature-title">Fast Shipping</h3>
-                    <p>Free shipping on orders over $50. Express delivery options available.</p>
-                </div>
+                <p>What sets TechDealsHub apart is our commitment to transparency. We never allow brand partnerships or sponsorships to influence our recommendations. Our product reviews and buying guides are based solely on thorough research, user feedback analysis, and performance evaluation. We believe that informed consumers make better purchasing decisions.</p>
                 
-                <div class="feature-card">
-                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
-                    <h3 class="feature-title">24/7 Support</h3>
-                    <p>Our customer service team is available around the clock to assist you.</p>
+                <p>Beyond just product recommendations, we provide educational content that helps you understand technical specifications and features in plain language. Our goal is to empower you with knowledge, so you can confidently select products that truly meet your needs and expectations.</p>
+                
+                <div class="affiliate-disclosure">
+                    <h3>Affiliate Disclosure</h3>
+                    <p>We participate in the Amazon Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. When you make a purchase through our links, we may earn a small commission at no additional cost to you. This helps support our research and allows us to continue providing free, unbiased product recommendations.</p>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section class="policy-section" id="privacy">
+        <div class="container">
+            <h2 class="section-title">Privacy Policy</h2>
+            <div class="policy-content">
+                <p>Your privacy is important to us. This Privacy Policy explains how TechDealsHub collects, uses, and protects your personal information when you visit our website.</p>
+                
+                <h3>Information We Collect</h3>
+                <p>We may collect both personal and non-personal information when you interact with our website:</p>
+                <ul>
+                    <li><strong>Personal Information:</strong> When you subscribe to our newsletter or contact us, we may collect your name and email address.</li>
+                    <li><strong>Non-Personal Information:</strong> We automatically collect certain information about your device and browsing behavior, including your IP address, browser type, operating system, and pages you visit on our site.</li>
+                    <li><strong>Cookies:</strong> We use cookies and similar tracking technologies to enhance your browsing experience, analyze site traffic, and understand where our visitors are coming from.</li>
+                </ul>
+                
+                <h3>How We Use Your Information</h3>
+                <p>The information we collect helps us:</p>
+                <ul>
+                    <li>Improve our website and user experience</li>
+                    <li>Send periodic newsletters with product updates and deals (if you've subscribed)</li>
+                    <li>Respond to your inquiries and provide customer support</li>
+                    <li>Analyze website performance and user behavior to enhance our content</li>
+                    <li>Display relevant advertisements through our advertising partners</li>
+                </ul>
+                
+                <h3>Third-Party Services</h3>
+                <p>We use third-party services that may collect information about your interactions with our website:</p>
+                <ul>
+                    <li><strong>Google Analytics:</strong> We use Google Analytics to understand how visitors engage with our website. Google Analytics collects information anonymously and reports website trends without identifying individual visitors.</li>
+                    <li><strong>Google AdSense:</strong> We use Google AdSense to display advertisements on our website. AdSense uses cookies to serve ads based on a user's prior visits to our website or other websites.</li>
+                    <li><strong>Amazon Associates:</strong> As participants in the Amazon Associates program, we include special tracking links in our content. When you click on these links, Amazon places cookies on your device to track referrals.</li>
+                </ul>
+                
+                <h3>Your Rights and Choices</h3>
+                <p>You have the right to:</p>
+                <ul>
+                    <li>Access, update, or delete your personal information</li>
+                    <li>Opt-out of marketing communications at any time</li>
+                    <li>Disable cookies through your browser settings</li>
+                    <li>Request information about how your data is being used</li>
+                </ul>
+                
+                <h3>Data Security</h3>
+                <p>We implement appropriate security measures to protect your personal information from unauthorized access, alteration, or disclosure. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
+                
+                <h3>Changes to This Policy</h3>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                
+                <p>If you have any questions about this Privacy Policy, please contact us at support@techdealshub.com.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms & Conditions Section -->
+    <section class="policy-section" id="terms">
+        <div class="container">
+            <h2 class="section-title">Terms & Conditions</h2>
+            <div class="policy-content">
+                <p>Please read these Terms and Conditions carefully before using the TechDealsHub website operated by us.</p>
+                
+                <h3>Acceptance of Terms</h3>
+                <p>By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by these terms, please do not use this site.</p>
+                
+                <h3>Use License</h3>
+                <p>Permission is granted to temporarily access the materials (information or software) on TechDealsHub's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:</p>
+                <ul>
+                    <li>Modify or copy the materials</li>
+                    <li>Use the materials for any commercial purpose or public display</li>
+                    <li>Attempt to decompile or reverse engineer any software contained on TechDealsHub's website</li>
+                    <li>Remove any copyright or other proprietary notations from the materials</li>
+                    <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+                </ul>
+                
+                <h3>Affiliate Disclosure</h3>
+                <p>TechDealsHub is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases.</p>
+                <p>We also participate in other affiliate programs and may earn commissions when you make purchases through our links. These affiliate relationships do not influence our product reviews, recommendations, or editorial content. We strive to provide honest, unbiased information to help you make informed purchasing decisions.</p>
+                
+                <h3>Disclaimer</h3>
+                <p>The materials on TechDealsHub's website are provided on an 'as is' basis. TechDealsHub makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+                <p>Further, TechDealsHub does not warrant or make any representations concerning the accuracy, likely results, or reliability of the use of the materials on its website or otherwise relating to such materials or on any sites linked to this site.</p>
+                
+                <h3>Limitations</h3>
+                <p>In no event shall TechDealsHub or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on TechDealsHub's website, even if TechDealsHub or a TechDealsHub authorized representative has been notified orally or in writing of the possibility of such damage.</p>
+                
+                <h3>Accuracy of Materials</h3>
+                <p>The materials appearing on TechDealsHub's website could include technical, typographical, or photographic errors. TechDealsHub does not warrant that any of the materials on its website are accurate, complete or current. TechDealsHub may make changes to the materials contained on its website at any time without notice. However, TechDealsHub does not make any commitment to update the materials.</p>
+                
+                <h3>Links</h3>
+                <p>TechDealsHub has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by TechDealsHub of the site. Use of any such linked website is at the user's own risk.</p>
+                
+                <h3>Modifications</h3>
+                <p>TechDealsHub may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</p>
+                
+                <h3>Governing Law</h3>
+                <p>These terms and conditions are governed by and construed in accordance with the laws of the United States and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <p>Have questions, suggestions, or need assistance? We'd love to hear from you.</p>
+            <div class="contact-info">
+                <i class="fas fa-envelope contact-icon"></i>
+                <span>support@techdealshub.com</span>
+            </div>
+            <p class="contact-note" style="margin-top: 2rem; color: var(--gray);">We typically respond to all inquiries within 24-48 hours.</p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>TechDeals</h3>
-                    <p>Your trusted source for the best tech products and deals. We help you find exactly what you need at the best prices.</p>
+                    <h3>TechDealsHub</h3>
+                    <p>Your trusted source for unbiased tech product reviews and Amazon deals. We help you make informed purchasing decisions.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -715,171 +704,64 @@
                     <h3>Quick Links</h3>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#products">All Products</a></li>
-                        <li><a href="#categories">Categories</a></li>
-                        <li><a href="#deals">Hot Deals</a></li>
+                        <li><a href="#products">Products</a></li>
                         <li><a href="#about">About Us</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Customer Service</h3>
+                    <h3>Product Categories</h3>
                     <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Returns & Refunds</a></li>
-                        <li><a href="#">Track Your Order</a></li>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Laptops</a></li>
+                        <li><a href="#">Smart TVs</a></li>
+                        <li><a href="#">Kitchen Appliances</a></li>
+                        <li><a href="#">Smartphones</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Contact Info</h3>
+                    <h3>Legal</h3>
                     <ul>
-                        <li><i class="fas fa-envelope"></i> info@techdeals.com</li>
-                        <li><i class="fas fa-phone"></i> (123) 456-7890</li>
-                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Digital City</li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Affiliate Disclosure</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2023 TechDeals. All rights reserved. | Affiliate Disclosure | Privacy Policy | Terms of Service</p>
+                <p>&copy; 2023 TechDealsHub. All rights reserved. | We participate in the Amazon Associates Program and other affiliate programs.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Sample product data (in a real scenario, this would come from a database)
-        const products = [
-            { id: 1, name: "Premium Gaming Laptop", category: "Laptops", price: 1299.99, rating: 4.8, description: "High-performance gaming laptop with RTX graphics", badge: "Hot" },
-            { id: 2, name: "Smartphone Pro Max", category: "Smartphones", price: 999.99, rating: 4.7, description: "Latest smartphone with advanced camera system", badge: "New" },
-            { id: 3, name: "Wireless Noise Cancelling Headphones", category: "Audio", price: 299.99, rating: 4.6, description: "Premium sound quality with active noise cancellation", badge: "Sale" },
-            { id: 4, name: "Ultra HD Smart TV", category: "TV & Home", price: 899.99, rating: 4.5, description: "65-inch 4K Smart TV with HDR technology", badge: "" },
-            { id: 5, name: "Professional DSLR Camera", category: "Cameras", price: 1499.99, rating: 4.9, description: "24MP DSLR with 4K video recording", badge: "Popular" },
-            { id: 6, name: "Gaming Mechanical Keyboard", category: "Accessories", price: 129.99, rating: 4.4, description: "RGB mechanical keyboard with customizable keys", badge: "" },
-            { id: 7, name: "Fitness Smartwatch", category: "Wearables", price: 249.99, rating: 4.3, description: "Track your health and fitness with this advanced smartwatch", badge: "New" },
-            { id: 8, name: "Tablet Pro", category: "Tablets", price: 599.99, rating: 4.5, description: "10.5-inch tablet with stylus support", badge: "" },
-            { id: 9, name: "Wireless Earbuds", category: "Audio", price: 149.99, rating: 4.2, description: "True wireless earbuds with charging case", badge: "Sale" },
-            { id: 10, name: "External SSD 1TB", category: "Storage", price: 199.99, rating: 4.7, description: "High-speed portable SSD for backups and storage", badge: "" },
-            { id: 11, name: "Gaming Mouse", category: "Accessories", price: 79.99, rating: 4.4, description: "Precision gaming mouse with customizable DPI", badge: "" },
-            { id: 12, name: "Monitor 27-inch 4K", category: "Monitors", price: 399.99, rating: 4.6, description: "Ultra HD monitor with HDR support", badge: "Popular" }
-        ];
-
-        // Icons for different product categories
-        const categoryIcons = {
-            "Laptops": "fas fa-laptop",
-            "Smartphones": "fas fa-mobile-alt",
-            "Audio": "fas fa-headphones",
-            "TV & Home": "fas fa-tv",
-            "Cameras": "fas fa-camera",
-            "Accessories": "fas fa-keyboard",
-            "Wearables": "fas fa-clock",
-            "Tablets": "fas fa-tablet-alt",
-            "Storage": "fas fa-hdd",
-            "Monitors": "fas fa-desktop",
-            "Gaming": "fas fa-gamepad",
-            "Networking": "fas fa-wifi"
-        };
-
-        // Function to generate product cards
-        function generateProductCards(productsToShow) {
-            const productGrid = document.getElementById('productGrid');
-            productGrid.innerHTML = '';
-            
-            productsToShow.forEach(product => {
-                const iconClass = categoryIcons[product.category] || "fas fa-box";
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.getElementById('main-nav').classList.toggle('active');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
                 
-                const productCard = document.createElement('div');
-                productCard.className = 'product-card';
-                productCard.innerHTML = `
-                    ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
-                    <div class="product-image">
-                        <i class="${iconClass}"></i>
-                    </div>
-                    <div class="product-info">
-                        <div class="product-category">${product.category}</div>
-                        <h3 class="product-title">${product.name}</h3>
-                        <p class="product-description">${product.description}</p>
-                        <div class="product-rating">
-                            ${'<i class="fas fa-star"></i>'.repeat(Math.floor(product.rating))}
-                            ${product.rating % 1 >= 0.5 ? '<i class="fas fa-star-half-alt"></i>' : ''}
-                            <span> (${product.rating})</span>
-                        </div>
-                        <div class="product-price">$${product.price.toFixed(2)}</div>
-                        <a href="#" class="affiliate-button">View Deal</a>
-                    </div>
-                `;
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
                 
-                productGrid.appendChild(productCard);
-            });
-        }
-
-        // Function to simulate loading more products
-        function loadMoreProducts() {
-            const loading = document.getElementById('loading');
-            loading.style.display = 'block';
-            
-            // Simulate API call delay
-            setTimeout(() => {
-                // In a real application, you would fetch more products from a server
-                // For this demo, we'll just duplicate the existing products
-                const moreProducts = [...products, ...products.map(p => ({...p, id: p.id + 12}))];
-                generateProductCards(moreProducts);
-                loading.style.display = 'none';
-                
-                // Update results count
-                document.querySelector('.results-count').textContent = `Showing ${moreProducts.length} of 500+ products`;
-            }, 1500);
-        }
-
-        // Initialize the page with products
-        document.addEventListener('DOMContentLoaded', () => {
-            generateProductCards(products);
-            
-            // Add event listeners for filter buttons
-            document.querySelectorAll('.filter-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-                    this.classList.add('active');
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
                     
-                    // In a real application, you would filter products by category
-                    // For this demo, we'll just show all products
-                    generateProductCards(products);
-                });
-            });
-            
-            // Add event listener for search
-            document.querySelector('.search-btn').addEventListener('click', function() {
-                const searchTerm = document.querySelector('.search-box').value.toLowerCase();
-                if (searchTerm) {
-                    const filteredProducts = products.filter(product => 
-                        product.name.toLowerCase().includes(searchTerm) || 
-                        product.description.toLowerCase().includes(searchTerm) ||
-                        product.category.toLowerCase().includes(searchTerm)
-                    );
-                    generateProductCards(filteredProducts);
-                    document.querySelector('.results-count').textContent = `Found ${filteredProducts.length} products`;
-                }
-            });
-            
-            // Add event listener for pagination
-            document.querySelectorAll('.page-btn').forEach(button => {
-                button.addEventListener('click', function() {
-                    if (this.querySelector('i')) {
-                        loadMoreProducts();
-                    } else {
-                        document.querySelectorAll('.page-btn').forEach(btn => btn.classList.remove('active'));
-                        this.classList.add('active');
-                        // In a real application, you would load the specific page
-                    }
-                });
-            });
-            
-            // Add event listener for Enter key in search box
-            document.querySelector('.search-box').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    document.querySelector('.search-btn').click();
+                    // Close mobile menu if open
+                    document.getElementById('main-nav').classList.remove('active');
                 }
             });
         });
