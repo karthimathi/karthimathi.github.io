@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Laptops 2025 - Premium Laptop Collection | ShopAll Deals</title>
-    <meta name="description" content="Discover the best Laptop deals for 2025 with our premium collection. Find Laptops from top brands with detailed reviews, pros, cons, and buying guides.">
+    <title>Best Laptops 2025 | Premium Laptop Collection | ShopAll Deals</title>
+    <meta name="description" content="Discover the best laptop deals for 2025 with our premium collection. Find laptops from top brands with detailed reviews, pros, cons, and buying guides.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -15,173 +16,127 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #fff;
+            background-color: #f8f9fa;
+            color: #333;
             line-height: 1.6;
             min-height: 100vh;
         }
 
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 15px 0;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
         .nav-menu {
             display: flex;
-            justify-content: center;
             list-style: none;
-            flex-wrap: wrap;
             gap: 25px;
         }
 
         .nav-menu a {
-            color: #e0e0e0;
+            color: #2c3e50;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
-            padding: 8px 15px;
-            border-radius: 8px;
         }
 
         .nav-menu a:hover {
-            color: #ffa36c;
-            background: rgba(255, 255, 255, 0.05);
+            color: #3498db;
         }
 
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #2c3e50;
+        }
+
+        /* Header */
         header {
             text-align: center;
-            padding: 40px 0;
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-            animation: pulse 15s infinite linear;
-            z-index: -1;
-        }
-
-        @keyframes pulse {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            margin-bottom: 40px;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
-            background: linear-gradient(90deg, #ff6b6b, #ffa36c, #ffde7d, #a3de83, #6a98f0, #b579ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            animation: gradient-shift 8s ease infinite;
-            background-size: 400% 400%;
-        }
-
-        @keyframes gradient-shift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            font-weight: 700;
         }
 
         .subtitle {
             font-size: 1.2rem;
-            color: #ccc;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
-            position: relative;
-        }
-
-        .subtitle::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
-            margin: 15px auto;
-            border-radius: 3px;
-        }
-
-        .intro-text {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 25px;
-            border-radius: 12px;
-            margin: 20px auto 40px;
-            max-width: 900px;
-            text-align: center;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #e0e0e0;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .intro-text strong {
-            color: #fff;
+            opacity: 0.9;
         }
 
         /* Content Sections */
         .content-section {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 30px;
-            border-radius: 12px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
             margin-bottom: 40px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
 
         .section-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #fff;
-            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: #2c3e50;
             position: relative;
+            padding-bottom: 10px;
         }
 
         .section-title::after {
             content: '';
-            display: block;
-            width: 80px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
             height: 3px;
-            background: linear-gradient(90deg, #ff6b6b, #ffa36c);
-            margin: 10px auto;
+            background: #3498db;
             border-radius: 3px;
         }
 
         .section-content {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.7;
-            color: #e0e0e0;
+            color: #555;
         }
 
         .section-content h3 {
-            color: #fff;
+            color: #2c3e50;
             margin: 25px 0 15px;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
         }
 
         .section-content ul {
@@ -193,290 +148,331 @@
             margin-bottom: 10px;
         }
 
-        .mobiles-grid {
+        /* Product Grid */
+        .products-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .mobile-card {
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transition: all 0.4s ease;
-            position: relative;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
             height: 100%;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .mobile-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #ff6b6b, #ffa36c, #ffde7d, #a3de83, #6a98f0, #b579ff);
-            background-size: 400% 400%;
-            animation: gradient-shift 8s ease infinite;
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .mobile-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            background: rgba(255, 255, 255, 0.12);
-        }
-
-        .mobile-image {
-            height: 220px;
+        .product-image {
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
-            background: rgba(0, 0, 0, 0.2);
+            background: #f8f9fa;
+            padding: 20px;
         }
 
-        .mobile-image::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 50%;
-            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
-            z-index: 1;
-        }
-
-        .mobile-image img {
-            max-width: 85%;
-            max-height: 85%;
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
             width: auto;
             height: auto;
             object-fit: contain;
-            transition: all 0.5s ease;
-            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
-            z-index: 2;
-            position: relative;
         }
 
-        .mobile-card:hover .mobile-image img {
-            transform: scale(1.1) rotate(2deg);
-        }
-
-        .mobile-number {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: linear-gradient(135deg, #ff6b6b, #ffa36c);
-            color: white;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            font-weight: bold;
-            z-index: 3;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .mobile-card:hover .mobile-number {
-            transform: scale(1.2) rotate(15deg);
-            background: linear-gradient(135deg, #6a98f0, #b579ff);
-        }
-
-        .mobile-content {
-            padding: 25px;
+        .product-content {
+            padding: 20px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .mobile-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #fff;
-            text-align: center;
-            position: relative;
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            line-height: 1.3;
         }
 
-        .mobile-title::after {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 2px;
-            background: linear-gradient(90deg, #ff6b6b, #ffa36c);
-            margin: 8px auto;
-            border-radius: 2px;
-        }
-
-        .mobile-features {
+        .product-features {
             list-style: none;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             flex-grow: 1;
         }
 
-        .mobile-features li {
-            padding: 8px 0;
-            color: #e0e0e0;
+        .product-features li {
+            padding: 5px 0;
+            color: #555;
             font-size: 0.95rem;
             display: flex;
-            align-items: center;
-            transition: all 0.3s ease;
+            align-items: flex-start;
         }
 
-        .mobile-features li:hover {
-            color: #fff;
-            transform: translateX(5px);
-        }
-
-        .mobile-features li i {
-            margin-right: 10px;
-            color: #ffa36c;
+        .product-features li i {
+            margin-right: 8px;
+            color: #3498db;
             font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-features li:hover i {
-            color: #ff6b6b;
-            transform: scale(1.2);
+            margin-top: 3px;
         }
 
         .buy-btn {
             display: block;
             width: 100%;
-            padding: 14px;
-            background: linear-gradient(90deg, #ff6b6b, #ffa36c);
+            padding: 12px;
+            background: #3498db;
             color: white;
             text-align: center;
-            border-radius: 12px;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
-            transition: all 0.4s ease;
+            font-weight: 600;
+            transition: background 0.3s;
             border: none;
             cursor: pointer;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .buy-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: all 0.6s ease;
-            z-index: -1;
+            font-size: 0.95rem;
         }
 
         .buy-btn:hover {
-            background: linear-gradient(90deg, #ffa36c, #ff6b6b);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.6);
+            background: #2980b9;
         }
 
-        .buy-btn:hover::before {
-            left: 100%;
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
         }
 
-        footer {
+        .faq-question {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: #555;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
             text-align: center;
-            margin-top: 60px;
-            padding: 30px;
-            color: #aaa;
-            font-size: 0.9rem;
-            position: relative;
         }
 
-        footer::before {
-            content: '';
+        .about-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
             display: block;
-            width: 200px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            margin: 0 auto 20px;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
         }
 
         .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
         }
 
         .footer-links a {
-            color: #aaa;
+            color: #bdc3c7;
             text-decoration: none;
             transition: color 0.3s;
-            font-weight: 500;
         }
 
         .footer-links a:hover {
-            color: #ffa36c;
+            color: #3498db;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .disclaimer {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #666;
+            border-left: 4px solid #3498db;
+        }
+
+        /* AdSense Placeholder */
+        .ad-container {
+            background: #f8f9fa;
+            border: 1px dashed #ddd;
+            padding: 20px;
+            text-align: center;
+            margin: 30px 0;
+            border-radius: 6px;
+            color: #777;
         }
 
         /* Responsive Design */
-        @media (max-width: 1200px) {
-            .mobiles-grid {
-                grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                gap: 15px;
             }
-        }
 
-        @media (max-width: 900px) {
-            .mobiles-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .nav-menu.active {
+                display: flex;
             }
-            
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
             h1 {
-                font-size: 2.8rem;
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 25px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
         }
 
-        @media (max-width: 600px) {
-            .mobiles-grid {
+        @media (max-width: 480px) {
+            .products-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             h1 {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
             }
-            
+
             .subtitle {
                 font-size: 1rem;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .nav-menu {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="nav-container">
-            <ul class="nav-menu">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ShopAll Deals</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="electronics.html">Electronics</a></li>
                 <li><a href="computers.html">Computers</a></li>
@@ -487,24 +483,33 @@
         </div>
     </nav>
 
-    <div class="container">
-        <header>
+    <header>
+        <div class="container">
             <h1>Premium Laptop Collection 2025</h1>
-            <p class="Discover the ultimate performance and style with our Premium Laptop Collection 2025. Whether you're a professional creator, gamer, or business expert, these laptops are designed to deliver next-level speed, stunning visuals, and long-lasting power.
-Featuring the latest Intel Core Ultra and AMD Ryzen AI processors, high-refresh OLED displays, and lightweight aluminum builds, every model in this lineup is built to impress.
-Compare top brands like Apple, Dell, HP, ASUS, and Lenovo, and find exclusive deals you won’t see anywhere else.Upgrade to a smarter, faster, and more elegant device — explore the best premium laptops of 2025 and make your productivity shine.</p>
-        </header>
-        
-        <div class="intro-text">
-            <strong>Browse our hand-picked laptop deals from top brands like Apple, Dell, HP, ASUS, and Lenovo.
-Find the perfect laptop for your needs with our carefully curated selection of the latest models featuring high-performance processors, stunning displays, and long-lasting battery life.</strong>      
+            <p class="subtitle">Discover the ultimate performance and style with our Premium Laptop Collection 2025. Whether you're a professional creator, gamer, or business expert, these laptops deliver next-level speed, stunning visuals, and long-lasting power.</p>
         </div>
-        
-        <!-- Added comprehensive content sections for AdSense -->
-        <div class="content-section">
+    </header>
+
+    <div class="container">
+        <!-- AdSense Placeholder -->
+        <div class="ad-container">
+            <p>Advertisement Space - Google AdSense</p>
+        </div>
+
+        <!-- Intro Section -->
+        <section class="content-section">
+            <h2 class="section-title">Welcome to Our Premium Laptop Collection</h2>
+            <div class="section-content">
+                <p>Browse our hand-picked laptop deals from top brands like Apple, Dell, HP, ASUS, and Lenovo. Find the perfect laptop for your needs with our carefully curated selection of the latest models featuring high-performance processors, stunning displays, and long-lasting battery life.</p>
+                <p>Featuring the latest Intel Core Ultra and AMD Ryzen AI processors, high-refresh OLED displays, and lightweight aluminum builds, every model in this lineup is built to impress. Compare top brands and find exclusive deals you won't see anywhere else.</p>
+            </div>
+        </section>
+
+        <!-- Buying Guide Section -->
+        <section class="content-section">
             <h2 class="section-title">How to Choose the Right Laptop in 2025</h2>
             <div class="section-content">
-                <p>With new laptop models launching every month, selecting the perfect device can be challenging. In this comprehensive guide, we’ll help you navigate the key factors to consider when purchasing a new laptop in 2025, including performance, display quality, battery life, and portability.</p>
+                <p>With new laptop models launching every month, selecting the perfect device can be challenging. In this comprehensive guide, we'll help you navigate the key factors to consider when purchasing a new laptop in 2025, including performance, display quality, battery life, and portability.</p>
                 
                 <h3>Identify Your Primary Usage</h3>
                 <p>First, determine how you primarily use your laptop:</p>
@@ -513,1065 +518,341 @@ Find the perfect laptop for your needs with our carefully curated selection of t
                     <li><strong>Students</strong> look for lightweight designs with good battery life for studying and note-taking.</li>
                     <li><strong>Gamers</strong> require powerful processors, dedicated graphics cards, and high-refresh-rate displays.</li>
                     <li><strong>Creative Professionals</strong> need high-resolution screens, fast storage, and advanced graphics for video editing or design work.</li>
-                     <li><strong>Business Users</strong> benefit from durable builds, strong security features, and multitasking capabilities.</li>
-               </ul>
-
+                    <li><strong>Business Users</strong> benefit from durable builds, strong security features, and multitasking capabilities.</li>
+                </ul>
                 
                 <h3>Key Specifications to Evaluate</h3>
                 <p>When comparing laptops, pay attention to these critical components:</p>
                 <ul>
-                     <li><strong>Processor (CPU):</strong> Look for the latest Intel Core Ultra or AMD Ryzen 7000/8000 series for top-tier performance.</li>
-                     <li><strong>RAM:</strong> 8GB minimum for basic tasks, 16GB or more recommended for multitasking and productivity.</li>
-                     <li><strong>Storage:</strong> Choose SSDs over HDDs; 512GB is ideal for speed and sufficient space.</li>
-                     <li><strong>Display:</strong> Consider screen size, resolution (Full HD or 4K), and refresh rate (120Hz+ for smooth visuals).</li>
-                     <li><strong>Battery Life:</strong> Opt for laptops offering at least 8–12 hours of battery backup, depending on usage.</li>
-                     <li><strong>Graphics (GPU):</strong> Integrated GPUs are fine for everyday work, while dedicated NVIDIA or AMD graphics are best for gaming and creative tasks.</li>
+                    <li><strong>Processor (CPU):</strong> Look for the latest Intel Core Ultra or AMD Ryzen 7000/8000 series for top-tier performance.</li>
+                    <li><strong>RAM:</strong> 8GB minimum for basic tasks, 16GB or more recommended for multitasking and productivity.</li>
+                    <li><strong>Storage:</strong> Choose SSDs over HDDs; 512GB is ideal for speed and sufficient space.</li>
+                    <li><strong>Display:</strong> Consider screen size, resolution (Full HD or 4K), and refresh rate (120Hz+ for smooth visuals).</li>
+                    <li><strong>Battery Life:</strong> Opt for laptops offering at least 8-12 hours of battery backup, depending on usage.</li>
+                    <li><strong>Graphics (GPU):</strong> Integrated GPUs are fine for everyday work, while dedicated NVIDIA or AMD graphics are best for gaming and creative tasks.</li>
                 </ul>
-
                 
                 <h3>Operating System Considerations</h3>
-<p>The three main laptop operating systems each have distinct advantages:</p>
-<ul>
-    <li><strong>Windows:</strong> Widely compatible, feature-rich, and ideal for both work and gaming.</li>
-    <li><strong>macOS:</strong> Seamless ecosystem integration, optimized performance, and premium build quality.</li>
-    <li><strong>ChromeOS:</strong> Lightweight, secure, and perfect for students or casual users focused on web-based tasks.</li>
-</ul>
+                <p>The three main laptop operating systems each have distinct advantages:</p>
+                <ul>
+                    <li><strong>Windows:</strong> Widely compatible, feature-rich, and ideal for both work and gaming.</li>
+                    <li><strong>macOS:</strong> Seamless ecosystem integration, optimized performance, and premium build quality.</li>
+                    <li><strong>ChromeOS:</strong> Lightweight, secure, and perfect for students or casual users focused on web-based tasks.</li>
+                </ul>
+                
+                <p>By carefully considering your needs, budget, and preferences, you can find the perfect laptop that will serve you well for years to come.</p>
+            </div>
+        </section>
 
-<p>By carefully considering your needs, budget, and preferences, you can find the perfect laptop that will serve you well for years to come.</p>
-</div>
-</div>
-
-<div class="content-section">
-    <h2 class="section-title">Best Laptops for Creators in 2025</h2>
-    <div class="section-content">
-        <p>Laptops for content creation have evolved tremendously, offering performance that rivals professional desktops. After extensive research and testing, we've identified the most important hardware and display features that matter most to creative professionals.</p>
-
-        <h3>What Makes a Great Creator Laptop?</h3>
-        <p>The ideal creator laptop should have:</p>
-        <ul>
-            <li>High-performance CPU (Intel Core Ultra or AMD Ryzen 9)</li>
-            <li>Dedicated GPU (NVIDIA RTX or Radeon) for rendering and graphics tasks</li>
-            <li>High-resolution, color-accurate display (QHD or 4K with 100% sRGB coverage)</li>
-            <li>Fast SSD storage for seamless file handling</li>
-            <li>Ample RAM (16GB or more) for multitasking and editing large projects</li>
-        </ul>
-
-        <h3>Our Top Recommendations</h3>
-        <p>Based on our evaluation, the laptops featured in our collection represent the best options for designers, video editors, and photographers across various price ranges. From affordable laptops ideal for beginners to premium workstations built for professionals, there's a perfect match for every creator’s workflow.</p>
-
-        <p>When choosing from our recommendations, consider not just the specs but also the build quality, display accuracy, and thermal performance. A laptop with balanced performance and good cooling can outperform higher-spec models in long creative sessions.</p>
-    </div>
-</div>
-
-<div class="content-section">
-    <h2 class="section-title">Best Gaming Laptops Under ₹80,000</h2>
-    <div class="section-content">
-        <p>Finding a capable gaming laptop under ₹80,000 has become increasingly possible in 2025. While you won’t get flagship-level hardware at this price, several models deliver impressive gaming performance and excellent value for money.</p>
-
-        <h3>What to Expect in This Price Range</h3>
-        <p>Gaming laptops under ₹80,000 typically feature:</p>
-        <ul>
-            <li>Mid-range processors (Intel Core i5 / AMD Ryzen 5 or above)</li>
-            <li>Dedicated GPUs (NVIDIA RTX 3050 / 3050 Ti or equivalent)</li>
-            <li>8GB–16GB RAM with fast SSD storage</li>
-            <li>High-refresh-rate displays (120Hz or 144Hz) for smooth visuals</li>
-            <li>Efficient cooling systems for consistent performance</li>
-        </ul>
-
-        <h3>Gaming Performance Expectations</h3>
-        <p>At this price point, you can expect smooth gameplay at medium to high settings for popular titles like GTA V, Valorant, Apex Legends, and Call of Duty: Warzone. For more demanding AAA games, optimizing graphics settings will ensure better frame rates and thermals.</p>
-
-        <h3>Additional Gaming Features</h3>
-        <p>Look for laptops with gaming-centric features like RGB backlit keyboards, customizable performance modes, and enhanced audio systems. These features can significantly improve your gaming experience without increasing the overall cost.</p>
-    </div>
-</div>
-
-        
-        <h2 style="text-align: center; font-size: 2.5rem; margin: 50px 0 30px; color: #fff;">Our Top Laptop Recommendations</h2>
-        
-        <div class="mobiles-grid">
-            <!-- Mobile 1 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop1.png" alt="Lenovo V15">
-                    <div class="mobile-number">1</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo V15</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Colour	Gray</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/49rqDbk" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 2 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop2.png" alt="Acer Aspire Lite">
-                    <div class="mobile-number">2</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Acer Aspire Lite</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	acer</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i>CPU Model	Core i3</li>
-                    </ul>
-                    <a href="https://amzn.to/4nydT6w" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 3 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop3.png" alt="HP Smartchoice Victus">
-                    <div class="mobile-number">3</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">HP Smartchoice Victus</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	HP</li>
-                        <li><i class="fas fa-check"></i> Screen Size	39.6 Centimetres</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> Graphics Coprocessor	NVIDIA GeForce RTX 3050</li>
-                    </ul>
-                    <a href="https://amzn.to/48Hwnxv" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 4 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop3.png" alt="Apple 2024 MacBook Pro">
-                    <div class="mobile-number">4</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Apple 2024 MacBook Pro</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Apple</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Apple M4</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	36 GB</li>
-                        <li><i class="fas fa-check"></i> Operating System	Mac OS</li>
-                    </ul>
-                    <a href="https://amzn.to/4o9TN3y" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 5 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop5.png" alt="ASUS ROG Strix SCAR 18">
-                    <div class="mobile-number">5</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ASUS ROG Strix SCAR 18</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	ASUS</li>
-                        <li><i class="fas fa-check"></i> Screen Size	18 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	2 TB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Intel Core Ultra 9</li>
-                    </ul>
-                    <a href="https://amzn.to/4qoHiCN" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 6 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop6.png" alt="HP Victus">
-                    <div class="mobile-number">6</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">HP Victus</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	HP</li>
-                        <li><i class="fas fa-check"></i> Screen Size	39.6 Centimetres</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Ryzen 7</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/3LbeAF6" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 7 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop7.png" alt="Lenovo LOQ 2024">
-                    <div class="mobile-number">7</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo LOQ 2024</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/47pA6xw" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 8 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop8.png" alt="Lenovo LOQ">
-                    <div class="mobile-number">8</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo LOQ</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Ryzen 5</li>
-                    </ul>
-                    <a href="https://amzn.to/43BXNRQ" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 9 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop9.png" alt="Lenovo Yoga Slim 7">
-                    <div class="mobile-number">9</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo Yoga Slim 7</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	1 TB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Intel Core Ultra 5</li>
-                    </ul>
-                    <a href="https://amzn.to/4nyLixW" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 10 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop10.png" alt="Lenovo IdeaPad ">
-                    <div class="mobile-number">10</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo IdeaPad </h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	1 TB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Intel Core Ultra 5</li>
-                    </ul>
-                    <a href="https://amzn.to/3X1UAax" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 11 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop11.png" alt="Lenovo Smartchoice Ideapad 5">
-                    <div class="mobile-number">11</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo Smartchoice Ideapad 5</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i> Model Name	IdeaPad 5 2-in-1</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14 Inches</li>
-                        <li><i class="fas fa-check"></i> AM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/4o3hPgt" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 12 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop12.png" alt="Lenovo IdeaPad 5">
-                    <div class="mobile-number">12</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo IdeaPad 5</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14 Inches</li>
-                        <li><i class="fas fa-check"></i>CPU Model	AMD Ryzen 7</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	24 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/4hox8h6" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 13 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop13.png" alt="HP 15">
-                    <div class="mobile-number">13</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">HP 15</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	HP</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	1 TB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/43tzWDY" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 14 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop14.png" alt="HP Smartchoice OmniBook 5 ">
-                    <div class="mobile-number">14</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">HP Smartchoice OmniBook 5</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	HP</li>
-                        <li><i class="fas fa-check"></i> Screen Size	40.6 Centimetres</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Ryzen 7</li>
-                    </ul>
-                    <a href="https://amzn.to/4hsXA9i" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 15 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop15.png" alt="HP Pavilion">
-                    <div class="mobile-number">15</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">HP Pavilion</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	HP</li>
-                        <li><i class="fas fa-check"></i> Model Name	HP Laptop</li>
-                        <li><i class="fas fa-check"></i> Screen Size	39.6 Centimetres</li>
-                        <li><i class="fas fa-check"></i>RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/3JglGrs" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 16 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop16.png" alt="ASUS Vivobook 16">
-                    <div class="mobile-number">16</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ASUS Vivobook 16</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	ASUS</li>
-                        <li><i class="fas fa-check"></i> Screen Size	16 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Core i5</li>
-                    </ul>
-                    <a href="https://amzn.to/47yaNtg" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 17 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop17.png" alt="ASUS Vivobook 15">
-                    <div class="mobile-number">17</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ASUS Vivobook 15</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	ASUS</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Ryzen 7</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	8 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/3L5Pfwq" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 18 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop18.png" alt="HP Pavilion x360">
-                    <div class="mobile-number">18</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">HP Pavilion x360</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	HP</li>
-                        <li><i class="fas fa-check"></i> Model Name	HP Laptop</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/4qjIK9g" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 19 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop19.png" alt="HP 15">
-                    <div class="mobile-number">19</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">HP 15</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	HP</li>
-                        <li><i class="fas fa-check"></i> Screen Size	39.6 Centimetres</li>
-                        <li><i class="fas fa-check"></i>Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/47qRba6" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 20 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop20.png" alt="Dell 15">
-                    <div class="mobile-number">20</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Dell 15</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Dell</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> CPU Model	AMD Ryzen 7</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/4nsqacy" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 21 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop21.png" alt="Dell 15">
-                    <div class="mobile-number">21</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Dell 15</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	Dell</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i>Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Core i5</li>
-                    </ul>
-                    <a href="https://amzn.to/4qswmUp" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 22 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop22.png" alt="Apple 2025 MacBook Air ">
-                    <div class="mobile-number">22</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Apple 2025 MacBook Air </h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Apple</li>
-                        <li><i class="fas fa-check"></i> Screen Size	13.6 Inches</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Apple M4</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/47ahwuo" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 23 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop23.png" alt="Apple iPad Air 11">
-                    <div class="mobile-number">23</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Apple iPad Air 11</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Apple</li>
-                        <li><i class="fas fa-check"></i> Memory Storage Capacity	128 GB</li>
-                        <li><i class="fas fa-check"></i> Screen Size	11 Inches</li>
-                        <li><i class="fas fa-check"></i> Display Resolution Maximum	2360x1640 Pixels</li>
-                    </ul>
-                    <a href="https://amzn.to/47lWw2r" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 24 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop24.png" alt="Apple 2024 MacBook Air">
-                    <div class="mobile-number">24</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Apple 2024 MacBook Air</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	Apple</li>
-                        <li><i class="fas fa-check"></i> Screen Size	13.6 Inches</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Apple M3</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	24 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/4npYqp0" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 25 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop25.png" alt="Primebook 2 Pro 2025">
-                    <div class="mobile-number">25</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Primebook 2 Pro 2025</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	Primebook</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14.1 Inches</li>
-                        <li><i class="fas fa-check"></i>Hard Disk Size	128 GB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	MediaTek Helio</li>
-                    </ul>
-                    <a href="https://amzn.to/3JsrHBc" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 26 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop26.png" alt="ULTIMUS APEX Laptop Intel">
-                    <div class="mobile-number">26</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ULTIMUS APEX Laptop Intel</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	FUTOPIA</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14.1 Inches</li>
-                        <li><i class="fas fa-check"></i>CPU Model	Celeron N4020</li>
-                        <li><i class="fas fa-check"></i>RAM Memory Installed Size	8 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/4oc2dr4" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 27 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop27.png" alt="Chuwi CoreBook X Laptop 14">
-                    <div class="mobile-number">27</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Chuwi CoreBook X Laptop 14</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Chuwi</li>
-                        <li><i class="fas fa-check"></i>Screen Size	14.1 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	256 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	8 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/47bZCr2" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 28 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop28.png" alt="JioBook 11 with Lifetime Office">
-                    <div class="mobile-number">28</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">JioBook 11 with Lifetime Office</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	JIO</li>
-                        <li><i class="fas fa-check"></i>Screen Size	11.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	64 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	4 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/4qjJISW" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 29 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop29.png" alt="ASUS Vivobook Go 14 ">
-                    <div class="mobile-number">29</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ASUS Vivobook Go 14</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	ASUS</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	8 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/4ox3J6Q" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 30 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop30.png" alt="ASUS Vivobook 15">
-                    <div class="mobile-number">30</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ASUS Vivobook 15</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	ASUS</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	8 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/47HTWoP" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 31 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop31.png" alt="ASUS Vivobook 15">
-                    <div class="mobile-number">31</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ASUS Vivobook 15</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	ASUS</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/4qsU3vZ" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 32 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop32.png" alt="acer TravelLite Smart FHD">
-                    <div class="mobile-number">32</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">acer TravelLite Smart FHD</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	acer</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/4qsUd6z" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 33 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop33.png" alt="Acer Aspire Lite">
-                    <div class="mobile-number">33</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Acer Aspire Lite</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	acer</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/48JhtH7" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 34 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop34.png" alt="Lenovo Smartchoice Ideapad">
-                    <div class="mobile-number">34</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo Smartchoice Ideapad</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                        <li><i class="fas fa-check"></i> Graphics Coprocessor	Intel UHD Graphics</li>
-                    </ul>
-                    <a href="https://amzn.to/4qqvGyY" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 35 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop35.png" alt="Apple 2024 Mac Mini Desktop Computer">
-                    <div class="mobile-number">35</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Apple 2024 Mac Mini Desktop Computer</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Apple</li>
-                        <li><i class="fas fa-check"></i> Graphics Card Description	Integrated</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Apple M4</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/47G0cxj" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 36 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop36.png" alt="Apple 2024 iMac">
-                    <div class="mobile-number">36</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Apple 2024 iMac</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Apple</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Apple M4</li>
-                        <li><i class="fas fa-check"></i> Screen Size	24 Inches</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	32 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/48Nmqi1" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 37 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop37.png" alt="Apple 2024 iMac All-in-One Desktop Computer">
-                    <div class="mobile-number">37</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Apple 2024 iMac All-in-One Desktop Computer</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Apple</li>
-                        <li><i class="fas fa-check"></i> Operating System	Mac OS</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Apple M4</li>
-                        <li><i class="fas fa-check"></i> Graphics Card Description	Integrated</li>
-                    </ul>
-                    <a href="https://amzn.to/47GW3cC" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 38 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop38.png" alt="ASUS AIO A3202">
-                    <div class="mobile-number">38</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ASUS AIO A3202</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	ASUS</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Intel Core i3</li>
-                        <li><i class="fas fa-check"></i> CPU Speed	1.2 GHz</li>
-                        <li><i class="fas fa-check"></i>Graphics Coprocessor	Integrated Intel UHD Graphics</li>
-                    </ul>
-                    <a href="https://amzn.to/43wn0ND" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 39 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop39.png" alt="ASUS AIO A3202">
-                    <div class="mobile-number">39</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ASUS AIO A3202</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	ASUS</li>
-                        <li><i class="fas fa-check"></i>CPU Model	Celeron</li>
-                        <li><i class="fas fa-check"></i>CPU Speed	1.1 GHz</li>
-                        <li><i class="fas fa-check"></i> Graphics Coprocessor	Integrated Graphics</li>
-                    </ul>
-                    <a href="https://amzn.to/4qy4xdC" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 40 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop40.png" alt="Asus AiO V440">
-                    <div class="mobile-number">40</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Asus AiO V440</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	ASUS</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Intel Core i3</li>
-                        <li><i class="fas fa-check"></i> Graphics Card Description	Integrated</li>
-                        <li><i class="fas fa-check"></i> Screen Size	23.8 Inches</li>
-                    </ul>
-                    <a href="https://amzn.to/47GajlP" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 41 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop41.png" alt="Lenovo L27i-4A">
-                    <div class="mobile-number">41</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo L27i-4A</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i> Screen Size	27 Inches</li>
-                        <li><i class="fas fa-check"></i>Aspect Ratio	16:9</li>
-                        <li><i class="fas fa-check"></i> Resolution	FHD 1080p</li>
-                    </ul>
-                    <a href="https://amzn.to/479vjkL" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 42 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop42.png" alt="Lenovo Legion-R32qc-30">
-                    <div class="mobile-number">42</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo Legion-R32qc-30</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i>Screen Size	31.5 Inches</li>
-                        <li><i class="fas fa-check"></i>Resolution	QHD Ultra Wide 1440p</li>
-                        <li><i class="fas fa-check"></i> Aspect Ratio	16:9</li>
-                    </ul>
-                    <a href="https://amzn.to/4o8vClZ" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 43 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop43.png" alt="HP All-in-One ">
-                    <div class="mobile-number">43</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">HP All-in-One</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	HP</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Pentium</li>
-                        <li><i class="fas fa-check"></i> Cache Size	8 GB</li>
-                        <li><i class="fas fa-check"></i> Graphics Coprocessor	Integrated Graphics</li>
-                    </ul>
-                    <a href="https://amzn.to/3J0FIGo" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 44 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop44.png" alt="ASUS Zenbook S 14">
-                    <div class="mobile-number">44</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ASUS Zenbook S 14</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	ASUS</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	1 TB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Intel Core Ultra 7</li>
-                    </ul>
-                    <a href="https://amzn.to/4oAXUVZ" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 45 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop45.png" alt="Lenovo Yoga 7 ">
-                    <div class="mobile-number">45</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo Yoga 7</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i>Screen Size	14 Inches</li>
-                        <li><i class="fas fa-check"></i>Hard Disk Size	1 TB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	24 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/3WkFsF8" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 46 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop46.png" alt="Lenovo IdeaPad 5 ">
-                    <div class="mobile-number">46</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lenovo IdeaPad 5 </h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Lenovo</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	1 TB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/3L5O4gp" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 47 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop47.png" alt="HP OmniBook X Laptop ">
-                    <div class="mobile-number">47</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">HP OmniBook X Laptop</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	HP</li>
-                        <li><i class="fas fa-check"></i> Screen Size	14 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	1 TB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Snapdragon</li>
-                    </ul>
-                    <a href="https://amzn.to/4ht0nzi" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 48 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop48.png" alt="ASUS Vivobook 15">
-                    <div class="mobile-number">48</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ASUS Vivobook 15</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	ASUS</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i>Hard Disk Size	1 TB</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Intel Core i7</li>
-                    </ul>
-                    <a href="https://amzn.to/3Lumvxi" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 49 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop49.png" alt="DELL 15 (2025) ">
-                    <div class="mobile-number">49</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">DELL 15 (2025)</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Dell</li>
-                        <li><i class="fas fa-check"></i> Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> Hard Disk Size	512 GB</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/477GeeS" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 50 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Computers/Laptop50.png" alt="(Refurbished) Dell G15-5530 Gaming Laptop">
-                    <div class="mobile-number">50</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">(Refurbished) Dell G15-5530 Gaming Laptop</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	Dell</li>
-                        <li><i class="fas fa-check"></i>Screen Size	15.6 Inches</li>
-                        <li><i class="fas fa-check"></i> CPU Model	Core i5</li>
-                        <li><i class="fas fa-check"></i> RAM Memory Installed Size	16 GB</li>
-                    </ul>
-                    <a href="https://amzn.to/43tDohU" class="buy-btn">View Mobile Deal</a>
-                </div>
-            </div>
+        <!-- AdSense Placeholder -->
+        <div class="ad-container">
+            <p>Advertisement Space - Google AdSense</p>
         </div>
-        
-        <div class="content-section">
-            <h2 class="section-title">Android vs iOS: Which Mobile OS is Right for You?</h2>
+
+        <!-- Creator Laptops Section -->
+        <section class="content-section">
+            <h2 class="section-title">Best Laptops for Creators in 2025</h2>
             <div class="section-content">
-                <p>The choice between Android and iOS is one of the most important decisions when selecting a new smartphone. Each operating system has distinct advantages that cater to different user preferences and needs.</p>
+                <p>Laptops for content creation have evolved tremendously, offering performance that rivals professional desktops. After extensive research and testing, we've identified the most important hardware and display features that matter most to creative professionals.</p>
                 
-                <h3>Advantages of Android</h3>
+                <h3>What Makes a Great Creator Laptop?</h3>
+                <p>The ideal creator laptop should have:</p>
                 <ul>
-                    <li><strong>Customization:</strong> Extensive customization options for home screens, icons, and system behavior</li>
-                    <li><strong>Device Variety:</strong> Wide range of devices at different price points from multiple manufacturers</li>
-                    <li><strong>Flexibility:</strong> More freedom to install apps from various sources and customize system settings</li>
-                    <li><strong>Google Integration:</strong> Seamless integration with Google services and ecosystem</li>
+                    <li>High-performance CPU (Intel Core Ultra or AMD Ryzen 9)</li>
+                    <li>Dedicated GPU (NVIDIA RTX or Radeon) for rendering and graphics tasks</li>
+                    <li>High-resolution, color-accurate display (QHD or 4K with 100% sRGB coverage)</li>
+                    <li>Fast SSD storage for seamless file handling</li>
+                    <li>Ample RAM (16GB or more) for multitasking and editing large projects</li>
                 </ul>
                 
-                <h3>Advantages of iOS</h3>
+                <h3>Our Top Recommendations</h3>
+                <p>Based on our evaluation, the laptops featured in our collection represent the best options for designers, video editors, and photographers across various price ranges. From affordable laptops ideal for beginners to premium workstations built for professionals, there's a perfect match for every creator's workflow.</p>
+                
+                <p>When choosing from our recommendations, consider not just the specs but also the build quality, display accuracy, and thermal performance. A laptop with balanced performance and good cooling can outperform higher-spec models in long creative sessions.</p>
+            </div>
+        </section>
+
+        <!-- Gaming Laptops Section -->
+        <section class="content-section">
+            <h2 class="section-title">Best Gaming Laptops Under ₹80,000</h2>
+            <div class="section-content">
+                <p>Finding a capable gaming laptop under ₹80,000 has become increasingly possible in 2025. While you won't get flagship-level hardware at this price, several models deliver impressive gaming performance and excellent value for money.</p>
+                
+                <h3>What to Expect in This Price Range</h3>
+                <p>Gaming laptops under ₹80,000 typically feature:</p>
                 <ul>
-                    <li><strong>Ecosystem Integration:</strong> Seamless connectivity with other Apple devices (Mac, iPad, Apple Watch)</li>
-                    <li><strong>Software Updates:</strong> Consistent and timely updates across all supported devices</li>
-                    <li><strong>App Quality:</strong> Generally higher quality and more polished applications</li>
-                    <li><strong>Privacy Focus:</strong> Strong privacy protections and app tracking transparency</li>
+                    <li>Mid-range processors (Intel Core i5 / AMD Ryzen 5 or above)</li>
+                    <li>Dedicated GPUs (NVIDIA RTX 3050 / 3050 Ti or equivalent)</li>
+                    <li>8GB-16GB RAM with fast SSD storage</li>
+                    <li>High-refresh-rate displays (120Hz or 144Hz) for smooth visuals</li>
+                    <li>Efficient cooling systems for consistent performance</li>
                 </ul>
                 
-                <h3>Making the Right Choice</h3>
-                <p>If you value customization, device variety, and flexibility, Android may be the better choice. If you prioritize ecosystem integration, consistent updates, and premium user experience, iOS might suit you better. Consider your existing devices, preferred apps, and how you use your smartphone daily when making this important decision.</p>
+                <h3>Gaming Performance Expectations</h3>
+                <p>At this price point, you can expect smooth gameplay at medium to high settings for popular titles like GTA V, Valorant, Apex Legends, and Call of Duty: Warzone. For more demanding AAA games, optimizing graphics settings will ensure better frame rates and thermals.</p>
+                
+                <h3>Additional Gaming Features</h3>
+                <p>Look for laptops with gaming-centric features like RGB backlit keyboards, customizable performance modes, and enhanced audio systems. These features can significantly improve your gaming experience without increasing the overall cost.</p>
+            </div>
+        </section>
+
+        <!-- AdSense Placeholder -->
+        <div class="ad-container">
+            <p>Advertisement Space - Google AdSense</p>
+        </div>
+
+        <!-- Product Highlights -->
+        <section class="content-section">
+            <h2 class="section-title">Our Top Laptop Recommendations</h2>
+            <div class="section-content">
+                <p>Our curated selection represents the best laptops available in 2025. Each product has been thoroughly researched to ensure it meets our high standards for performance, design, and value.</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Computers/Laptop1.png" alt="Lenovo V15">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Lenovo V15</h3>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Brand: Lenovo</li>
+                            <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
+                            <li><i class="fas fa-check"></i> Color: Gray</li>
+                            <li><i class="fas fa-check"></i> RAM: 16 GB</li>
+                        </ul>
+                        <a href="https://amzn.to/49rqDbk" class="buy-btn">View Deal</a>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Computers/Laptop2.png" alt="Acer Aspire Lite">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Acer Aspire Lite</h3>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Brand: Acer</li>
+                            <li><i class="fas fa-check"></i> Screen Size: 15.6 Inches</li>
+                            <li><i class="fas fa-check"></i> Storage: 512 GB</li>
+                            <li><i class="fas fa-check"></i> CPU: Core i3</li>
+                        </ul>
+                        <a href="https://amzn.to/4nydT6w" class="buy-btn">View Deal</a>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Computers/Laptop3.png" alt="HP Smartchoice Victus">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">HP Smartchoice Victus</h3>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Brand: HP</li>
+                            <li><i class="fas fa-check"></i> Screen Size: 39.6 cm</li>
+                            <li><i class="fas fa-check"></i> Storage: 512 GB</li>
+                            <li><i class="fas fa-check"></i> GPU: NVIDIA RTX 3050</li>
+                        </ul>
+                        <a href="https://amzn.to/48Hwnxv" class="buy-btn">View Deal</a>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Computers/Laptop3.png" alt="Apple 2024 MacBook Pro">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Apple 2024 MacBook Pro</h3>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Brand: Apple</li>
+                            <li><i class="fas fa-check"></i> CPU: Apple M4</li>
+                            <li><i class="fas fa-check"></i> RAM: 36 GB</li>
+                            <li><i class="fas fa-check"></i> OS: Mac OS</li>
+                        </ul>
+                        <a href="https://amzn.to/4o9TN3y" class="buy-btn">View Deal</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="content-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="section-content">
+                <div class="faq-item">
+                    <div class="faq-question">How much RAM do I need for my laptop?</div>
+                    <div class="faq-answer">For basic tasks like web browsing and document editing, 8GB is sufficient. For multitasking, creative work, or gaming, 16GB is recommended. Professionals working with large files or running virtual machines may benefit from 32GB or more.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Should I choose an SSD or HDD for storage?</div>
+                    <div class="faq-answer">SSDs are significantly faster than HDDs, resulting in quicker boot times, faster application loading, and better overall system responsiveness. While HDDs offer more storage for the price, we recommend SSDs for the primary drive in any modern laptop.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What's the ideal screen size for a laptop?</div>
+                    <div class="faq-answer">Screen size depends on your usage: 13-14 inches for maximum portability, 15-16 inches for the best balance of screen real estate and portability, and 17+ inches for desktop replacement or gaming laptops where portability is less important.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How important is battery life in a laptop?</div>
+                    <div class="faq-answer">Battery life is crucial if you frequently work away from power outlets. Look for laptops with at least 8 hours of battery life for typical use. Keep in mind that manufacturer claims often represent best-case scenarios, so check independent reviews for real-world battery performance.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="content-section">
+            <h2 class="section-title">About ShopAll Deals</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>ShopAll Deals is your trusted source for comprehensive laptop reviews, comparisons, and buying guides. Our mission is to help you make informed decisions when purchasing laptops by providing detailed analysis, performance benchmarks, and real-world usage insights.</p>
+                    <p>Our team of tech experts spends hundreds of hours testing and evaluating laptops across different price ranges and use cases. We consider factors like performance, build quality, display quality, battery life, and value for money to bring you the most accurate recommendations.</p>
+                    <p>We believe that everyone should have access to quality technology that enhances their productivity and creativity, regardless of their budget. That's why we provide recommendations across all price ranges, from budget-friendly options to premium flagship devices.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Placeholder for about image -->
+                    <div style="background: #f8f9fa; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                        <p>About Us Image</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="content-section">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="section-content">
+                <p>Have questions, suggestions, or feedback? We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            <p><strong>Affiliate Disclosure:</strong> ShopAll Deals is a participant in various affiliate programs. We may earn a small commission when you make a purchase through our links, at no extra cost to you. This helps us maintain the site and continue providing valuable content. Our reviews and recommendations are always based on our honest opinions and thorough research.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ShopAll Deals</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="electronics.html">Electronics</a></li>
+                        <li><a href="computers.html">Computers</a></li>
+                        <li><a href="mobiles.html">Mobiles</a></li>
+                        <li><a href="audio.html">Audio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 ShopAll Deals. All rights reserved.</p>
             </div>
         </div>
-        
-        <footer>
-            <div class="footer-links">
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="disclaimer.html">Disclaimer</a>
-            </div>
-            <p>© 2025 ShopAll Deals. All rights reserved.</p>
-            <p style="margin-top: 10px; font-size: 0.8rem; color: #888;">
-                <strong>Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a small commission when you make a purchase through our links, at no extra cost to you. This helps us maintain the site and continue providing valuable content.
-            </p>
-        </footer>
-    </div>
-    
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        // Simple form submission handler
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Premium Mobile Collection - ShopAll Deals",
-      "description": "Browse our collection of premium smartphones from top brands with the latest processors, advanced camera systems, and cutting-edge features.",
-      "url": "https://www.shopalldeals.com/mobiles.html",
-      "numberOfItems": 50,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Samsung Galaxy S24 Ultra",
-          "url": "https://www.shopalldeals.com/mobiles.html#samsung-s24-ultra"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Apple iPhone 15 Pro Max",
-          "url": "https://www.shopalldeals.com/mobiles.html#iphone-15-pro-max"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Google Pixel 8 Pro",
-          "url": "https://www.shopalldeals.com/mobiles.html#pixel-8-pro"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "OnePlus 12",
-          "url": "https://www.shopalldeals.com/mobiles.html#oneplus-12"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Xiaomi 14 Ultra",
-          "url": "https://www.shopalldeals.com/mobiles.html#xiaomi-14-ultra"
-        }
+      "@type": "WebSite",
+      "name": "ShopAll Deals",
+      "url": "https://www.shopalldeals.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.shopalldeals.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ShopAll Deals",
+      "url": "https://www.shopalldeals.com/",
+      "logo": "https://www.shopalldeals.com/logo.png",
+      "description": "Premium laptop reviews and buying guides",
+      "sameAs": [
+        "https://www.facebook.com/shopalldeals",
+        "https://www.twitter.com/shopalldeals",
+        "https://www.instagram.com/shopalldeals"
       ]
     }
     </script>
