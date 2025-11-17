@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Smart TVs of 2025 – Compare Prices & Features</title>
-    <meta name="description" content="Discover the best televisions for every home and budget. From 4K Ultra HD to Smart OLED displays, explore top brands and latest models with stunning picture quality and immersive sound. Compare features, read reviews, and grab exclusive deals on the best TVs available online.">
+    <title>Best Smart TVs 2025 | 4K, OLED & Smart TV Reviews | ShopAll Deals</title>
+    <meta name="description" content="Discover the best televisions for every home and budget. Compare 4K Ultra HD, OLED, and Smart TVs with expert reviews, buying guides, and exclusive deals.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -15,173 +16,127 @@
         }
 
         body {
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            color: #fff;
+            background-color: #f8f9fa;
+            color: #333;
             line-height: 1.6;
             min-height: 100vh;
         }
 
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 15px 0;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
         .nav-menu {
             display: flex;
-            justify-content: center;
             list-style: none;
-            flex-wrap: wrap;
             gap: 25px;
         }
 
         .nav-menu a {
-            color: #e0e0e0;
+            color: #2c3e50;
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s;
-            padding: 8px 15px;
-            border-radius: 8px;
         }
 
         .nav-menu a:hover {
-            color: #ffa36c;
-            background: rgba(255, 255, 255, 0.05);
+            color: #3498db;
         }
 
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #2c3e50;
+        }
+
+        /* Header */
         header {
             text-align: center;
-            padding: 40px 0;
-            margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
-            animation: pulse 15s infinite linear;
-            z-index: -1;
-        }
-
-        @keyframes pulse {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            padding: 60px 0 40px;
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            margin-bottom: 40px;
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 2.5rem;
             margin-bottom: 15px;
-            background: linear-gradient(90deg, #ff6b6b, #ffa36c, #ffde7d, #a3de83, #6a98f0, #b579ff);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            animation: gradient-shift 8s ease infinite;
-            background-size: 400% 400%;
-        }
-
-        @keyframes gradient-shift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            font-weight: 700;
         }
 
         .subtitle {
             font-size: 1.2rem;
-            color: #ccc;
-            max-width: 600px;
+            max-width: 800px;
             margin: 0 auto;
-            position: relative;
-        }
-
-        .subtitle::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
-            margin: 15px auto;
-            border-radius: 3px;
-        }
-
-        .intro-text {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 25px;
-            border-radius: 12px;
-            margin: 20px auto 40px;
-            max-width: 900px;
-            text-align: center;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            color: #e0e0e0;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .intro-text strong {
-            color: #fff;
+            opacity: 0.9;
         }
 
         /* Content Sections */
         .content-section {
-            background: rgba(255, 255, 255, 0.08);
-            padding: 30px;
-            border-radius: 12px;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
             margin-bottom: 40px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
         }
 
         .section-title {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #fff;
-            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            color: #2c3e50;
             position: relative;
+            padding-bottom: 10px;
         }
 
         .section-title::after {
             content: '';
-            display: block;
-            width: 80px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
             height: 3px;
-            background: linear-gradient(90deg, #ff6b6b, #ffa36c);
-            margin: 10px auto;
+            background: #3498db;
             border-radius: 3px;
         }
 
         .section-content {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             line-height: 1.7;
-            color: #e0e0e0;
+            color: #555;
         }
 
         .section-content h3 {
-            color: #fff;
+            color: #2c3e50;
             margin: 25px 0 15px;
-            font-size: 1.4rem;
+            font-size: 1.3rem;
         }
 
         .section-content ul {
@@ -193,290 +148,331 @@
             margin-bottom: 10px;
         }
 
-        .mobiles-grid {
+        /* Product Grid */
+        .products-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
 
-        .mobile-card {
-            background: rgba(255, 255, 255, 0.08);
-            border-radius: 20px;
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            transition: all 0.4s ease;
-            position: relative;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
             display: flex;
             flex-direction: column;
             height: 100%;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .mobile-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #ff6b6b, #ffa36c, #ffde7d, #a3de83, #6a98f0, #b579ff);
-            background-size: 400% 400%;
-            animation: gradient-shift 8s ease infinite;
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-        .mobile-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-            background: rgba(255, 255, 255, 0.12);
-        }
-
-        .mobile-image {
-            height: 220px;
+        .product-image {
+            height: 200px;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
-            background: rgba(0, 0, 0, 0.2);
+            background: #f8f9fa;
+            padding: 20px;
         }
 
-        .mobile-image::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 50%;
-            background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
-            z-index: 1;
-        }
-
-        .mobile-image img {
-            max-width: 85%;
-            max-height: 85%;
+        .product-image img {
+            max-width: 100%;
+            max-height: 100%;
             width: auto;
             height: auto;
             object-fit: contain;
-            transition: all 0.5s ease;
-            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
-            z-index: 2;
-            position: relative;
         }
 
-        .mobile-card:hover .mobile-image img {
-            transform: scale(1.1) rotate(2deg);
-        }
-
-        .mobile-number {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background: linear-gradient(135deg, #ff6b6b, #ffa36c);
-            color: white;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.9rem;
-            font-weight: bold;
-            z-index: 3;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .mobile-card:hover .mobile-number {
-            transform: scale(1.2) rotate(15deg);
-            background: linear-gradient(135deg, #6a98f0, #b579ff);
-        }
-
-        .mobile-content {
-            padding: 25px;
+        .product-content {
+            padding: 20px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .mobile-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #fff;
-            text-align: center;
-            position: relative;
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+            line-height: 1.3;
         }
 
-        .mobile-title::after {
-            content: '';
-            display: block;
-            width: 40px;
-            height: 2px;
-            background: linear-gradient(90deg, #ff6b6b, #ffa36c);
-            margin: 8px auto;
-            border-radius: 2px;
-        }
-
-        .mobile-features {
+        .product-features {
             list-style: none;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             flex-grow: 1;
         }
 
-        .mobile-features li {
-            padding: 8px 0;
-            color: #e0e0e0;
+        .product-features li {
+            padding: 5px 0;
+            color: #555;
             font-size: 0.95rem;
             display: flex;
-            align-items: center;
-            transition: all 0.3s ease;
+            align-items: flex-start;
         }
 
-        .mobile-features li:hover {
-            color: #fff;
-            transform: translateX(5px);
-        }
-
-        .mobile-features li i {
-            margin-right: 10px;
-            color: #ffa36c;
+        .product-features li i {
+            margin-right: 8px;
+            color: #3498db;
             font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-
-        .mobile-features li:hover i {
-            color: #ff6b6b;
-            transform: scale(1.2);
+            margin-top: 3px;
         }
 
         .buy-btn {
             display: block;
             width: 100%;
-            padding: 14px;
-            background: linear-gradient(90deg, #ff6b6b, #ffa36c);
+            padding: 12px;
+            background: #3498db;
             color: white;
             text-align: center;
-            border-radius: 12px;
+            border-radius: 6px;
             text-decoration: none;
-            font-weight: bold;
-            transition: all 0.4s ease;
+            font-weight: 600;
+            transition: background 0.3s;
             border: none;
             cursor: pointer;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            box-shadow: 0 6px 15px rgba(255, 107, 107, 0.4);
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .buy-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: all 0.6s ease;
-            z-index: -1;
+            font-size: 0.95rem;
         }
 
         .buy-btn:hover {
-            background: linear-gradient(90deg, #ffa36c, #ff6b6b);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(255, 107, 107, 0.6);
+            background: #2980b9;
         }
 
-        .buy-btn:hover::before {
-            left: 100%;
+        /* FAQ Section */
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
         }
 
-        footer {
+        .faq-question {
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .faq-answer {
+            color: #555;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-image {
+            flex: 1;
+            min-width: 300px;
             text-align: center;
-            margin-top: 60px;
-            padding: 30px;
-            color: #aaa;
-            font-size: 0.9rem;
-            position: relative;
         }
 
-        footer::before {
-            content: '';
+        .about-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
             display: block;
-            width: 200px;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            margin: 0 auto 20px;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #3498db;
+            outline: none;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #2980b9;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
         }
 
         .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
         }
 
         .footer-links a {
-            color: #aaa;
+            color: #bdc3c7;
             text-decoration: none;
             transition: color 0.3s;
-            font-weight: 500;
         }
 
         .footer-links a:hover {
-            color: #ffa36c;
+            color: #3498db;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            color: #bdc3c7;
+            font-size: 0.9rem;
+        }
+
+        .disclaimer {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #666;
+            border-left: 4px solid #3498db;
+        }
+
+        /* AdSense Placeholder */
+        .ad-container {
+            background: #f8f9fa;
+            border: 1px dashed #ddd;
+            padding: 20px;
+            text-align: center;
+            margin: 30px 0;
+            border-radius: 6px;
+            color: #777;
         }
 
         /* Responsive Design */
-        @media (max-width: 1200px) {
-            .mobiles-grid {
-                grid-template-columns: repeat(3, 1fr);
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                gap: 15px;
             }
-        }
 
-        @media (max-width: 900px) {
-            .mobiles-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .nav-menu.active {
+                display: flex;
             }
-            
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
             h1 {
-                font-size: 2.8rem;
+                font-size: 2rem;
+            }
+
+            .content-section {
+                padding: 25px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
             }
         }
 
-        @media (max-width: 600px) {
-            .mobiles-grid {
+        @media (max-width: 480px) {
+            .products-grid {
                 grid-template-columns: 1fr;
             }
-            
+
             h1 {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
             }
-            
+
             .subtitle {
                 font-size: 1rem;
-            }
-            
-            .footer-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .nav-menu {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
     <nav>
-        <div class="nav-container">
-            <ul class="nav-menu">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">ShopAll Deals</a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="electronics.html">Electronics</a></li>
                 <li><a href="computers.html">Computers</a></li>
@@ -487,1105 +483,374 @@
         </div>
     </nav>
 
-    <div class="container">
-        <header>
-            <h1>Shop the Best 4K, OLED & Smart TVs – Expert Picks</h1>
-            <p class="subtitle">Discover a wide range of top-rated 4K, OLED, and Smart TVs designed to deliver the ultimate viewing experience. From ultra-clear picture quality to advanced smart features, find the perfect television that fits your lifestyle and budget. Compare models, explore top brands, and grab exclusive offers to upgrade your entertainment setup today.</p>
-        </header>
-        
-        <div class="intro-text">
-            <strong>Turn your living room into a cinema with our expert-picked televisions. From vibrant 4K visuals to lifelike OLED displays, enjoy crystal-clear quality and advanced streaming features that make every movie night unforgettable.</strong> 
-            Stay ahead of the curve with the newest innovations in television technology. Discover 4K, QLED, and OLED TVs packed with smart assistants, voice control, and energy-efficient performance — all from trusted global brands.
+    <header>
+        <div class="container">
+            <h1>Shop the Best 4K, OLED & Smart TVs</h1>
+            <p class="subtitle">Discover a wide range of top-rated 4K, OLED, and Smart TVs designed to deliver the ultimate viewing experience. Compare models, explore top brands, and grab exclusive offers to upgrade your entertainment setup today.</p>
         </div>
-        
-        <!-- Added comprehensive content sections for AdSense -->
-        <div class="content-section">
+    </header>
+
+    <div class="container">
+        <!-- AdSense Placeholder -->
+        <div class="ad-container">
+            <p>Advertisement Space - Google AdSense</p>
+        </div>
+
+        <!-- Intro Section -->
+        <section class="content-section">
+            <h2 class="section-title">Welcome to Our Premium TV Collection</h2>
+            <div class="section-content">
+                <p>Turn your living room into a cinema with our expert-picked televisions. From vibrant 4K visuals to lifelike OLED displays, enjoy crystal-clear quality and advanced streaming features that make every movie night unforgettable.</p>
+                <p>Stay ahead of the curve with the newest innovations in television technology. Discover 4K, QLED, and OLED TVs packed with smart assistants, voice control, and energy-efficient performance — all from trusted global brands.</p>
+            </div>
+        </section>
+
+        <!-- Buying Guide Section -->
+        <section class="content-section">
             <h2 class="section-title">How to Choose the Right Television in 2025</h2>
             <div class="section-content">
                 <p>Upgrade your TV without breaking the bank! Browse exclusive discounts and limited-time offers on premium 4K, OLED, and Smart TVs. Get high-end features, superior design, and unbeatable value — all in one place.</p>
                 
-                <h3>Tech & Innovation Focused</h3>
-                <p>First, determine how you primarily use your Television:</p>
+                <h3>Identify Your Primary Usage</h3>
+                <p>First, determine how you primarily use your television:</p>
                 <ul>
-                    <li><strong>If you love watching movies and shows</strong> Choose an OLED or QLED TV for rich colors, perfect blacks, and cinematic visuals. Look for HDR (High Dynamic Range) support for deeper contrast and realistic brightness. Popular brands like LG, Sony, and Samsung offer excellent options for movie lovers.</li>
-                    <li><strong>If you’re a gamer</strong> Pick a TV with a high refresh rate (120Hz or higher) and low input lag to ensure smooth gameplay. HDMI 2.1 ports and Game Mode features are must-haves for console players using PS5 or Xbox Series X. Check out models from Samsung, LG, and Hisense for gaming performance.</li>
-                    <li><strong>If you enjoy watching sports</strong> Look for TVs with motion smoothing and wide viewing angles so everyone gets a clear view. A 4K LED or QLED TV is ideal for crisp, blur-free sports action. Choose brands that offer strong motion handling and vivid colors like Sony and TCL.</li>
-                    <li><strong>If you love streaming and smart features</strong> Opt for a Smart TV with built-in apps like Netflix, Prime Video, and YouTube. Make sure it supports Wi-Fi, screen mirroring, and voice assistants (like Alexa or Google Assistant). Smart TVs from OnePlus, Xiaomi, and Samsung are great for online entertainment.</li>
+                    <li><strong>If you love watching movies and shows:</strong> Choose an OLED or QLED TV for rich colors, perfect blacks, and cinematic visuals. Look for HDR (High Dynamic Range) support for deeper contrast and realistic brightness. Popular brands like LG, Sony, and Samsung offer excellent options for movie lovers.</li>
+                    <li><strong>If you're a gamer:</strong> Pick a TV with a high refresh rate (120Hz or higher) and low input lag to ensure smooth gameplay. HDMI 2.1 ports and Game Mode features are must-haves for console players using PS5 or Xbox Series X. Check out models from Samsung, LG, and Hisense for gaming performance.</li>
+                    <li><strong>If you enjoy watching sports:</strong> Look for TVs with motion smoothing and wide viewing angles so everyone gets a clear view. A 4K LED or QLED TV is ideal for crisp, blur-free sports action. Choose brands that offer strong motion handling and vivid colors like Sony and TCL.</li>
+                    <li><strong>If you love streaming and smart features:</strong> Opt for a Smart TV with built-in apps like Netflix, Prime Video, and YouTube. Make sure it supports Wi-Fi, screen mirroring, and voice assistants (like Alexa or Google Assistant). Smart TVs from OnePlus, Xiaomi, and Samsung are great for online entertainment.</li>
                 </ul>
                 
                 <h3>Key Specifications to Evaluate</h3>
-                <p>When buying a new television, understanding key specifications helps you choose the right model for your needs. Here’s what to look for before making your purchase:</p>
+                <p>When buying a new television, understanding key specifications helps you choose the right model for your needs. Here's what to look for before making your purchase:</p>
                 <ul>
-                    <li><strong>Display Type</strong> 
-                                LED TVs: Affordable and energy-efficient.
-                                QLED TVs: Brighter colors and better contrast.
-                                OLED TVs: Deep blacks, rich colors, and cinematic experience.</li>
-                    <li><strong>Screen Size</strong> 
-                                Small rooms: 32–43 inches
-                                Medium rooms: 50–55 inches
-                                Large rooms: 65 inches and above</li>
-                    <li><strong>Resolution</strong> 
-                                HD (720p): Suitable for small rooms.
-                                Full HD (1080p): Great for regular viewing.
-                                4K Ultra HD: Crisp, detailed picture — perfect for movies and games.
-                                8K: Future-ready tech for premium viewers.</li>
-                    <li><strong>Refresh Rate</strong> 
-                                60Hz: Standard for regular use.
-                                120Hz or higher: Recommended for gaming and fast-paced content.</li>
-                    <li><strong>Connectivity Options</strong> 
-                                HDMI 2.1: For gaming consoles and 4K devices.
-                                USB ports: To play media directly.
-                                Bluetooth & Wi-Fi: For wireless streaming and audio connections.</li>
-                    <li><strong>Sound Quality</strong> 
-                                Dolby Audio or DTS:X support.
-                                Option to connect soundbars or home theaters via HDMI ARC or Bluetooth.</li>
+                    <li><strong>Display Type:</strong> LED TVs: Affordable and energy-efficient. QLED TVs: Brighter colors and better contrast. OLED TVs: Deep blacks, rich colors, and cinematic experience.</li>
+                    <li><strong>Screen Size:</strong> Small rooms: 32-43 inches. Medium rooms: 50-55 inches. Large rooms: 65 inches and above</li>
+                    <li><strong>Resolution:</strong> HD (720p): Suitable for small rooms. Full HD (1080p): Great for regular viewing. 4K Ultra HD: Crisp, detailed picture — perfect for movies and games. 8K: Future-ready tech for premium viewers.</li>
+                    <li><strong>Refresh Rate:</strong> 60Hz: Standard for regular use. 120Hz or higher: Recommended for gaming and fast-paced content.</li>
+                    <li><strong>Connectivity Options:</strong> HDMI 2.1: For gaming consoles and 4K devices. USB ports: To play media directly. Bluetooth & Wi-Fi: For wireless streaming and audio connections.</li>
+                    <li><strong>Sound Quality:</strong> Dolby Audio or DTS:X support. Option to connect soundbars or home theaters via HDMI ARC or Bluetooth.</li>
                 </ul>
                 
-                <h3>Operating System Considerations</h3>
+                <h3>Smart TV Operating System Considerations</h3>
                 <p>When choosing a smart TV, the operating system (OS) plays a key role in your day-to-day experience — it impacts app support, UI smoothness, updates, and integration with other devices. Here's what you should think about:</p>
                 <ul>
-                    <li><strong>Google TV / Android TV</strong> Wide app ecosystem: Because it’s based on Android, you get access to the Google Play Store and thousands of apps.</li>
-                    <li><strong>webOS (LG)</strong> Simple and clean interface: Uses a bottom “Launcher Bar” for easy navigation without disturbing what’s playing.</li>
+                    <li><strong>Google TV / Android TV:</strong> Wide app ecosystem: Because it's based on Android, you get access to the Google Play Store and thousands of apps.</li>
+                    <li><strong>webOS (LG):</strong> Simple and clean interface: Uses a bottom "Launcher Bar" for easy navigation without disturbing what's playing.</li>
+                    <li><strong>Tizen (Samsung):</strong> Fast and responsive: Known for smooth performance and excellent app support.</li>
+                    <li><strong>Roku TV:</strong> User-friendly interface: Simple navigation and extensive streaming app selection.</li>
                 </ul>
                 
                 <p>By carefully considering your needs, budget, and preferences, you can find the perfect television that will serve you well for years to come.</p>
             </div>
+        </section>
+
+        <!-- AdSense Placeholder -->
+        <div class="ad-container">
+            <p>Advertisement Space - Google AdSense</p>
         </div>
-        
-        <div class="content-section">
-            <h2 class="section-title">Best Television in 2025</h2>
+
+        <!-- Best TVs Section -->
+        <section class="content-section">
+            <h2 class="section-title">Best Televisions in 2025</h2>
             <div class="section-content">
-                <p>Mobile photography has advanced tremendously, with many smartphones now rivaling dedicated cameras. After extensive testing and research, we've identified the key camera features that matter most for different types of photographers.</p>
+                <p>Explore our expert-selected list of the best televisions available today. From ultra-sharp 4K displays to vibrant OLED screens and feature-packed Smart TVs, these models combine exceptional picture quality, performance, and value.</p>
                 
                 <h3>What Makes a Great Television?</h3>
                 <p>The ideal television should have:</p>
                 <ul>
-                    <li><strong>Stunning Picture Quality:</strong>
-                        Look for 4K or OLED displays that deliver sharp details, true-to-life colors, and deep contrast. Features like HDR10, Dolby Vision, and Wide Color Gamut make every scene vibrant and realistic.</li>
-                    <li><strong>Immersive Sound Experience:</strong>
-                        A great picture deserves great sound. Choose TVs with Dolby Audio, DTS:X, or built-in subwoofers for richer, theater-like sound. If possible, pair it with a soundbar or home theater system for the ultimate experience.</li>
-                    <li><strong>Smart Features & App Support:</strong>
-                        Your TV should support major streaming apps like Netflix, Prime Video, YouTube, and Disney+ Hotstar. Built-in Wi-Fi, Bluetooth, and voice assistants (like Alexa or Google Assistant) make navigation easy and fun.</li>
-                    <li><strong>Fast Performance for Gaming & Streaming</strong>
-                        Look for a powerful processor, 120Hz refresh rate, and low input lag for smooth gaming and lag-free streaming. HDMI 2.1 ports are a bonus for next-gen consoles like PS5 and Xbox Series X.</li>
-                    <li><strong>Easy-to-Use Interface:</strong>A user-friendly operating system makes all the difference. Whether it’s Google TV, webOS, or Tizen, your TV should have a smooth, responsive interface with frequent updates and easy access to apps.</li>
+                    <li><strong>Stunning Picture Quality:</strong> Look for 4K or OLED displays that deliver sharp details, true-to-life colors, and deep contrast. Features like HDR10, Dolby Vision, and Wide Color Gamut make every scene vibrant and realistic.</li>
+                    <li><strong>Immersive Sound Experience:</strong> A great picture deserves great sound. Choose TVs with Dolby Audio, DTS:X, or built-in subwoofers for richer, theater-like sound. If possible, pair it with a soundbar or home theater system for the ultimate experience.</li>
+                    <li><strong>Smart Features & App Support:</strong> Your TV should support major streaming apps like Netflix, Prime Video, YouTube, and Disney+ Hotstar. Built-in Wi-Fi, Bluetooth, and voice assistants (like Alexa or Google Assistant) make navigation easy and fun.</li>
+                    <li><strong>Fast Performance for Gaming & Streaming:</strong> Look for a powerful processor, 120Hz refresh rate, and low input lag for smooth gaming and lag-free streaming. HDMI 2.1 ports are a bonus for next-gen consoles like PS5 and Xbox Series X.</li>
+                    <li><strong>Easy-to-Use Interface:</strong> A user-friendly operating system makes all the difference. Whether it's Google TV, webOS, or Tizen, your TV should have a smooth, responsive interface with frequent updates and easy access to apps.</li>
                 </ul>
                 
                 <h3>Our Top Recommendations</h3>
-                <p>Explore our expert-selected list of the best televisions available today. From ultra-sharp 4K displays to vibrant OLED screens and feature-packed Smart TVs, these models combine exceptional picture quality, performance, and value. Whether you’re upgrading your home theater or looking for a reliable everyday TV, our top recommendations make it easy to find the perfect match.</p>
-                
-                <p>We’ve rounded up the televisions that truly stand out. Whether you want a big screen for family movie nights or a smart TV for easy streaming, our recommendations help you find what fits your style and budget.</p>
+                <p>Whether you're upgrading your home theater or looking for a reliable everyday TV, our top recommendations make it easy to find the perfect match. We've rounded up the televisions that truly stand out. Whether you want a big screen for family movie nights or a smart TV for easy streaming, our recommendations help you find what fits your style and budget.</p>
             </div>
-        </div>
-        
-        <div class="content-section">
-            <h2 class="section-title">Gaming Television Under ₹1,00,000</h2>
+        </section>
+
+        <!-- Gaming TVs Section -->
+        <section class="content-section">
+            <h2 class="section-title">Best Gaming TVs Under ₹1,00,000</h2>
             <div class="section-content">
-                <p>Finding a capable gaming smartphone under ₹30,000 has become increasingly possible in 2025. While you won't get flagship performance at this price point, several models offer excellent value for mobile gamers.</p>
+                <p>Finding a capable gaming TV under ₹1,00,000 has become increasingly possible in 2025. While you won't get flagship performance at this price point, several models offer excellent value for gamers.</p>
                 
                 <h3>What to Expect in This Price Range</h3>
-                <p>Gaming television under 1 Lakh typically feature:</p>
+                <p>Gaming TVs under ₹1,00,000 typically feature:</p>
                 <ul>
-                    <li><strong>High Refresh Rate (≥ 100 Hz or 120 Hz)</strong>Many gaming TVs in this price range support 120 Hz, which makes fast-paced games feel smoother and more responsive.</li>
-                    <li><strong>HDMI 2.1 Support</strong>Essential for modern consoles (PS5, Xbox Series X) to use 4K @ 120Hz.</li>
-                    <li>8GB RAM with 128GB storage</li>
-                    <li><strong>Low Input Lag</strong>A key spec for gaming — ideally under 10 ms (or as low as possible).</li>
-                    <li><strong>Variable Refresh Rate (VRR) / Adaptive Sync</strong>Syncs the TV’s refresh rate with the game’s frame rate to reduce stuttering or tearing.</li>
+                    <li><strong>High Refresh Rate (≥ 100 Hz or 120 Hz):</strong> Many gaming TVs in this price range support 120 Hz, which makes fast-paced games feel smoother and more responsive.</li>
+                    <li><strong>HDMI 2.1 Support:</strong> Essential for modern consoles (PS5, Xbox Series X) to use 4K @ 120Hz.</li>
+                    <li><strong>Low Input Lag:</strong> A key spec for gaming — ideally under 10 ms (or as low as possible).</li>
+                    <li><strong>Variable Refresh Rate (VRR) / Adaptive Sync:</strong> Syncs the TV's refresh rate with the game's frame rate to reduce stuttering or tearing.</li>
+                    <li><strong>Balanced Panel Type:</strong> Many affordable gaming TVs use VA or QLED panels, which offer good contrast and brightness.</li>
                 </ul>
                 
-                <h3>Balanced Panel Type</h3>
-                <p>Many affordable gaming TVs use VA or QLED panels, which offer good contrast and brightness.</p>
+                <h3>Gaming Performance Expectations</h3>
+                <p>At this price point, you can expect smooth gameplay with excellent visual quality for popular gaming titles. For more demanding AAA games, optimizing graphics settings will ensure better performance and thermals.</p>
                 
-                <h3>Durable and Reliable Build</h3>
-                <p>Even on a budget, a good gaming TV should have a solid build, reliable brand support, and service options.</p>
+                <h3>Additional Gaming Features</h3>
+                <p>Look for TVs with gaming-centric features like Auto Low Latency Mode (ALLM), dedicated gaming presets, and enhanced audio systems. These features can significantly improve your gaming experience without increasing the overall cost.</p>
             </div>
+        </section>
+
+        <!-- AdSense Placeholder -->
+        <div class="ad-container">
+            <p>Advertisement Space - Google AdSense</p>
         </div>
-        
-        <h2 style="text-align: center; font-size: 2.5rem; margin: 50px 0 30px; color: #fff;">Our Top Television Recommendations</h2>
-        
-        <div class="mobiles-grid">
-            <!-- Mobile 1 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv1.png" alt="LG 80 cms">
-                    <div class="mobile-number">1</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">LG 80 cms</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	32 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	LG</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	768p</li>
-                    </ul>
-                    <a href="https://amzn.to/3LbMVUE" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 2 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv2.png" alt="Xiaomi 138 cm">
-                    <div class="mobile-number">2</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Xiaomi 138 cm</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Xiaomi</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/3LlOOy1" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 3 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv3.png" alt="Lumio Vision 7">
-                    <div class="mobile-number">3</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lumio Vision 7</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Brand	Lumio</li>
-                        <li><i class="fas fa-check"></i> Screen Size	109 Centimetres</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                        <li><i class="fas fa-check"></i> Refresh Rate	60 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/4nGVLYb" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 4 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv4.png" alt="E Gate Zen 12X">
-                    <div class="mobile-number">4</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">E Gate Zen 12X</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	E GATE</li>
-                        <li><i class="fas fa-check"></i> Connectivity Technology	Wi-Fi</li>
-                        <li><i class="fas fa-check"></i> Display resolution	1920 x 1080</li>
-                        <li><i class="fas fa-check"></i> Display Resolution Maximum	1920 x 1080 Pixels</li>
-                    </ul>
-                    <a href="https://amzn.to/47CCtNp" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 5 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv5.png" alt="Samsung">
-                    <div class="mobile-number">5</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Samsung</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	43 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Samsung</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	1080p</li>
-                    </ul>
-                    <a href="https://amzn.to/493o6nS" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 6 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv6.png" alt="Samsung">
-                    <div class="mobile-number">6</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Samsung</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	43 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Samsung</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                        <li><i class="fas fa-check"></i> Refresh Rate	50 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/4oQodrp" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 7 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv7.png" alt="Sony">
-                    <div class="mobile-number">7</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Sony</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Sony</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                        <li><i class="fas fa-check"></i> Refresh Rate	60 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/4oSuLpx" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 8 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv8.png" alt="Crossbeats Lumex Flix Projector 4k Ultra HD">
-                    <div class="mobile-number">8</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Crossbeats Lumex Flix Projector 4k Ultra HD</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	CrossBeats</li>
-                        <li><i class="fas fa-check"></i> Recommended Uses For Product	Business, Education, Gaming, Home Cinema, Office</li>
-                        <li><i class="fas fa-check"></i>Connectivity Technology	Bluetooth, HDMI, USB, Wi-Fi</li>
-                        <li><i class="fas fa-check"></i> Display resolution	1920 x 1080</li>
-                    </ul>
-                    <a href="https://amzn.to/3XbfWSZ" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 9 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv9.png" alt="TCL 139 cm ">
-                    <div class="mobile-number">9</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">TCL 139 cm </h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i>Brand	TCL</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QD-Mini LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4oRrYg8" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 10 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv10.png" alt="TCL">
-                    <div class="mobile-number">10</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">TCL</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	TCL</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QD-Mini LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4nB1q1K" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 11 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv11.png" alt="Vu">
-                    <div class="mobile-number">11</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Vu</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	50 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Vu</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i>Refresh Rate	60 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/47BeIp2" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 12 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv12.png" alt="Xiaomi">
-                    <div class="mobile-number">12</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Xiaomi</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	32 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	XIAOMI</li>
-                        <li><i class="fas fa-check"></i>Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i>Resolution	720p</li>
-                    </ul>
-                    <a href="https://amzn.to/4qOUYHq" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 13 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv13.png" alt="TOSHIBA">
-                    <div class="mobile-number">13</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">TOSHIBA</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	50 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	TOSHIBA</li>
-                        <li><i class="fas fa-check"></i>Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4qJeZih" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 14 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv14.png" alt="Sony BRAVIA 3 Series">
-                    <div class="mobile-number">14</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Screen Size	55 Inches</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Sony</li>
-                        <li><i class="fas fa-check"></i>Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	720p</li>
-                        <li><i class="fas fa-check"></i>Refresh Rate	60 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/49AvGX1" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 15 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv15.png" alt="IBELL">
-                    <div class="mobile-number">15</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">IBELL</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	43 Inches</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i>Resolution	1080p</li>
-                        <li><i class="fas fa-check"></i>Refresh Rate	60 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/47F0RxP" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 16 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv16.png" alt="TCL">
-                    <div class="mobile-number">16</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">TCL</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	75 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	TCL</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/3WCA7Jv" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 17 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv17.png" alt="Dyanora">
-                    <div class="mobile-number">17</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Dyanora</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	43 Inches</li>
-                        <li><i class="fas fa-check"></i>Brand	Dyanora</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4oo0Vcp" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 18 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv18.png" alt="Samsung">
-                    <div class="mobile-number">18</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Samsung</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Samsung</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4qM1KNR" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 19 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv19.png" alt="Acerpure">
-                    <div class="mobile-number">19</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Acerpure</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	acerpure</li>
-                        <li><i class="fas fa-check"></i>Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/47secLk" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 20 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv20.png" alt="LG">
-                    <div class="mobile-number">20</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">LG</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	LG</li>
-                        <li><i class="fas fa-check"></i> Display Technology	4K UHD</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/43PbrBj" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 21 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv21.png" alt="LG">
-                    <div class="mobile-number">21</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">LG</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	LG</li>
-                        <li><i class="fas fa-check"></i> Display Technology	OLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4i5qUmZ" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 22 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv22.png" alt="Philips ">
-                    <div class="mobile-number">22</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Philips </h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Philips</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i>Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4qJiy8g" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 23 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv23.png" alt="Panasonic">
-                    <div class="mobile-number">23</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Panasonic</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	50 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Panasonic</li>
-                        <li><i class="fas fa-check"></i> Display Technology	4K UHD</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/43hTsTV" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 24 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv24.png" alt="TCL">
-                    <div class="mobile-number">24</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">TCL</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	50 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	TCL</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	1080p</li>
-                    </ul>
-                    <a href="https://amzn.to/43kcb1g" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 25 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv25.png" alt="VW">
-                    <div class="mobile-number">25</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">VW</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	VW</li>
-                        <li><i class="fas fa-check"></i>Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i>Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/47pK9DW" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 26 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv26.png" alt="Vu">
-                    <div class="mobile-number">26</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Vu</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Vu</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/3WIfvQ6" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 27 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv27.png" alt="TOSHIBA">
-                    <div class="mobile-number">27</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">TOSHIBA</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i>Brand	TOSHIBA</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i>Refresh Rate	60 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/3LNGEP2" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 28 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv28.png" alt="ONIDA ">
-                    <div class="mobile-number">28</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">ONIDA </h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i>Brand	Onida</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/3JLjF6C" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 29 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv29.png" alt="TOSHIBA ">
-                    <div class="mobile-number">29</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">TOSHIBA</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	TOSHIBA</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED TV</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4oUoFVv" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 30 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv30.png" alt="VU">
-                    <div class="mobile-number">30</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">VU</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Vu</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i>Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4oynpI6" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 31 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv31.png" alt="Hisense">
-                    <div class="mobile-number">31</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Hisense</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Hisense</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                        <li><i class="fas fa-check"></i> Refresh Rate	60 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/3Ln0DEl" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 32 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv32.png" alt="Vu">
-                    <div class="mobile-number">32</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Vu</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Vu</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED, QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/491ugor" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 33 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv33.png" alt="Samsung">
-                    <div class="mobile-number">33</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Samsung</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Samsung</li>
-                        <li><i class="fas fa-check"></i> Display Technology	UHD</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/47qTBH8" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 34 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv34.png" alt="Samsung">
-                    <div class="mobile-number">34</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Samsung</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	32 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Samsung</li>
-                        <li><i class="fas fa-check"></i> Resolution	768p</li>
-                        <li><i class="fas fa-check"></i> Refresh Rate	50 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/3LtPJwz" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 35 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv35.png" alt="Acerpure ">
-                    <div class="mobile-number">35</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Acerpure </h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	50 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	acerpure</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4ouHCyh" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 36 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv36.png" alt="Sony">
-                    <div class="mobile-number">36</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Sony</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Sony</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4nIaIZO" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 37 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv37.png" alt="Philips">
-                    <div class="mobile-number">37</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Philips</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	43 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Philips</li>
-                        <li><i class="fas fa-check"></i> Resolution	1080p</li>
-                        <li><i class="fas fa-check"></i> Refresh Rate	60 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/4ovyw4z" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 38 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv38.png" alt="Sony">
-                    <div class="mobile-number">38</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Sony</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	75 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Sony</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i>Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/4qQ6ulw" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 39 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv39.png" alt="TCL">
-                    <div class="mobile-number">39</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">TCL</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	TCL</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/3JR7Pbd" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 40 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv40.png" alt="Acerpure">
-                    <div class="mobile-number">40</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Acerpure</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	75 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	acerpure</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/3JR7Uvx" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 41 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv41.png" alt="SANSUI">
-                    <div class="mobile-number">41</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">SANSUI</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	75 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	SANSUI</li>
-                        <li><i class="fas fa-check"></i>Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/43eRaFe" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 42 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv42.png" alt="SANSUI">
-                    <div class="mobile-number">42</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Screen Size	65 Inches</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	SANSUI</li>
-                        <li><i class="fas fa-check"></i>Display Technology	4K UHD</li>
-                        <li><i class="fas fa-check"></i>Resolution	4K</li>
-                        <li><i class="fas fa-check"></i> Refresh Rate	60 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/4pjv5Or" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 43 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv43.png" alt="Acerpure ">
-                    <div class="mobile-number">43</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Acerpure </h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	65 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	acerpure</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/494FUyQ" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 44 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv44.png" alt="Vu">
-                    <div class="mobile-number">44</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Vu</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Vu</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                        <li><i class="fas fa-check"></i> Refresh Rate	60 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/47QBmde" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 45 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv45.png" alt="Vu ">
-                    <div class="mobile-number">45</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Vu </h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i>Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Vu</li>
-                        <li><i class="fas fa-check"></i>Resolution	4K</li>
-                        <li><i class="fas fa-check"></i> Refresh Rate	60 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/3WHECm7" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 46 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv46.png" alt="Vu">
-                    <div class="mobile-number">46</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Vu</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Brand	Vu</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QLED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                        <li><i class="fas fa-check"></i> Refresh Rate	120 Hz</li>
-                    </ul>
-                    <a href="https://amzn.to/4hLuOkw" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 47 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv47.png" alt="Panasonic ">
-                    <div class="mobile-number">47</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Panasonic </h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Panasonic</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4k ultra hd</li>
-                    </ul>
-                    <a href="https://amzn.to/49NIvNM" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 48 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv48.png" alt="Lumio Vision">
-                    <div class="mobile-number">48</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Lumio Vision</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	139 Centimetres</li>
-                        <li><i class="fas fa-check"></i>Brand	Lumio</li>
-                        <li><i class="fas fa-check"></i> Display Technology	4K UHD, Mini Led</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/484GP1e" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 49 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv49.png" alt="Panasonic">
-                    <div class="mobile-number">49</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">Panasonic </h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	55 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	Panasonic</li>
-                        <li><i class="fas fa-check"></i> Display Technology	LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/3LrTG4Q" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-            
-            <!-- Mobile 50 -->
-            <div class="mobile-card">
-                <div class="mobile-image">
-                    <img src="Television/tv50.png" alt="TCL">
-                    <div class="mobile-number">50</div>
-                </div>
-                <div class="mobile-content">
-                    <h3 class="mobile-title">TCL</h3>
-                    <ul class="mobile-features">
-                        <li><i class="fas fa-check"></i> Screen Size	85 Inches</li>
-                        <li><i class="fas fa-check"></i> Brand	TCL</li>
-                        <li><i class="fas fa-check"></i> Display Technology	QD-Mini LED</li>
-                        <li><i class="fas fa-check"></i> Resolution	4K</li>
-                    </ul>
-                    <a href="https://amzn.to/3WNmKpR" class="buy-btn">View TV Deal</a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="content-section">
-            <h2 class="section-title">Android vs iOS: Which Mobile OS is Right for You?</h2>
+
+        <!-- Product Highlights -->
+        <section class="content-section">
+            <h2 class="section-title">Our Top Television Recommendations</h2>
             <div class="section-content">
-                <p>The choice between Android and iOS is one of the most important decisions when selecting a new smartphone. Each operating system has distinct advantages that cater to different user preferences and needs.</p>
+                <p>Our curated selection represents the best televisions available in 2025. Each product has been thoroughly researched to ensure it meets our high standards for picture quality, smart features, and value.</p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Television/tv1.png" alt="LG 80 cms">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">LG 80 cms</h3>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Screen Size: 32 Inches</li>
+                            <li><i class="fas fa-check"></i> Brand: LG</li>
+                            <li><i class="fas fa-check"></i> Display: LED</li>
+                            <li><i class="fas fa-check"></i> Resolution: 768p</li>
+                        </ul>
+                        <a href="https://amzn.to/3LbMVUE" class="buy-btn">View Deal</a>
+                    </div>
+                </div>
                 
-                <h3>Advantages of Android</h3>
-                <ul>
-                    <li><strong>Customization:</strong> Extensive customization options for home screens, icons, and system behavior</li>
-                    <li><strong>Device Variety:</strong> Wide range of devices at different price points from multiple manufacturers</li>
-                    <li><strong>Flexibility:</strong> More freedom to install apps from various sources and customize system settings</li>
-                    <li><strong>Google Integration:</strong> Seamless integration with Google services and ecosystem</li>
-                </ul>
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Television/tv2.png" alt="Xiaomi 138 cm">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Xiaomi 138 cm</h3>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Screen Size: 55 Inches</li>
+                            <li><i class="fas fa-check"></i> Brand: Xiaomi</li>
+                            <li><i class="fas fa-check"></i> Display: QLED</li>
+                            <li><i class="fas fa-check"></i> Resolution: 4K</li>
+                        </ul>
+                        <a href="https://amzn.to/3LlOOy1" class="buy-btn">View Deal</a>
+                    </div>
+                </div>
                 
-                <h3>Advantages of iOS</h3>
-                <ul>
-                    <li><strong>Ecosystem Integration:</strong> Seamless connectivity with other Apple devices (Mac, iPad, Apple Watch)</li>
-                    <li><strong>Software Updates:</strong> Consistent and timely updates across all supported devices</li>
-                    <li><strong>App Quality:</strong> Generally higher quality and more polished applications</li>
-                    <li><strong>Privacy Focus:</strong> Strong privacy protections and app tracking transparency</li>
-                </ul>
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Television/tv3.png" alt="Lumio Vision 7">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">Lumio Vision 7</h3>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Brand: Lumio</li>
+                            <li><i class="fas fa-check"></i> Screen Size: 109 cm</li>
+                            <li><i class="fas fa-check"></i> Resolution: 4K</li>
+                            <li><i class="fas fa-check"></i> Refresh Rate: 60 Hz</li>
+                        </ul>
+                        <a href="https://amzn.to/4nGVLYb" class="buy-btn">View Deal</a>
+                    </div>
+                </div>
                 
-                <h3>Making the Right Choice</h3>
-                <p>If you value customization, device variety, and flexibility, Android may be the better choice. If you prioritize ecosystem integration, consistent updates, and premium user experience, iOS might suit you better. Consider your existing devices, preferred apps, and how you use your smartphone daily when making this important decision.</p>
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="Television/tv4.png" alt="E Gate Zen 12X">
+                    </div>
+                    <div class="product-content">
+                        <h3 class="product-title">E Gate Zen 12X</h3>
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Brand: E GATE</li>
+                            <li><i class="fas fa-check"></i> Connectivity: Wi-Fi</li>
+                            <li><i class="fas fa-check"></i> Resolution: 1920x1080</li>
+                            <li><i class="fas fa-check"></i> Display: Full HD</li>
+                        </ul>
+                        <a href="https://amzn.to/47CCtNp" class="buy-btn">View Deal</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="content-section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="section-content">
+                <div class="faq-item">
+                    <div class="faq-question">What's the difference between OLED and QLED TVs?</div>
+                    <div class="faq-answer">OLED TVs use self-emissive pixels that can turn completely off for perfect blacks and infinite contrast. QLED TVs use quantum dots to enhance color and brightness on LCD panels. OLED generally offers better contrast and viewing angles, while QLED provides higher brightness levels.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How important is refresh rate for TV viewing?</div>
+                    <div class="faq-answer">For regular TV watching and movies, 60Hz is perfectly adequate. For sports, fast-action content, and gaming, higher refresh rates (120Hz or more) provide smoother motion and reduce blur. Gamers should prioritize higher refresh rates and low input lag.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What screen size should I choose for my room?</div>
+                    <div class="faq-answer">A general rule is to sit at a distance 1.5 to 2.5 times the diagonal screen size. For a 55-inch TV, sit 6.5 to 11 feet away. Consider your room size, seating distance, and personal preference. Larger screens provide more immersive experiences but require appropriate viewing distances.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Do I need a soundbar with my new TV?</div>
+                    <div class="faq-answer">Most modern flat-screen TVs have limited space for speakers, resulting in mediocre sound quality. A soundbar significantly improves audio clarity, bass response, and overall immersion. For the best home theater experience, we recommend pairing your TV with at least a basic soundbar.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="content-section">
+            <h2 class="section-title">About ShopAll Deals</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>ShopAll Deals is your trusted source for comprehensive television reviews, comparisons, and buying guides. Our mission is to help you make informed decisions when purchasing TVs by providing detailed analysis, performance insights, and real-world usage information.</p>
+                    <p>Our team of home entertainment experts spends hundreds of hours researching and evaluating televisions across different price ranges and use cases. We consider factors like picture quality, smart features, gaming performance, sound quality, and value for money to bring you the most accurate recommendations.</p>
+                    <p>We believe that everyone should have access to quality home entertainment technology that enhances their viewing experience, regardless of their budget. That's why we provide recommendations across all price ranges, from budget-friendly options to premium flagship models.</p>
+                </div>
+                <div class="about-image">
+                    <!-- Placeholder for about image -->
+                    <div style="background: #f8f9fa; height: 250px; display: flex; align-items: center; justify-content: center; border-radius: 8px;">
+                        <p>About Us Image</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="content-section">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="section-content">
+                <p>Have questions, suggestions, or feedback? We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" class="form-control" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            <p><strong>Affiliate Disclosure:</strong> ShopAll Deals is a participant in various affiliate programs. We may earn a small commission when you make a purchase through our links, at no extra cost to you. This helps us maintain the site and continue providing valuable content. Our reviews and recommendations are always based on our honest opinions and thorough research.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>ShopAll Deals</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="press.html">Press</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Categories</h3>
+                    <ul class="footer-links">
+                        <li><a href="electronics.html">Electronics</a></li>
+                        <li><a href="computers.html">Computers</a></li>
+                        <li><a href="mobiles.html">Mobiles</a></li>
+                        <li><a href="audio.html">Audio</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="shipping.html">Shipping Info</a></li>
+                        <li><a href="returns.html">Returns</a></li>
+                        <li><a href="size-guide.html">Size Guide</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="cookies.html">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 ShopAll Deals. All rights reserved.</p>
             </div>
         </div>
-        
-        <footer>
-            <div class="footer-links">
-                <a href="about.html">About Us</a>
-                <a href="contact.html">Contact</a>
-                <a href="privacy-policy.html">Privacy Policy</a>
-                <a href="terms.html">Terms of Service</a>
-                <a href="disclaimer.html">Disclaimer</a>
-            </div>
-            <p>© 2025 ShopAll Deals. All rights reserved.</p>
-            <p style="margin-top: 10px; font-size: 0.8rem; color: #888;">
-                <strong>Affiliate Disclosure:</strong> This site contains affiliate links. We may earn a small commission when you make a purchase through our links, at no extra cost to you. This helps us maintain the site and continue providing valuable content.
-            </p>
-        </footer>
-    </div>
-    
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            document.getElementById('navMenu').classList.toggle('active');
+        });
+
+        // Simple form submission handler
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        });
+    </script>
+
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Premium Mobile Collection - ShopAll Deals",
-      "description": "Browse our collection of premium smartphones from top brands with the latest processors, advanced camera systems, and cutting-edge features.",
-      "url": "https://www.shopalldeals.com/mobiles.html",
-      "numberOfItems": 50,
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Samsung Galaxy S24 Ultra",
-          "url": "https://www.shopalldeals.com/mobiles.html#samsung-s24-ultra"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Apple iPhone 15 Pro Max",
-          "url": "https://www.shopalldeals.com/mobiles.html#iphone-15-pro-max"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Google Pixel 8 Pro",
-          "url": "https://www.shopalldeals.com/mobiles.html#pixel-8-pro"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "OnePlus 12",
-          "url": "https://www.shopalldeals.com/mobiles.html#oneplus-12"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Xiaomi 14 Ultra",
-          "url": "https://www.shopalldeals.com/mobiles.html#xiaomi-14-ultra"
-        }
+      "@type": "WebSite",
+      "name": "ShopAll Deals",
+      "url": "https://www.shopalldeals.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.shopalldeals.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "ShopAll Deals",
+      "url": "https://www.shopalldeals.com/",
+      "logo": "https://www.shopalldeals.com/logo.png",
+      "description": "Premium television reviews and buying guides",
+      "sameAs": [
+        "https://www.facebook.com/shopalldeals",
+        "https://www.twitter.com/shopalldeals",
+        "https://www.instagram.com/shopalldeals"
       ]
     }
     </script>
