@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer | TechDeals - Your Source for Tech Bargains</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7c3aed;
+            --accent: #06b6d4;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --tech-gradient: linear-gradient(135deg, #2563eb, #7c3aed);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        body {
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--tech-gradient);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(120, 119, 198, 0.3) 0%, transparent 55%),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 55%);
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .last-updated {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Navigation */
+        .nav-container {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .quick-nav {
+            display: flex;
+            justify-content: center;
+            padding: 18px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .quick-nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+        
+        .quick-nav a:hover {
+            color: var(--primary);
+            background: #f1f5f9;
+        }
+        
+        .quick-nav a.active {
+            color: var(--primary);
+            background: #e0f2fe;
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        .content-section {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+            padding: 45px;
+            margin: 40px 0;
+            border: 1px solid #e2e8f0;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 1.9rem;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+        }
+        
+        h2 i {
+            margin-right: 12px;
+            background: var(--primary);
+            color: white;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 1.2rem;
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 30px 0 18px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 18px;
+            color: #475569;
+            font-size: 1.05rem;
+        }
+        
+        ul, ol {
+            margin: 18px 0 18px 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            color: #475569;
+        }
+        
+        ul li::before {
+            content: '▸';
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        ol {
+            counter-reset: item;
+        }
+        
+        ol li {
+            counter-increment: item;
+        }
+        
+        ol li::before {
+            content: counter(item) ".";
+            color: var(--primary);
+            font-weight: bold;
+            display: inline-block;
+            width: 2em;
+            margin-left: -2.5em;
+        }
+        
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid var(--accent);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+            position: relative;
+        }
+        
+        .highlight-box::before {
+            content: '!';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--accent);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+        
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        
+        tr:hover {
+            background-color: #f8fafc;
+        }
+        
+        /* Warning Section */
+        .warning-section {
+            background: linear-gradient(135deg, #fef3c7, #fef7cd);
+            border: 1px solid #fcd34d;
+            border-radius: 16px;
+            padding: 35px;
+            margin: 40px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .warning-icon {
+            background: #f59e0b;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .warning-content h3 {
+            color: #92400e;
+            margin-top: 0;
+        }
+        
+        .warning-content p {
+            color: #92400e;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--tech-gradient);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTIwMCA4MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjA1Ij48cG9seWdvbiBwb2ludHM9IjEyMDAsMCAxMjAwLDgwMCAwLDgwMCAwLDAiPjwvcG9seWdvbj48L2c+PC9zdmc+');
+            opacity: 0.2;
+        }
+        
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .contact-section p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 35px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            background: white;
+            color: var(--primary);
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 25px;
+            margin-top: 70px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: color 0.3s;
+            font-size: 1.05rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            .content-section {
+                padding: 30px;
+            }
+            
+            .quick-nav {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 15px;
+            }
+            
+            .quick-nav a {
+                white-space: nowrap;
+            }
+            
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .warning-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .warning-icon {
+                margin-right: 0;
+                margin-bottom: 15px;
+                align-self: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="tech-pattern"></div>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Tech<span>Deals</span></div>
+                <h1>Website Disclaimer</h1>
+                <p class="subtitle">Important information regarding the use of our website, product recommendations, and affiliate relationships.</p>
+                <div class="last-updated">
+                    <i class="fas fa-calendar-alt"></i> Last Updated: November 5, 2023
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="nav-container">
+        <div class="container">
+            <div class="quick-nav">
+                <a href="#affiliate-disclosure" class="active"><i class="fas fa-handshake"></i> Affiliate Disclosure</a>
+                <a href="#accuracy"><i class="fas fa-check-circle"></i> Accuracy of Information</a>
+                <a href="#professional-advice"><i class="fas fa-user-tie"></i> Professional Advice</a>
+                <a href="#external-links"><i class="fas fa-external-link-alt"></i> External Links</a>
+                <a href="#liability"><i class="fas fa-balance-scale"></i> Limitation of Liability</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact Us</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content-section">
+            <h2><i class="fas fa-exclamation-triangle"></i> Introduction</h2>
+            <p>Welcome to the TechDeals disclaimer page. The information provided on TechDeals (the "Website") is for general informational purposes only. All information on the Website is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Website.</p>
+            <p>By using our Website, you hereby consent to our Disclaimer and agree to its terms. We reserve the right to make changes to this document at any time and for any reason. We will alert you about any changes by updating the "Last Updated" date of this Disclaimer.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Note:</strong> This disclaimer applies to all content, tools, and services provided on TechDeals. Please read this disclaimer carefully before using our website.</p>
+            </div>
+        </div>
+        
+        <div class="content-section" id="affiliate-disclosure">
+            <h2><i class="fas fa-handshake"></i> Affiliate Disclosure</h2>
+            <p>TechDeals is a participant in various affiliate advertising programs designed to provide a means for sites to earn advertising fees by advertising and linking to products. Some of the links on our website may be "affiliate links".</p>
+            
+            <h3>What This Means For You</h3>
+            <p>This means that if you click on the link and purchase the item, we may receive an affiliate commission at no extra cost to you. This is one of the ways we generate revenue to support the operation of our website and continue providing you with valuable tech deal information.</p>
+            
+            <h3>Our Promise</h3>
+            <p>We only recommend products and services that we believe will provide value to our readers. Our affiliate relationships do not influence our content, reviews, or product recommendations. We always prioritize providing accurate and helpful information to our audience.</p>
+            
+            <h3>Amazon Associates</h3>
+            <p>TechDeals is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. As an Amazon Associate, we earn from qualifying purchases.</p>
+        </div>
+        
+        <div class="content-section" id="accuracy">
+            <h2><i class="fas fa-check-circle"></i> Accuracy of Information</h2>
+            <p>While we strive to provide accurate and up-to-date information about tech deals, prices, and product availability, we cannot guarantee that all information is current, complete, or accurate.</p>
+            
+            <h3>Pricing and Availability</h3>
+            <p>Tech product prices and availability change frequently. The deals we feature may expire or become unavailable without notice. We recommend verifying the current price and availability directly on the retailer's website before making a purchase.</p>
+            
+            <h3>Product Information</h3>
+            <p>Product specifications, features, and descriptions are based on information provided by manufacturers and retailers. We are not responsible for any discrepancies between the information on our website and the actual products.</p>
+            
+            <h3>Errors and Omissions</h3>
+            <p>We make every effort to prevent errors and omissions on our website. However, given the volume of information and the frequency of changes in the tech industry, we cannot guarantee that our website is completely free of inaccuracies.</p>
+        </div>
+        
+        <div class="warning-section">
+            <div class="warning-icon">
+                <i class="fas fa-exclamation"></i>
+            </div>
+            <div class="warning-content">
+                <h3>Important Notice</h3>
+                <p>Always verify product details, specifications, and current prices on the retailer's website before making any purchase. TechDeals is not responsible for any changes in pricing, availability, or product information that occur after we publish a deal.</p>
+            </div>
+        </div>
+        
+        <div class="content-section" id="professional-advice">
+            <h2><i class="fas fa-user-tie"></i> No Professional Advice</h2>
+            <p>The information contained on TechDeals is for general information purposes only. The information is not intended as professional advice and should not be construed as such.</p>
+            
+            <h3>Not Technical Advice</h3>
+            <p>Our product recommendations and deal alerts should not be considered as professional technical advice. We recommend consulting with a qualified professional for specific technical requirements or concerns.</p>
+            
+            <h3>Not Financial Advice</h3>
+            <p>Our content should not be considered financial advice. While we aim to help you find the best deals, the decision to purchase any product is yours alone. We are not responsible for any financial outcomes resulting from purchases made based on our recommendations.</p>
+        </div>
+        
+        <div class="content-section" id="external-links">
+            <h2><i class="fas fa-external-link-alt"></i> External Links Disclaimer</h2>
+            <p>Our website may contain links to external websites that are not provided or maintained by or in any way affiliated with TechDeals.</p>
+            
+            <h3>Third-Party Websites</h3>
+            <p>We have no control over the content, nature, or availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
+            
+            <h3>Responsibility</h3>
+            <p>We are not responsible for the practices employed by websites linked to or from our website, nor the information or content contained therein. Please remember that when you use a link to go from our website to another website, our Privacy Policy is no longer in effect.</p>
+        </div>
+        
+        <div class="content-section" id="liability">
+            <h2><i class="fas fa-balance-scale"></i> Limitation of Liability</h2>
+            <p>In no event shall TechDeals, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+            
+            <ol>
+                <li>Your access to or use of or inability to access or use the Website</li>
+                <li>Any conduct or content of any third party on the Website</li>
+                <li>Any content obtained from the Website</li>
+                <li>Unauthorized access, use or alteration of your transmissions or content</li>
+            </ol>
+            
+            <h3>Purchase Decisions</h3>
+            <p>We are not responsible for any purchases made through links on our website. All transactions are between you and the respective retailer. We recommend reviewing the retailer's terms of service, return policy, and warranty information before making a purchase.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2><i class="fas fa-gavel"></i> Fair Use Disclaimer</h2>
+            <p>This website may contain copyrighted material the use of which has not always been specifically authorized by the copyright owner. We are making such material available in our efforts to advance understanding of technology, product reviews, and deal information.</p>
+            
+            <p>We believe this constitutes a "fair use" of any such copyrighted material as provided for in section 107 of the US Copyright Law. If you wish to use copyrighted material from this site for purposes of your own that go beyond "fair use", you must obtain permission from the copyright owner.</p>
+        </div>
+        
+        <div class="content-section">
+            <h2><i class="fas fa-sync-alt"></i> Changes To This Disclaimer</h2>
+            <p>We may update our Disclaimer from time to time. We will notify you of any changes by posting the new Disclaimer on this page and updating the "Last Updated" date at the top of this Disclaimer.</p>
+            
+            <p>You are advised to review this Disclaimer periodically for any changes. Changes to this Disclaimer are effective when they are posted on this page.</p>
+        </div>
+        
+        <div class="contact-section" id="contact">
+            <div class="contact-content">
+                <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+                <p>If you have any questions about this Disclaimer, please contact us:</p>
+                <a href="mailto:legal@techdeals.com" class="contact-btn">
+                    <i class="fas fa-paper-plane"></i> Email Our Legal Team
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechDeals</h3>
+                    <p>Your trusted source for the latest technology deals, discounts, and product recommendations.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">Latest Deals</a>
+                        <a href="#">Product Reviews</a>
+                        <a href="#">Deal Alerts</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Disclaimer</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 TechDeals. All rights reserved. | Designed for clarity and compliance</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 120,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    document.querySelectorAll('.quick-nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Highlight active section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.content-section, .contact-section');
+            const navLinks = document.querySelectorAll('.quick-nav a');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(pageYOffset >= (sectionTop - 160)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
