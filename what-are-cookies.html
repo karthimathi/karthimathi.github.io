@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Are Cookies? - TechDeals</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7c3aed;
+            --accent: #06b6d4;
+            --light: #f8fafc;
+            --dark: #1e293b;
+            --gray: #64748b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --tech-gradient: linear-gradient(135deg, #2563eb, #7c3aed);
+            --cookie-color: #d97706;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+        
+        body {
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--tech-gradient);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(120, 119, 198, 0.3) 0%, transparent 55%),
+                radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 55%);
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .logo span {
+            color: var(--accent);
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        /* Navigation */
+        .nav-container {
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .quick-nav {
+            display: flex;
+            justify-content: center;
+            padding: 18px 0;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .quick-nav a {
+            margin: 0 12px;
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 500;
+            transition: all 0.3s;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+        
+        .quick-nav a:hover {
+            color: var(--primary);
+            background: #f1f5f9;
+        }
+        
+        .quick-nav a.active {
+            color: var(--primary);
+            background: #e0f2fe;
+            font-weight: 600;
+        }
+        
+        /* Main Content */
+        .content-section {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+            padding: 45px;
+            margin: 40px 0;
+            border: 1px solid #e2e8f0;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 25px;
+            font-size: 1.9rem;
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+        }
+        
+        h2 i {
+            margin-right: 12px;
+            background: var(--primary);
+            color: white;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 1.2rem;
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 30px 0 18px;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 18px;
+            color: #475569;
+            font-size: 1.05rem;
+        }
+        
+        ul, ol {
+            margin: 18px 0 18px 30px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            position: relative;
+            color: #475569;
+        }
+        
+        ul li::before {
+            content: '▸';
+            color: var(--accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+        
+        .highlight-box {
+            background: #f0f9ff;
+            border-left: 4px solid var(--accent);
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 0 12px 12px 0;
+            position: relative;
+        }
+        
+        .highlight-box::before {
+            content: '!';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--accent);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        /* Cookie Animation */
+        .cookie-demo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 40px 0;
+            height: 300px;
+            background: #f8fafc;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            border: 2px dashed #cbd5e1;
+        }
+        
+        .browser-window {
+            width: 90%;
+            height: 80%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .browser-header {
+            height: 40px;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            border-bottom: 1px solid #cbd5e1;
+        }
+        
+        .browser-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .browser-button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        
+        .browser-button.red { background: #f87171; }
+        .browser-button.yellow { background: #fbbf24; }
+        .browser-button.green { background: #34d399; }
+        
+        .browser-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        .cookie-jar {
+            width: 120px;
+            height: 150px;
+            background: var(--cookie-color);
+            border-radius: 10px 10px 50px 50px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cookie-jar::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            width: 140px;
+            height: 20px;
+            background: #b45309;
+            border-radius: 10px;
+        }
+        
+        .cookie {
+            width: 50px;
+            height: 50px;
+            background: #d97706;
+            border-radius: 50%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s, opacity 0.5s;
+        }
+        
+        .cookie::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #b45309;
+            opacity: 0.3;
+        }
+        
+        .cookie-chips {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #7c2d12;
+            border-radius: 50%;
+        }
+        
+        .chip-1 { top: 10px; left: 10px; }
+        .chip-2 { top: 10px; right: 10px; }
+        .chip-3 { bottom: 10px; left: 10px; }
+        .chip-4 { bottom: 10px; right: 10px; }
+        .chip-5 { top: 25px; left: 25px; }
+        
+        .computer {
+            width: 180px;
+            height: 120px;
+            background: #374151;
+            border-radius: 10px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .computer-screen {
+            width: 160px;
+            height: 100px;
+            background: #06b6d4;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .data-flow {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 0.7rem;
+            opacity: 0;
+        }
+        
+        .demo-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .demo-btn {
+            padding: 10px 20px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .demo-btn:hover {
+            background: var(--primary-dark);
+        }
+        
+        .demo-btn.secondary {
+            background: #e2e8f0;
+            color: var(--dark);
+        }
+        
+        .demo-btn.secondary:hover {
+            background: #cbd5e1;
+        }
+        
+        /* Analogy Section */
+        .analogy-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .analogy-card {
+            flex: 1;
+            min-width: 300px;
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s;
+        }
+        
+        .analogy-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .analogy-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .analogy-card h3 {
+            margin-top: 0;
+            color: var(--primary);
+        }
+        
+        /* Cookie Facts */
+        .cookie-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .fact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--accent);
+        }
+        
+        .fact-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .fact-card h4 i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background: var(--tech-gradient);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTIwMCA4MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjA1Ij48cG9seWdvbiBwb2ludHM9IjEyMDAsMCAxMjAwLDgwMCAwLDgwMCAwLDAiPjwvcG9seWdvbj48L2c+PC9zdmc+');
+            opacity: 0.2;
+        }
+        
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+        
+        .contact-section p {
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 700px;
+            margin: 0 auto 35px;
+            font-size: 1.1rem;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            background: white;
+            color: var(--primary);
+            padding: 14px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 50px 0 25px;
+            margin-top: 70px;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-bottom: 12px;
+            transition: color 0.3s;
+            font-size: 1.05rem;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid #334155;
+            color: #94a3b8;
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.4rem;
+            }
+            
+            .content-section {
+                padding: 30px;
+            }
+            
+            .quick-nav {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 15px;
+            }
+            
+            .quick-nav a {
+                white-space: nowrap;
+            }
+            
+            .cookie-demo {
+                height: 250px;
+            }
+            
+            .browser-window {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="tech-pattern"></div>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Tech<span>Deals</span></div>
+                <h1>What Are Cookies?</h1>
+                <p class="subtitle">A simple explanation of website cookies and how they work to enhance your browsing experience.</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="nav-container">
+        <div class="container">
+            <div class="quick-nav">
+                <a href="#definition" class="active"><i class="fas fa-info-circle"></i> Definition</a>
+                <a href="#how-they-work"><i class="fas fa-cogs"></i> How They Work</a>
+                <a href="#analogies"><i class="fas fa-lightbulb"></i> Simple Analogies</a>
+                <a href="#types"><i class="fas fa-list"></i> Types of Cookies</a>
+                <a href="#facts"><i class="fas fa-star"></i> Cookie Facts</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Questions?</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="content-section" id="definition">
+            <h2><i class="fas fa-info-circle"></i> What Are Cookies?</h2>
+            <p>Cookies are small text files that websites place on your computer or mobile device when you visit them. Think of them as tiny memory cards that help websites remember information about your visit.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Simple Definition:</strong> Cookies are small pieces of data stored on your device by websites you visit. They contain information that helps websites recognize you and remember your preferences.</p>
+            </div>
+            
+            <h3>Why Are They Called "Cookies"?</h3>
+            <p>The term "cookie" comes from "magic cookie," a concept in computing where a small piece of data is passed between programs. The name stuck because, like fortune cookies, they contain a small amount of information inside.</p>
+        </div>
+        
+        <div class="content-section" id="how-they-work">
+            <h2><i class="fas fa-cogs"></i> How Do Cookies Work?</h2>
+            <p>Let's visualize how cookies work with this interactive demonstration:</p>
+            
+            <div class="cookie-demo">
+                <div class="browser-window">
+                    <div class="browser-header">
+                        <div class="browser-buttons">
+                            <div class="browser-button red"></div>
+                            <div class="browser-button yellow"></div>
+                            <div class="browser-button green"></div>
+                        </div>
+                    </div>
+                    <div class="browser-content">
+                        <div class="computer">
+                            <div class="computer-screen">Your Device</div>
+                        </div>
+                        <div class="data-flow" id="dataFlow">📄</div>
+                        <div class="cookie-jar">
+                            <div class="cookie" id="demoCookie">
+                                <div class="cookie-chips chip-1"></div>
+                                <div class="cookie-chips chip-2"></div>
+                                <div class="cookie-chips chip-3"></div>
+                                <div class="cookie-chips chip-4"></div>
+                                <div class="cookie-chips chip-5"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="demo-controls">
+                <button class="demo-btn secondary" id="resetDemo">Reset</button>
+                <button class="demo-btn" id="startDemo">Show How Cookies Work</button>
+            </div>
+            
+            <h3>The Cookie Process</h3>
+            <ol>
+                <li><strong>First Visit:</strong> When you first visit a website, it sends a cookie to your browser</li>
+                <li><strong>Storage:</strong> Your browser stores this cookie on your device</li>
+                <li><strong>Subsequent Visits:</strong> When you return to the site, your browser sends the cookie back to the website</li>
+                <li><strong>Recognition:</strong> The website reads the cookie and "remembers" you and your preferences</li>
+            </ol>
+        </div>
+        
+        <div class="content-section" id="analogies">
+            <h2><i class="fas fa-lightbulb"></i> Understanding Cookies Through Analogies</h2>
+            <p>Sometimes technical concepts are easier to understand with simple analogies:</p>
+            
+            <div class="analogy-section">
+                <div class="analogy-card">
+                    <div class="analogy-icon">
+                        <i class="fas fa-address-card"></i>
+                    </div>
+                    <h3>Name Tag at an Event</h3>
+                    <p>When you attend a conference, you get a name tag. Staff can quickly identify you without asking your name each time. Similarly, cookies help websites recognize you without asking for your information repeatedly.</p>
+                </div>
+                
+                <div class="analogy-card">
+                    <div class="analogy-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Shopping Cart</h3>
+                    <p>When shopping online, cookies remember what you've added to your cart even if you leave the site and come back later. Without cookies, your cart would be empty each time you returned.</p>
+                </div>
+                
+                <div class="analogy-card">
+                    <div class="analogy-icon">
+                        <i class="fas fa-user-cog"></i>
+                    </div>
+                    <h3>Personal Assistant</h3>
+                    <p>Imagine a personal assistant who remembers your preferences - language, theme, layout. Cookies work similarly, remembering your settings so websites can provide a personalized experience.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section" id="types">
+            <h2><i class="fas fa-list"></i> Common Types of Cookies</h2>
+            <p>Not all cookies are the same. Here are the main types you'll encounter:</p>
+            
+            <div class="cookie-facts">
+                <div class="fact-card">
+                    <h4><i class="fas fa-shield-alt"></i> Essential Cookies</h4>
+                    <p>Required for websites to function properly. They enable basic functions like page navigation and access to secure areas.</p>
+                </div>
+                
+                <div class="fact-card">
+                    <h4><i class="fas fa-chart-line"></i> Performance Cookies</h4>
+                    <p>Help website owners understand how visitors interact with their website by collecting anonymous information.</p>
+                </div>
+                
+                <div class="fact-card">
+                    <h4><i class="fas fa-cogs"></i> Functionality Cookies</h4>
+                    <p>Allow websites to remember choices you make and provide enhanced, more personal features.</p>
+                </div>
+                
+                <div class="fact-card">
+                    <h4><i class="fas fa-ad"></i> Advertising Cookies</h4>
+                    <p>Used to deliver ads more relevant to you and your interests, and to limit the number of times you see an ad.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-section" id="facts">
+            <h2><i class="fas fa-star"></i> Interesting Cookie Facts</h2>
+            
+            <div class="cookie-facts">
+                <div class="fact-card">
+                    <h4><i class="fas fa-cookie"></i> Not Programs</h4>
+                    <p>Cookies are not software programs - they can't contain viruses or malware. They're simply text files.</p>
+                </div>
+                
+                <div class="fact-card">
+                    <h4><i class="fas fa-lock"></i> Privacy Protection</h4>
+                    <p>Cookies can only be read by the website that created them, not by other websites.</p>
+                </div>
+                
+                <div class="fact-card">
+                    <h4><i class="fas fa-hourglass-half"></i> Limited Lifespan</h4>
+                    <p>Cookies have expiration dates. Some last only for your browsing session, while others can last for years.</p>
+                </div>
+                
+                <div class="fact-card">
+                    <h4><i class="fas fa-mobile-alt"></i> Not Just Computers</h4>
+                    <p>Cookies are stored on whatever device you use to browse - computers, smartphones, and tablets.</p>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <p><strong>Remember:</strong> Cookies themselves are harmless text files. However, how websites use the information collected through cookies is what matters for your privacy.</p>
+            </div>
+        </div>
+        
+        <div class="contact-section" id="contact">
+            <div class="contact-content">
+                <h2><i class="fas fa-question-circle"></i> Still Have Questions?</h2>
+                <p>If you're still curious about cookies or have specific questions about how we use them on TechDeals, our team is here to help!</p>
+                <a href="mailto:support@techdeals.com" class="contact-btn">
+                    <i class="fas fa-paper-plane"></i> Contact Our Support Team
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechDeals</h3>
+                    <p>Your trusted source for the latest technology deals, discounts, and product recommendations.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">Latest Deals</a>
+                        <a href="#">Product Reviews</a>
+                        <a href="#">Deal Alerts</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Learn More</h3>
+                    <div class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Disclaimer</a>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 TechDeals. All rights reserved. | Making tech understandable for everyone</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Cookie animation
+        document.getElementById('startDemo').addEventListener('click', function() {
+            const dataFlow = document.getElementById('dataFlow');
+            const cookie = document.getElementById('demoCookie');
+            
+            // Reset positions first
+            dataFlow.style.opacity = '0';
+            dataFlow.style.transform = 'translateX(0)';
+            cookie.style.transform = 'translateY(0)';
+            cookie.style.opacity = '1';
+            
+            // Animate data flow from computer to cookie jar
+            setTimeout(() => {
+                dataFlow.style.opacity = '1';
+                dataFlow.style.transition = 'transform 1.5s, opacity 0.5s';
+                dataFlow.style.transform = 'translateX(180px)';
+            }, 500);
+            
+            // Animate cookie appearing
+            setTimeout(() => {
+                cookie.style.transition = 'transform 0.5s, opacity 0.5s';
+                cookie.style.transform = 'translateY(-20px)';
+            }, 2000);
+            
+            // Animate data flow back to computer (with cookie)
+            setTimeout(() => {
+                dataFlow.textContent = '🍪';
+                dataFlow.style.transition = 'transform 1.5s';
+                dataFlow.style.transform = 'translateX(-180px)';
+            }, 2500);
+            
+            // Reset for next animation
+            setTimeout(() => {
+                dataFlow.style.opacity = '0';
+                dataFlow.textContent = '📄';
+            }, 4000);
+        });
+        
+        document.getElementById('resetDemo').addEventListener('click', function() {
+            const dataFlow = document.getElementById('dataFlow');
+            const cookie = document.getElementById('demoCookie');
+            
+            dataFlow.style.opacity = '0';
+            dataFlow.style.transform = 'translateX(0)';
+            cookie.style.transform = 'translateY(0)';
+            dataFlow.textContent = '📄';
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 120,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active nav link
+                    document.querySelectorAll('.quick-nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Highlight active section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.content-section, .contact-section');
+            const navLinks = document.querySelectorAll('.quick-nav a');
+            
+            let currentSection = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if(pageYOffset >= (sectionTop - 160)) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if(link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
